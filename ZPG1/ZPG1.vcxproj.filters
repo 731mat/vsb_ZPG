@@ -41,9 +41,6 @@
     <ClInclude Include="Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Desktop\bedna.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="worker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -70,8 +67,5 @@
     <None Include="FragmentShader.glsl">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="ClassDiagram3.cd" />
-    <None Include="ClassDiagram31.cd" />
-    <None Include="ClassDiagram32.cd" />
   </ItemGroup>
 </Project>

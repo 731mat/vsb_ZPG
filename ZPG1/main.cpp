@@ -7,8 +7,7 @@ int main(void)
 {
 	Application* window = Application::getWindow();
 	//Camera *camera = new Camera;
-	//Shader *shader = window->getShader(); // ty tady vytvaris uplne novy shader, ktery vubec neni nacteny z tech souboru, jen mu predas kameru a je prazdny , já jsem se inspiroval tim observerem od Nìmce, jene jsem nevìdìl jak vytovøit kameru a zároveò pøedat i ty podprogramy
-	// tak stejne jak mas na radku pod timhle, setterem
+	//Shader *shader = window->getShader(); 
 	//shader->setCamera(*camera);
 	//camera->setCamera(shader->getShader());
 

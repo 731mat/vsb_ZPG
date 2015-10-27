@@ -74,7 +74,6 @@
     <ClCompile Include="ShaderLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\Desktop\bedna.h" />
     <ClInclude Include="AbstractObserver.h" />
     <ClInclude Include="AbstractSubject.h" />
     <ClInclude Include="bedna.h" />
@@ -86,9 +85,6 @@
     <ClInclude Include="worker.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram3.cd" />
-    <None Include="ClassDiagram31.cd" />
-    <None Include="ClassDiagram32.cd" />
     <None Include="FragmentShader.glsl" />
     <None Include="VertexShader.glsl" />
   </ItemGroup>

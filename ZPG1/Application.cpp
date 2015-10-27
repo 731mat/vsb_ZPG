@@ -101,8 +101,7 @@ void Application::callbackKeys() {
 	glfwSetWindowSizeCallback(window, window_size_callback);//  */
 }
 
-void Application::mainloop() { // render už ti teda funguje, sorry, že jsem ti pár vìcí rozrýpal, ale musel jsem lokalizovat tu chybu.
-	// doporucuju si v tom udelat trochu vetsi poradek a pouzivat git, aby se ti prave tohle nestavalo :-D uz jdu spat, tak to kdyztak dame dokupy dneska pozdeji. dobrou noc :-)
+void Application::mainloop() {
 	rotationx = 0;
 	renderObject();
 
@@ -120,12 +119,8 @@ void Application::mainloop() { // render už ti teda funguje, sorry, že jsem ti p
 
 	GL_CHECK_ERRORS();
 
-	// šla ti ta bedna zobrazit pøedtím? ano ale jak jsem tam dal observer tak už nic 
-	// asi to nemáš verzované co? nìkde bych to mìl mít bez observeru
 	while (!glfwWindowShouldClose(window))
 	{
-		//glUseProgram(this->shader->getID()); tvoje grafárna si ze mì dìlá srandu..jak to ? z nìjakého dùvodu když se 2x zapíše do výstupní barvy ve fragment shaderu, tak to pøestane vykreslovat :-D a to je problém  ? :D
-		// no tak je to problém, když kvùli tomu strávím pùl hodiny hledáním chyby :-D
 		drawObj();
 		glfwPollEvents();
 		glfwSwapBuffers(window);
@@ -168,37 +163,6 @@ void Application::renderObject() {
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);
 	glBindVertexArray(0);
-
-	/*/ vertex buffer object(VBO)
-	VBO = 0;
-	Object::type = type;
-	Object::count = count;
-	glGenBuffers(1, &VBO); // generate the VBO
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, byteSize, points, GL_STATIC_DRAW);
-	//vertex attribute object(VAO)
-	VAO = 0;
-	glGenVertexArrays(1, &VAO);
-	glBindVertexArray(VAO);
-	glEnableVertexAttribArray(0);
-	glBindBuffer(GL_ARRAY_BUFFER, VAO);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
-	
-	//// vertex buffer object(VBO)
-	//VBO1 = 0;
-	//glGenBuffers(1, &VBO1); // generate the VBO
-	//glBindBuffer(GL_ARRAY_BUFFER, VBO1);
-	//glBufferData(GL_ARRAY_BUFFER, byteSize, points2, GL_STATIC_DRAW);
-	////vertex attribute object(VAO)
-	//VAO1 = 0;
-	//glGenVertexArrays(1, &VAO1);
-	//glBindVertexArray(VAO1);
-	//glEnableVertexAttribArray(0);
-	//glBindBuffer(GL_ARRAY_BUFFER, VBO1);
-	//glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
-	*/
-	
-
 }
 
 Shader* Application::getShader()
@@ -210,15 +174,9 @@ void Application::moved(int key) {
 	switch (key)
 	{
 	case GLFW_KEY_S:
-		
-		//camera->moveForward();
-		//camera->moveForward();
-
 		printf("u click");
 		break;
 	case GLFW_KEY_W:
-		
-		//camera->moveBack();
 		printf("u click");
 		break;
 	}

@@ -7,7 +7,6 @@
 #include <glm/gtc/type_ptr.hpp> // glm::value_ptr
 
 Shader::Shader(const char *vertexFile, const char *fragmentFile):camera(camera) {
-	//Shader::camera = camera;
 	programID = loadShader(vertexFile, fragmentFile);
 	glUseProgram(programID);
 
@@ -22,8 +21,6 @@ void Shader::setCamera(Camera& camera) {
 
 void Shader::setShader() {
 
-	//glProgramUniform3f(programID, myLoc, 2.f, 0.5f, 1.2f); // aktualizace dat
-	//glUseProgram(0);
     glUseProgram(programID);
 
 }
