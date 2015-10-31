@@ -6,7 +6,7 @@
 #include <glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
 #include <glm/gtc/type_ptr.hpp> // glm::value_ptr
 
-Shader::Shader(const char *vertexFile, const char *fragmentFile):camera(camera) {
+Shader::Shader(const char *vertexFile, const char *fragmentFile) {
 	programID = loadShader(vertexFile, fragmentFile);
 	glUseProgram(programID);
 
@@ -15,9 +15,6 @@ Shader::Shader(const char *vertexFile, const char *fragmentFile):camera(camera) 
 	GL_CHECK_ERRORS();
 }
 
-void Shader::setCamera(Camera& camera) {
-	camera.registerObserver(this);
-}
 
 void Shader::setShader() {
 
@@ -34,11 +31,11 @@ GLint Shader::getShader() {
 }
 
 void Shader::update(glm::vec3 vector) {
-
+	printf("Zmena probehla o: %f", vector);
 }
 
 void Shader::shaderRotate(float rotationx) {
-	glm::mat4 r = glm::rotate(glm::mat4(1.0f), glm::radians(rotationx), glm::vec3(0.0f, 0.0f, 1.0f));
+	glm::mat4 r = glm::rotate(glm::mat4(1.0f), glm::radians(rotationx), glm::vec3(0.0f, 1.0f, 1.0f));
 	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &r[0][0]);
 }
 

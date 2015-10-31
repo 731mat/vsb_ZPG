@@ -19,7 +19,6 @@ private:
 	GLuint programID;
 	GLuint matrixID;	//GLuint viewMatrixID;
 	GLuint myLoc;
-	Camera& camera;
 
 
 
@@ -27,7 +26,6 @@ public:
 	Shader(const char *vertexFile, const char *fragmentFile);
 	~Shader();
 	void setShader();
-	void setCamera(Camera& camera);
 
 	GLint getShader();
 	void shaderRotate(float rotationx);

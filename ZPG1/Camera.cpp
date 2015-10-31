@@ -4,7 +4,7 @@
 #include <glm/mat4x4.hpp> // glm::mat4
 #include <glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
 #include <glm/gtc/type_ptr.hpp> // glm::value_ptr
-
+#include <list>
 
 Camera::Camera() {
 	//position
@@ -32,21 +32,29 @@ glm::mat4 Camera::getProjection(){
 
 	 glUniformMatrix4fv(viewMatrixID, 1, GL_FALSE, &getCamera()[0][0]);
 	 glUniformMatrix4fv(projectMatrixID, 1, GL_FALSE, &getProjection()[0][0]);
-	 /*target = glm::vec3(0, 1, -1);
-	 UP -= 0.0030f * glm::normalize(glm::cross(target, eye));;
-	 center -= 0.0030f * glm::normalize(glm::cross( eye+target,center));;
-	 eye -= 0.0030f * glm::normalize(glm::cross(target, center));;
-	 notifyObserver();*/
+
+	// UP -= 0.0030f * glm::normalize(glm::cross(center, eye));;
+	 //center -= 0.0030f * glm::normalize(glm::cross( eye+center,center));;
+	 //eye -= 0.0030f * glm::normalize(glm::cross(UP, center));;
+	 notifyObserver();
  }
 
  void Camera::registerObserver(AbstractObserver* observer) {
+	 observers.push_back(observer);
 	 printf("Registrovano");
  }
  void Camera::removeObserver(AbstractObserver* observer){
+	 observers.remove(observer);
 	 printf("Odstraneno");
  }
  void Camera::notifyObserver() {
-	 printf("Uz o tom viem");
+	 std::list<AbstractObserver*>::iterator pos = this->observers.begin();
+	 while (pos != this->observers.end())
+	 {
+		 ((AbstractObserver*)(*pos))->update(glm::vec3(0.f, 1.f, 0.f));
+		 ++pos;
+	 }
+
  }
 
 
@@ -72,7 +80,7 @@ glm::mat4 Camera::getProjection(){
  }
 
  void Camera::moveUp() {
-	 center += 0.00030f * UP;
+	 center -= 0.00030f * UP;
  }
 
  void Camera::moveDown() {

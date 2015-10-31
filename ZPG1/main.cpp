@@ -1,3 +1,4 @@
+
 #include "Application.h"
 #include "opengl_helper.h"
 
@@ -6,9 +7,8 @@
 int main(void)
 {
 	Application* window = Application::getWindow();
-	//Camera *camera = new Camera;
+	
 	//Shader *shader = window->getShader(); 
-	//shader->setCamera(*camera);
 	//camera->setCamera(shader->getShader());
 
 	GL_CHECK_ERRORS();
