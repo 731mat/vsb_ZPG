@@ -10,6 +10,8 @@ Shader::Shader(const char *vertexFile, const char *fragmentFile) {
 	programID = loadShader(vertexFile, fragmentFile);
 	glUseProgram(programID);
 	matrixID = glGetUniformLocation(programID, "modelMatrix");
+	glm::mat4 r = glm::mat4();
+	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &r[0][0]);
 }
 
 

@@ -44,7 +44,7 @@ Application::Application(int width, int height, const char* title) {
 
 	GL_CHECK_ERRORS();
 	glGetError();
-	setVerGL(4.5, 4.5);
+	//setVerGL(4.5, 4.5);
 	compileShaders();
 	camera = new Camera;
 	light = new Light;
@@ -79,17 +79,31 @@ void Application::compileShaders() {
 void Application::drawObj() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	shader->setShader();
-	camera->setCamera(shader->getShader());
-	rotationx += 1.9f;
+	camera->setCamera(shader->getShader(),*light);
+	rotationx += 10.9f;
+	light->setPosY(rotationx);
 	shader->shaderRotate(rotationx);
 	//camera->moveDown();
-	for (int i = 0; i < drawables.size(); i++)
+	for (unsigned int i = 0; i < drawables.size(); i++)
 		drawables[i]->draw();
 
 	}
-void Application::KeysClicked() {
-	//int hodnota = controller->key_callback;
-	//printf("Dostal jsem klavesu: %d .", hodnota);
+void Application::KeysClicked(int key) {
+	switch (key)
+	{
+	case GLFW_KEY_W:
+		camera->moveUp();
+		break;
+	case GLFW_KEY_S:
+		camera->moveDown();
+		break;
+	case GLFW_KEY_A:
+		camera->moveLeft();
+		break;
+	case GLFW_KEY_D:
+		camera->moveRight();
+		break;
+	}
 }
 void Application::setVerGL(int major, int minor) {
 
@@ -113,4 +127,8 @@ void Application::getVerGL() {
 	glfwGetFramebufferSize(window, &width, &height);
 	float ratio = width / (float)height;
 	glViewport(0, 0, width, height);
+}
+
+Camera* Application::getCamera() {
+	return camera;
 }

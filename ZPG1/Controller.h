@@ -5,7 +5,7 @@
 #include "Camera.h"
 class Controller {
 private:
-	//static Application app;
+	
 public:
 	Controller();
 	~Controller();

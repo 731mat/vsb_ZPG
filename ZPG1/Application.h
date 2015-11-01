@@ -49,15 +49,15 @@ private:
 	Application(int width, int height, const char* title);
 
 public:
-	void KeysClicked();
+	void KeysClicked(int key);
 	static Application* getWindow();
 
 	~Application();
 
 	void mainloop();
 
-	Shader* getShader();
-
+	//Shader* getShader();
+	Camera* getCamera();
 	static int width, height;
 	static std::string title;
 };

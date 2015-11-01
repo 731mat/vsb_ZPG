@@ -6,12 +6,13 @@
 #include <glm/mat4x4.hpp> // glm::mat4
 #include <glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
 #include "AbstractSubject.h"
+#include "Light.h"
 #include "stdio.h"
 
 class Camera : public AbstractSubject {
 
 private:
-	
+	float curX, curY;
 	glm::vec3 eye;
 	glm::vec3 center;
 	glm::vec3 UP;
@@ -25,15 +26,16 @@ public:
 	~Camera();
 	glm::mat4 getCamera();
 	glm::mat4 getProjection();
-	glm::vec3 getLight();
-	void setCamera(GLint programID);
-
+	void setCamera(GLint programID, Light &light);
+	void lookAt(glm::vec3 center, glm::vec3 up);
 	void moveForward();
 	void moveBack();
 	void moveRight();
 	void moveLeft();
 	void moveDown();
 	void moveUp();
+
+	void cursorCallback(float x, float y);
 
 	void registerObserver(AbstractObserver* observer);
 	void removeObserver(AbstractObserver* observer);

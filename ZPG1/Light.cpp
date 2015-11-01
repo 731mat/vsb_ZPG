@@ -1,9 +1,9 @@
 #include "Light.h"
 
 Light::Light() {
-	x = 0.f;
-	y = 0.f;
-	z = 0.f;
+	x = -0.3f;
+	y = 11.1f;
+	z = -3.f;
 }
 
 float Light::getPosX() {

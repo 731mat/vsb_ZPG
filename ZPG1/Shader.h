@@ -18,7 +18,6 @@ class Shader : public ShaderLoader, AbstractObserver {
 private:
 	GLuint programID;
 	GLuint matrixID;	//GLuint viewMatrixID;
-	GLuint myLoc;
 
 
 
