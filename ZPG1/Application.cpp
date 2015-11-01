@@ -26,8 +26,9 @@ Application::Application(int width, int height, const char* title) {
 	}
 
 	glfwMakeContextCurrent(window);
+	glfwSwapInterval(1);
 	
-	//glfwSetErrorCallback(error_callback);
+	glfwSetErrorCallback(controller->error_callback);
 
 	// start GLEW extension handler
 	glewExperimental = GL_TRUE;
@@ -38,16 +39,17 @@ Application::Application(int width, int height, const char* title) {
 	float ratio = fwidth / (float)fheight;
 	glViewport(0, 0, fwidth, fheight);
 	glMatrixMode(GL_PROJECTION);
-	////glLoadIdentity();
-	////glOrtho(-ratio, ratio, -1.f, 1.f, 1.f, -1.f);
+	glLoadIdentity();
+	glOrtho(-ratio, ratio, -1.f, 1.f, 1.f, -1.f);
 
 	GL_CHECK_ERRORS();
 	glGetError();
 	setVerGL(4.5, 4.5);
-	controller->setController(window);
 	compileShaders();
 	camera = new Camera;
+	light = new Light;
 	camera->registerObserver((AbstractObserver*)shader);
+	controller->setController(window);
 }
 
 
@@ -63,6 +65,7 @@ void Application::mainloop() {
 
 	while (!glfwWindowShouldClose(window))
 	{
+
 		drawObj();
 		glfwPollEvents();
 		glfwSwapBuffers(window);
@@ -74,31 +77,20 @@ void Application::compileShaders() {
 }
 
 void Application::drawObj() {
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	shader->setShader();
 	camera->setCamera(shader->getShader());
 	rotationx += 1.9f;
 	shader->shaderRotate(rotationx);
-	camera->moveDown();
+	//camera->moveDown();
 	for (int i = 0; i < drawables.size(); i++)
 		drawables[i]->draw();
 
 	}
-
-
-
-void Application::moved(int key) {
-	switch (key)
-	{
-	case GLFW_KEY_S:
-		printf("u click");
-		break;
-	case GLFW_KEY_W:
-		printf("u click");
-		break;
-	}
+void Application::KeysClicked() {
+	//int hodnota = controller->key_callback;
+	//printf("Dostal jsem klavesu: %d .", hodnota);
 }
-
 void Application::setVerGL(int major, int minor) {
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);

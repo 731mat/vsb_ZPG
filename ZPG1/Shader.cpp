@@ -9,17 +9,12 @@
 Shader::Shader(const char *vertexFile, const char *fragmentFile) {
 	programID = loadShader(vertexFile, fragmentFile);
 	glUseProgram(programID);
-
 	matrixID = glGetUniformLocation(programID, "modelMatrix");
-	myLoc = glGetUniformLocation(programID, "lightPosition");
-	GL_CHECK_ERRORS();
 }
 
 
 void Shader::setShader() {
-
     glUseProgram(programID);
-
 }
 
 Shader::~Shader() {
@@ -35,7 +30,7 @@ void Shader::update(glm::vec3 vector) {
 }
 
 void Shader::shaderRotate(float rotationx) {
-	glm::mat4 r = glm::rotate(glm::mat4(1.0f), glm::radians(rotationx), glm::vec3(0.0f, 1.0f, 1.0f));
+	glm::mat4 r = glm::rotate(glm::mat4(1.0f), glm::radians(rotationx), glm::vec3(0.0f, 1.0f, 0.0f));
 	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &r[0][0]);
 }
 

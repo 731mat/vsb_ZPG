@@ -39,6 +39,9 @@
     <ClCompile Include="Drawable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ShaderLoader.h">
@@ -68,11 +71,23 @@
     <ClInclude Include="Drawable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="worker.h">
+    <ClInclude Include="modely\sphere.h">
       <Filter>models</Filter>
     </ClInclude>
-    <ClInclude Include="bedna.h">
+    <ClInclude Include="modely\suzi_flat.h">
       <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="modely\suzi_smooth.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="modely\worker.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="modely\bedna.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

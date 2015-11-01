@@ -1,4 +1,5 @@
 #include "Camera.h"
+
 #include <glm/vec3.hpp> // glm::vec3
 #include <glm/vec4.hpp> // glm::vec4
 #include <glm/mat4x4.hpp> // glm::mat4
@@ -19,6 +20,10 @@ glm::mat4 Camera::getProjection(){
 	// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
 	return glm::perspective(45.f, 4.0f / 3.0f, 0.1f, 100.0f);
 }
+glm::vec3 Camera::getLight(){
+	// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
+	return glm::normalize(glm::vec3(-0.3, 11.0, -3.f));
+}
 
  glm::mat4 Camera::getCamera(void){
 	 return glm::lookAt(eye, eye + center, UP);
@@ -28,14 +33,11 @@ glm::mat4 Camera::getProjection(){
 
  	 viewMatrixID = glGetUniformLocation(programID, "viewMatrix");
 	 projectMatrixID = glGetUniformLocation(programID, "projectionMatrix");
-	 myLoc = glGetUniformLocation(programID, "lightPosition");
+	 lightPositionID = glGetUniformLocation(programID, "lightPosition");
 
 	 glUniformMatrix4fv(viewMatrixID, 1, GL_FALSE, &getCamera()[0][0]);
 	 glUniformMatrix4fv(projectMatrixID, 1, GL_FALSE, &getProjection()[0][0]);
-
-	// UP -= 0.0030f * glm::normalize(glm::cross(center, eye));;
-	 //center -= 0.0030f * glm::normalize(glm::cross( eye+center,center));;
-	 //eye -= 0.0030f * glm::normalize(glm::cross(UP, center));;
+	// glProgramUniform3f(programID, lightPositionID, light->getPosX(), light->getPosY(), light->getPosZ());
 	 notifyObserver();
  }
 
@@ -62,7 +64,7 @@ glm::mat4 Camera::getProjection(){
 	 // 1,3,5//
 	 center = glm::vec3(0, 0, -1);
 	 eye += center * 0.030f;
-	 //position -= moveSpeed * glm::normalize(glm::cross(target, UP));
+
  }
 
  void Camera::moveBack() {
@@ -70,13 +72,13 @@ glm::mat4 Camera::getProjection(){
  }
 
  void Camera::moveRight() {
-	 target = glm::vec3(0, -100, 1);
-	 eye += 0.005f * glm::normalize(glm::cross(target, UP));
+	 center = glm::vec3(0, -100, 1);
+	 eye += 0.005f * glm::normalize(glm::cross(center, UP));
  }
 
  void Camera::moveLeft() {
-	 target = glm::vec3(0, 3, 5);
-	 eye -= 0.005f * glm::normalize(glm::cross(target, UP));
+	 center = glm::vec3(0, 3, 5);
+	 eye -= 0.005f * glm::normalize(glm::cross(center, UP));
  }
 
  void Camera::moveUp() {

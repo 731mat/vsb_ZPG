@@ -15,10 +15,9 @@ private:
 	glm::vec3 eye;
 	glm::vec3 center;
 	glm::vec3 UP;
-	glm::vec3 target;
 	GLint viewMatrixID;
 	GLint projectMatrixID;
-	GLint myLoc;
+	GLint lightPositionID;
 
 
 public:
@@ -26,6 +25,7 @@ public:
 	~Camera();
 	glm::mat4 getCamera();
 	glm::mat4 getProjection();
+	glm::vec3 getLight();
 	void setCamera(GLint programID);
 
 	void moveForward();

@@ -1,4 +1,5 @@
 #include "Controller.h"
+#include "Application.h"
 #include <cstdio>
 
 void Controller::setController(GLFWwindow* window) {
@@ -8,7 +9,25 @@ void Controller::setController(GLFWwindow* window) {
 	glfwSetMouseButtonCallback(window, button_callback);
 	glfwSetWindowFocusCallback(window, window_focus_callback);
 	glfwSetWindowIconifyCallback(window, window_iconify_callback);
-	glfwSetWindowSizeCallback(window, window_size_callback);//  
+	glfwSetWindowSizeCallback(window, window_size_callback);
+}
+
+
+void Controller::moved(int key) {
+	//printf("%d",key);,
+	//app.KeysClicked(key);
+	switch (key)
+	{
+	case GLFW_KEY_S:
+		printf("u click");
+		//cam.moveBack();
+		
+		break;
+	case GLFW_KEY_W:
+		printf("u click");
+		// cam.moveForward();
+		break;
+	}
 }
 
 
@@ -19,7 +38,7 @@ void Controller::key_callback(GLFWwindow* window, int key, int scancode, int act
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE)
 		glfwSetWindowShouldClose(window, GL_TRUE);
 	printf("key_callback [%d,%d,%d,%d] \n", key, scancode, action, mods);
-	//moved(key);
+	moved(key);
 }
 
 void Controller::window_focus_callback(GLFWwindow* window, int focused){ printf("window_focus_callback \n"); }
