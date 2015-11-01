@@ -69,6 +69,7 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="Drawable.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Shader.cpp" />
@@ -81,14 +82,14 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="Drawable.h" />
     <ClInclude Include="opengl_helper.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderLoader.h" />
     <ClInclude Include="worker.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram4.cd" />
-    <None Include="ClassDiagram41.cd" />
+    <None Include="ClassDiagram.cd" />
     <None Include="FragmentShader.glsl" />
     <None Include="VertexShader.glsl" />
   </ItemGroup>

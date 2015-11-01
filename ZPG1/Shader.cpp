@@ -31,7 +31,7 @@ GLint Shader::getShader() {
 }
 
 void Shader::update(glm::vec3 vector) {
-	printf("Zmena probehla o: %f", vector);
+//	printf("Zmena probehla o: %f", vector);
 }
 
 void Shader::shaderRotate(float rotationx) {

@@ -2,7 +2,7 @@
 #define application_h_
 
 #include <GL/glew.h>
-#include <GLFW/glfw3.h>  
+ 
 
 //Include GLM  
 #include <glm/vec3.hpp> // glm::vec3
@@ -20,6 +20,7 @@
 #include "Shader.h"
 #include "Camera.h"
 #include "Controller.h"
+#include "Drawable.h"
 #include "opengl_helper.h"
 
 class Application{
@@ -32,12 +33,11 @@ private:
 	Controller* controller;
 	GLuint VBO;
 	GLuint VAO;
-	//GLchar type;
+	std::vector<Drawable*> drawables;
 	int count;
 	float rotationx;
 
 	void createObj();
-
 	void setVerGL(int major, int minor);
 	void getVerGL();
 	void compileShaders();
@@ -51,7 +51,6 @@ public:
 
 	~Application();
 
-	void renderObject();
 	void mainloop();
 
 	Shader* getShader();

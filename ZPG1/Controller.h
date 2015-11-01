@@ -1,7 +1,6 @@
 #ifndef Controller_h_
 #define Controller_h_
 
-#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 class Controller {
