@@ -29,29 +29,22 @@ glm::mat4 Camera::getProjection(){
  }
 
  void Camera::setCamera(GLint programID, Light &light) {
-
- 	 viewMatrixID = glGetUniformLocation(programID, "viewMatrix");
-	 projectMatrixID = glGetUniformLocation(programID, "projectionMatrix");
-	 lightPositionID = glGetUniformLocation(programID, "lightPosition");
-	 glUniformMatrix4fv(viewMatrixID, 1, GL_FALSE, &getCamera()[0][0]);
-	 glUniformMatrix4fv(projectMatrixID, 1, GL_FALSE, &getProjection()[0][0]);
-	 glProgramUniform3f(programID, lightPositionID, light.getPosX(), light.getPosY(), light.getPosZ());
 	 notifyObserver();
  }
 
- void Camera::registerObserver(AbstractObserver* observer) {
-	 observers.push_back(observer);
+ void Camera::registerObserver(OnChangeCameraObserver* observer) {
+	 camsObservers.push_back(observer);
 	 printf("Registrovano");
  }
- void Camera::removeObserver(AbstractObserver* observer){
-	 observers.remove(observer);
+ void Camera::removeObserver(OnChangeCameraObserver* observer){
+	 camsObservers.remove(observer);
 	 printf("Odstraneno");
  }
  void Camera::notifyObserver() {
-	 std::list<AbstractObserver*>::iterator pos = this->observers.begin();
-	 while (pos != this->observers.end())
+	 std::list<OnChangeCameraObserver*>::iterator pos = this->camsObservers.begin();
+	 while (pos != this->camsObservers.end())
 	 {
-		 ((AbstractObserver*)(*pos))->update(glm::vec3(0.f, 1.f, 0.f));
+		 ((OnChangeCameraObserver*)(*pos))->updateCamera(this);
 		 ++pos;
 	 }
  }
@@ -62,7 +55,7 @@ glm::mat4 Camera::getProjection(){
 
  void Camera::moveForward() {
 	 // 1,3,5//
-	 center = glm::vec3(0, 0, -1);
+	// center = glm::vec3(0, 0, -1);
 	 eye += center * 0.030f;
  }
 
@@ -71,11 +64,11 @@ glm::mat4 Camera::getProjection(){
  }
 
  void Camera::moveRight() {
-	 eye -= 0.05f * glm::normalize(glm::cross(center, UP));
+	 eye += 0.05f * glm::normalize(glm::cross(center, UP));
  }
 
  void Camera::moveLeft() {
-	 eye += 0.05f * glm::normalize(glm::cross(center, UP));
+	 eye -= 0.05f * glm::normalize(glm::cross(center, UP));
  }
 
  void Camera::moveUp() {
@@ -97,9 +90,10 @@ glm::mat4 Camera::getProjection(){
 	 center = glm::rotateX(glm::normalize(this->center), dy);
 	 center = rotateY(center, dx);
 	 //UP = rotateX(glm::normalize(this->UP), dy);
-	 //UP = rotateY(UP, dx);
+	 UP = rotateY(UP, dx);
 	 lookAt(center, UP);
 	 printf("%f, %f\n", dx, dy);
 	 curX = x;
 	 curY = y;
+	 
  }

@@ -47,13 +47,19 @@ Application::Application(int width, int height, const char* title) {
 	//setVerGL(4.5, 4.5);
 	compileShaders();
 	camera = new Camera;
-	light = new Light;
-	camera->registerObserver((AbstractObserver*)shader);
+	light = new Light();
+	light->registerObserver((OnChangeLightObserver*)shader);
+	camera->registerObserver((OnChangeCameraObserver*)shader);
 	controller->setController(window);
 }
 
 
 Application::~Application() {
+	delete shader;
+	//delete light;
+	//delete camera;
+	for (unsigned int i = 0; i < drawables.size(); i++) 
+		drawables.pop_back();
 	glfwDestroyWindow(window);
 	glfwTerminate();
 }
@@ -61,7 +67,11 @@ Application::~Application() {
 
 void Application::mainloop() {
 	rotationx = 0;
-	drawables.push_back(new Drawable());
+	drawables.push_back(new Drawable(glm::vec3(-2, 1, 0)));
+	drawables.push_back(new Drawable(glm::vec3(1, 1, 0)));
+	drawables.push_back(new Drawable(glm::vec3(-2, -1, 0)));
+	drawables.push_back(new Drawable(glm::vec3(1, -1, 0)));
+
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -78,24 +88,21 @@ void Application::compileShaders() {
 
 void Application::drawObj() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	shader->setShader();
 	camera->setCamera(shader->getShader(),*light);
-	rotationx += 10.9f;
-	light->setPosY(rotationx);
+	rotationx += 0.1f;
+	//light->setPosY(rotationx);
 	shader->shaderRotate(rotationx);
-	//camera->moveDown();
 	for (unsigned int i = 0; i < drawables.size(); i++)
 		drawables[i]->draw();
-
 	}
 void Application::KeysClicked(int key) {
 	switch (key)
 	{
 	case GLFW_KEY_W:
-		camera->moveUp();
+		camera->moveForward();
 		break;
 	case GLFW_KEY_S:
-		camera->moveDown();
+		camera->moveBack();
 		break;
 	case GLFW_KEY_A:
 		camera->moveLeft();
@@ -103,6 +110,25 @@ void Application::KeysClicked(int key) {
 	case GLFW_KEY_D:
 		camera->moveRight();
 		break;
+	case GLFW_KEY_KP_2:
+		light->setPos("DOWN");
+		break;
+	case GLFW_KEY_KP_8:
+		light->setPos("UP");
+		break;
+	case GLFW_KEY_KP_4:
+		light->setPos("LEFT");
+		break;
+	case GLFW_KEY_KP_6:
+		light->setPos("RIGHT");
+		break;
+	case GLFW_KEY_KP_1:
+		light->setPos("FORWARD");
+		break;
+	case GLFW_KEY_KP_3:
+		light->setPos("BACK");
+		break;
+
 	}
 }
 void Application::setVerGL(int major, int minor) {
@@ -131,4 +157,8 @@ void Application::getVerGL() {
 
 Camera* Application::getCamera() {
 	return camera;
+}
+
+Shader* Application::getShader() {
+	return shader;
 }

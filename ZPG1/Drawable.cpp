@@ -1,19 +1,24 @@
 #include "Drawable.h"
-#include "models\suzi_smooth.h"
+#include "Application.h"
+//#include "models\\bedna.h"
+#include "models\sphere.h"
 
 
 int Drawable::drawables = 0;
-Drawable::Drawable() {
+Drawable::Drawable(glm::vec3 setVector) {
 	VAO = drawables;
 	VBO = drawables;
+	position = setVector;
+	drawables++;
 	renderObject();
+	
 }
 void Drawable::draw() {
-	
+	Application::getWindow()->getShader()->setModelMatrix(position);
 	glBindVertexArray(VAO);
 	// draw triangles
 	glDrawArrays(GL_TRIANGLES, 0, (GLsizei)pocetPrvku); //mode,first,count
-	glBindVertexArray(0);
+	glBindVertexArray(VAO);
 }
 
 void Drawable::renderObject() {

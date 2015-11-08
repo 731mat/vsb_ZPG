@@ -37,6 +37,7 @@ private:
 	GLuint VBO;
 	GLuint VAO;
 	std::vector<Drawable*> drawables;
+	
 	int count;
 	float rotationx;
 
@@ -58,6 +59,7 @@ public:
 
 	//Shader* getShader();
 	Camera* getCamera();
+	Shader* getShader();
 	static int width, height;
 	static std::string title;
 };
