@@ -21,6 +21,7 @@ private:
 	GLuint viewMatrixID;
 	GLuint projectMatrixID;
 	GLuint lightPositionID;
+	GLuint viewPositionID;
 
 
 public:

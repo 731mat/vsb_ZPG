@@ -12,7 +12,7 @@
 class Camera : public OnChangeCameraSubject {
 
 private:
-	float curX, curY;
+	float curX, curY,xPos,yPos,zPos;
 	glm::vec3 eye;
 	glm::vec3 center;
 	glm::vec3 UP;
@@ -32,6 +32,10 @@ public:
 	void moveLeft();
 	void moveDown();
 	void moveUp();
+
+	GLint getPosX();
+	GLint getPosY();
+	GLint getPosZ();
 
 	void cursorCallback(float x, float y);
 	void registerObserver(OnChangeCameraObserver* observer);

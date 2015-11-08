@@ -9,14 +9,27 @@
 #include <list>
 
 Camera::Camera() {
+	xPos = 0.f;
+	yPos = 0.f;
+	zPos = 7;
 	//position
-	eye = glm::vec3(0.f, 0.f, 7);
+	eye = glm::vec3(xPos, yPos, zPos);
 	//direction
 	center = glm::vec3(0, 0, -1.f);
 	//idk exactly
 	UP = glm::vec3(0.f, 1.f, 0.f);
 	curX = 0;
 	curY = 0;
+}
+
+GLint Camera::getPosX() {
+	return xPos;
+}
+GLint Camera::getPosY() {
+	return yPos;
+}
+GLint Camera::getPosZ() {
+	return zPos;
 }
 
 glm::mat4 Camera::getProjection(){

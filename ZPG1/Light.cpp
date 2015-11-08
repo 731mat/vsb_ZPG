@@ -20,9 +20,9 @@ Light::Light() {
 	//glLightfv(GL_LIGHT0, GL_LINEAR_ATTENUATION, 2.0);	//Setup The Diffuse Light
 	//glLightfv(GL_LIGHT0, GL_QUADRATIC_ATTENUATION, 2.0);	//Position The Light
 	//glEnable(GL_LIGHT0);
-	x = 0.f;
-	y = 0.f;
-	z = 0.f;
+	x = 10.f;
+	y = 10.f;
+	z = 10.f;
 }
 
 GLint Light::getPosX() {

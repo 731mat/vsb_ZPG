@@ -47,7 +47,7 @@ Application::Application(int width, int height, const char* title) {
 	//setVerGL(4.5, 4.5);
 	compileShaders();
 	camera = new Camera;
-	light = new Light();
+	light = new Light;
 	light->registerObserver((OnChangeLightObserver*)shader);
 	camera->registerObserver((OnChangeCameraObserver*)shader);
 	controller->setController(window);
