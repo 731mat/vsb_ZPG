@@ -1,18 +1,35 @@
 #include "Camera.h"
+
 #include <glm/vec3.hpp> // glm::vec3
 #include <glm/vec4.hpp> // glm::vec4
 #include <glm/mat4x4.hpp> // glm::mat4
 #include <glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
 #include <glm/gtc/type_ptr.hpp> // glm::value_ptr
+#include "glm/gtx/rotate_vector.hpp"
 #include <list>
 
 Camera::Camera() {
+	xPos = 0.f;
+	yPos = 0.f;
+	zPos = 7;
 	//position
-	eye = glm::vec3(0.f, 0.f, 5);
+	eye = glm::vec3(xPos, yPos, zPos);
 	//direction
 	center = glm::vec3(0, 0, -1.f);
-	//idk exactlz
+	//idk exactly
 	UP = glm::vec3(0.f, 1.f, 0.f);
+	curX = 0;
+	curY = 0;
+}
+
+GLint Camera::getPosX() {
+	return xPos;
+}
+GLint Camera::getPosY() {
+	return yPos;
+}
+GLint Camera::getPosZ() {
+	return zPos;
 }
 
 glm::mat4 Camera::getProjection(){
@@ -24,65 +41,82 @@ glm::mat4 Camera::getProjection(){
 	 return glm::lookAt(eye, eye + center, UP);
  }
 
- void Camera::setCamera(GLint programID) {
-
- 	 viewMatrixID = glGetUniformLocation(programID, "viewMatrix");
-	 projectMatrixID = glGetUniformLocation(programID, "projectionMatrix");
-	 myLoc = glGetUniformLocation(programID, "lightPosition");
-
-	 glUniformMatrix4fv(viewMatrixID, 1, GL_FALSE, &getCamera()[0][0]);
-	 glUniformMatrix4fv(projectMatrixID, 1, GL_FALSE, &getProjection()[0][0]);
-
-	// UP -= 0.0030f * glm::normalize(glm::cross(center, eye));;
-	 //center -= 0.0030f * glm::normalize(glm::cross( eye+center,center));;
-	 //eye -= 0.0030f * glm::normalize(glm::cross(UP, center));;
+ void Camera::setCamera(GLint programID, Light &light) {
 	 notifyObserver();
  }
 
- void Camera::registerObserver(AbstractObserver* observer) {
-	 observers.push_back(observer);
+ void Camera::registerObserver(OnChangeCameraObserver* observer) {
+	 camsObservers.push_back(observer);
 	 printf("Registrovano");
  }
- void Camera::removeObserver(AbstractObserver* observer){
-	 observers.remove(observer);
+ void Camera::removeObserver(OnChangeCameraObserver* observer){
+	 camsObservers.remove(observer);
 	 printf("Odstraneno");
  }
  void Camera::notifyObserver() {
-	 std::list<AbstractObserver*>::iterator pos = this->observers.begin();
-	 while (pos != this->observers.end())
+	 std::list<OnChangeCameraObserver*>::iterator pos = this->camsObservers.begin();
+	 while (pos != this->camsObservers.end())
 	 {
-		 ((AbstractObserver*)(*pos))->update(glm::vec3(0.f, 1.f, 0.f));
+		 ((OnChangeCameraObserver*)(*pos))->updateCamera(this);
 		 ++pos;
 	 }
-
+ }
+ void Camera::lookAt(glm::vec3 center, glm::vec3 UP){
+	 this->center = center;
+	 this->UP = UP;
  }
 
-
  void Camera::moveForward() {
-	 // 1,3,5//
-	 center = glm::vec3(0, 0, -1);
+
 	 eye += center * 0.030f;
-	 //position -= moveSpeed * glm::normalize(glm::cross(target, UP));
+	 notifyObserver();
  }
 
  void Camera::moveBack() {
+
 	 eye -= center * 0.005f;
+	 notifyObserver();
  }
 
  void Camera::moveRight() {
-	 target = glm::vec3(0, -100, 1);
-	 eye += 0.005f * glm::normalize(glm::cross(target, UP));
+
+	 eye += 0.05f * glm::normalize(glm::cross(center, UP));
+	 notifyObserver();
  }
 
  void Camera::moveLeft() {
-	 target = glm::vec3(0, 3, 5);
-	 eye -= 0.005f * glm::normalize(glm::cross(target, UP));
+
+	 eye -= 0.05f * glm::normalize(glm::cross(center, UP));
+	 notifyObserver();
  }
 
  void Camera::moveUp() {
-	 center -= 0.00030f * UP;
+
+	 center -= 0.030f * UP;
+	 notifyObserver();
  }
 
  void Camera::moveDown() {
-	 center += 0.00030f * UP;
+
+	 center += 0.030f * UP;
+	 notifyObserver();
+ }
+
+ void Camera::cursorCallback(float x, float y) {
+	 if (curX == 0)
+		 curX = x;
+	 if (curY == 0)
+		 curY = y;
+	 float dx = (x - curX) / 100.0;
+	 float dy = (y - curY) / 100.0;
+
+	 center = glm::rotateX(glm::normalize(this->center), dy);
+	 center = rotateY(center, dx);
+	 //UP = rotateX(glm::normalize(this->UP), dy);
+	 UP = rotateY(UP, dx);
+	 lookAt(center, UP);
+	// printf("%f, %f\n", dx, dy);
+	 curX = x;
+	 curY = y;
+	 notifyObserver();
  }

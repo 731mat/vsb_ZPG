@@ -5,20 +5,18 @@
 #include <glm/vec4.hpp> // glm::vec4
 #include <glm/mat4x4.hpp> // glm::mat4
 #include <glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
-#include "AbstractSubject.h"
+#include "OnChangeCameraSubject.h"
+#include "Light.h"
 #include "stdio.h"
 
-class Camera : public AbstractSubject {
+class Camera : public OnChangeCameraSubject {
 
 private:
-	
+	float curX, curY,xPos,yPos,zPos;
 	glm::vec3 eye;
 	glm::vec3 center;
 	glm::vec3 UP;
-	glm::vec3 target;
-	GLint viewMatrixID;
-	GLint projectMatrixID;
-	GLint myLoc;
+
 
 
 public:
@@ -26,8 +24,8 @@ public:
 	~Camera();
 	glm::mat4 getCamera();
 	glm::mat4 getProjection();
-	void setCamera(GLint programID);
-
+	void setCamera(GLint programID, Light &light);
+	void lookAt(glm::vec3 center, glm::vec3 up);
 	void moveForward();
 	void moveBack();
 	void moveRight();
@@ -35,8 +33,13 @@ public:
 	void moveDown();
 	void moveUp();
 
-	void registerObserver(AbstractObserver* observer);
-	void removeObserver(AbstractObserver* observer);
+	GLint getPosX();
+	GLint getPosY();
+	GLint getPosZ();
+
+	void cursorCallback(float x, float y);
+	void registerObserver(OnChangeCameraObserver* observer);
+	void removeObserver(OnChangeCameraObserver* observer);
 
 protected:
 	void notifyObserver();

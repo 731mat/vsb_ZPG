@@ -9,17 +9,18 @@
 Shader::Shader(const char *vertexFile, const char *fragmentFile) {
 	programID = loadShader(vertexFile, fragmentFile);
 	glUseProgram(programID);
-
 	matrixID = glGetUniformLocation(programID, "modelMatrix");
-	myLoc = glGetUniformLocation(programID, "lightPosition");
-	GL_CHECK_ERRORS();
+	viewMatrixID = glGetUniformLocation(programID, "viewMatrix");
+	projectMatrixID = glGetUniformLocation(programID, "projectionMatrix");
+	lightPositionID = glGetUniformLocation(programID, "lightPosition");
+	viewPositionID = glGetUniformLocation(programID, "viewPosition");
+	glm::mat4 r = glm::mat4();
+	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &r[0][0]);
 }
 
 
 void Shader::setShader() {
-
     glUseProgram(programID);
-
 }
 
 Shader::~Shader() {
@@ -30,12 +31,24 @@ GLint Shader::getShader() {
 	return programID;
 }
 
-void Shader::update(glm::vec3 vector) {
-//	printf("Zmena probehla o: %f", vector);
+void Shader::updateCamera(Camera* camera) {
+	glUniformMatrix4fv(viewMatrixID, 1, GL_FALSE, &camera->getCamera()[0][0]);
+	glUniformMatrix4fv(projectMatrixID, 1, GL_FALSE, &camera->getProjection()[0][0]);
+	glUniform3f(viewPositionID,camera->getPosX(),camera->getPosY(), camera->getPosZ() );
+	//glm::vec3 vec = neco.getVector();
+	//glUniform3f(lokace, vec.x, vec.y, vec.z);
 }
 
+void Shader::updateLight(Light* light) {
+	glUniform3f(lightPositionID, light->getPosX(), light->getPosY(), light->getPosZ());
+	
+}
+void Shader::setModelMatrix(glm::vec3 setVector) {
+	glm::mat4 r = glm::translate(glm::mat4(1.0f), setVector);
+	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &r[0][0]);
+}
 void Shader::shaderRotate(float rotationx) {
-	glm::mat4 r = glm::rotate(glm::mat4(1.0f), glm::radians(rotationx), glm::vec3(0.0f, 1.0f, 1.0f));
+	glm::mat4 r = glm::rotate(glm::mat4(1.0f), glm::radians(rotationx), glm::vec3(0.0f, 1.0f, 0.0f));
 	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &r[0][0]);
 }
 

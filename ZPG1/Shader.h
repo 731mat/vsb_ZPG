@@ -13,13 +13,15 @@
 #include "opengl_helper.h"	// tohle je helper soubor na kontrolu chyb, doporuèuju používat makro GL_CHECK_ERRORS po každém glXXX volání :-)
 
 
-class Shader : public ShaderLoader, AbstractObserver {
+class Shader : public ShaderLoader, OnChangeCameraObserver, OnChangeLightObserver {
 
 private:
 	GLuint programID;
 	GLuint matrixID;	//GLuint viewMatrixID;
-	GLuint myLoc;
-
+	GLuint viewMatrixID;
+	GLuint projectMatrixID;
+	GLuint lightPositionID;
+	GLuint viewPositionID;
 
 
 public:
@@ -29,8 +31,9 @@ public:
 
 	GLint getShader();
 	void shaderRotate(float rotationx);
-	void update(glm::vec3 vector);
-
+	void setModelMatrix(glm::vec3 setVector);
+	void updateCamera(Camera* camera);
+	void updateLight(Light* light);
 	GLuint getID() { return this->programID;  }
 };
 #endif Shader _h_

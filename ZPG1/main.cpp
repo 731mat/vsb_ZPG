@@ -16,7 +16,7 @@ int main(void)
 	//camera->removeObserver(shader);
 	window->mainloop();
 	
-	delete window;
+	//delete window;
 
 	exit(EXIT_SUCCESS);
 }

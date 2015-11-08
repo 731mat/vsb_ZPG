@@ -26,8 +26,9 @@ Application::Application(int width, int height, const char* title) {
 	}
 
 	glfwMakeContextCurrent(window);
+	glfwSwapInterval(1);
 	
-	//glfwSetErrorCallback(error_callback);
+	glfwSetErrorCallback(controller->error_callback);
 
 	// start GLEW extension handler
 	glewExperimental = GL_TRUE;
@@ -38,20 +39,27 @@ Application::Application(int width, int height, const char* title) {
 	float ratio = fwidth / (float)fheight;
 	glViewport(0, 0, fwidth, fheight);
 	glMatrixMode(GL_PROJECTION);
-	////glLoadIdentity();
-	////glOrtho(-ratio, ratio, -1.f, 1.f, 1.f, -1.f);
+	glLoadIdentity();
+	glOrtho(-ratio, ratio, -1.f, 1.f, 1.f, -1.f);
 
 	GL_CHECK_ERRORS();
 	glGetError();
-	setVerGL(4.5, 4.5);
-	controller->setController(window);
+	//setVerGL(4.5, 4.5);
 	compileShaders();
 	camera = new Camera;
-	camera->registerObserver((AbstractObserver*)shader);
+	light = new Light;
+	light->registerObserver((OnChangeLightObserver*)shader);
+	camera->registerObserver((OnChangeCameraObserver*)shader);
+	controller->setController(window);
 }
 
 
 Application::~Application() {
+	delete shader;
+	//delete light;
+	//delete camera;
+	for (unsigned int i = 0; i < drawables.size(); i++) 
+		drawables.pop_back();
 	glfwDestroyWindow(window);
 	glfwTerminate();
 }
@@ -59,7 +67,12 @@ Application::~Application() {
 
 void Application::mainloop() {
 	rotationx = 0;
-	drawables.push_back(new Drawable());
+	drawables.push_back(new Drawable(glm::vec3(0, 2, 0)));
+	drawables.push_back(new Drawable(glm::vec3(0, -2, 0)));
+	drawables.push_back(new Drawable(glm::vec3(-2, 0, 0)));
+	drawables.push_back(new Drawable(glm::vec3(2, 0, 0)));
+	camera->setCamera(shader->getShader(),*light);
+	light->notifyObserver();
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -74,31 +87,48 @@ void Application::compileShaders() {
 }
 
 void Application::drawObj() {
-	glClear(GL_COLOR_BUFFER_BIT);
-	shader->setShader();
-	camera->setCamera(shader->getShader());
-	rotationx += 1.9f;
-	shader->shaderRotate(rotationx);
-	camera->moveDown();
-	for (int i = 0; i < drawables.size(); i++)
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	rotationx += 0.1f;
+	//shader->shaderRotate(rotationx);
+	for (unsigned int i = 0; i < drawables.size(); i++)
 		drawables[i]->draw();
-
 	}
-
-
-
-void Application::moved(int key) {
+void Application::KeysClicked(int key) {
 	switch (key)
 	{
-	case GLFW_KEY_S:
-		printf("u click");
-		break;
 	case GLFW_KEY_W:
-		printf("u click");
+		camera->moveForward();
 		break;
+	case GLFW_KEY_S:
+		camera->moveBack();
+		break;
+	case GLFW_KEY_A:
+		camera->moveLeft();
+		break;
+	case GLFW_KEY_D:
+		camera->moveRight();
+		break;
+	case GLFW_KEY_KP_2:
+		light->setPos("DOWN");
+		break;
+	case GLFW_KEY_KP_8:
+		light->setPos("UP");
+		break;
+	case GLFW_KEY_KP_4:
+		light->setPos("LEFT");
+		break;
+	case GLFW_KEY_KP_6:
+		light->setPos("RIGHT");
+		break;
+	case GLFW_KEY_KP_1:
+		light->setPos("FORWARD");
+		break;
+	case GLFW_KEY_KP_3:
+		light->setPos("BACK");
+		break;
+
 	}
 }
-
 void Application::setVerGL(int major, int minor) {
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
@@ -121,4 +151,12 @@ void Application::getVerGL() {
 	glfwGetFramebufferSize(window, &width, &height);
 	float ratio = width / (float)height;
 	glViewport(0, 0, width, height);
+}
+
+Camera* Application::getCamera() {
+	return camera;
+}
+
+Shader* Application::getShader() {
+	return shader;
 }

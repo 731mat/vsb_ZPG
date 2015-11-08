@@ -1,16 +1,30 @@
-#version 400
+#version 330
 
 in vec4 ex_worldPosition;
 in vec3 ex_worldNormal;
 
+uniform vec3 lightPosition;
+uniform vec3 viewPosition;
+
 out vec4 out_Color;
-//uniform vec3 lightPosition;
+
 void main () {
 
-vec3 lightVector= normalize(vec3(-1.3, 1.0, 1));
-float dot_product = max(dot(lightVector, normalize(ex_worldNormal)), 0.0);
-vec4 diffuse = dot_product * vec4( 0.385, 0.647, 0.812, 1.0);
+float dot_product = max(dot(normalize(lightPosition - ex_worldPosition.xyz), normalize(ex_worldNormal)), 0.0);
+
+vec4 diffuse = dot_product * vec4( 0.385, 1.647, 0.812, 1.0);
+//vec4 ambient = vec4( 1.1, 0.1, 0.9, 1.0);
 vec4 ambient = vec4( 0.1, 0.1, 0.1, 1.0);
-//out_Color = vec4(1.0f, 1.0f, 1.0f, 1.0f);
-out_Color = ambient + diffuse;
+
+
+vec4 V = normalize(vec4(viewPosition,1.0f) - ex_worldPosition);
+vec4 R = vec4(reflect(ex_worldPosition.xyz - lightPosition, ex_worldNormal),0);
+float specularTerm = pow(max(dot(R, V),0.0), 10);
+
+vec3 p = vec3(1,1,1) * specularTerm;
+vec4 specular =    vec4(p,1.0);
+
+
+
+out_Color = ambient + diffuse + specular;//out_Color = vec4(lightPosition,1.0f);
 }

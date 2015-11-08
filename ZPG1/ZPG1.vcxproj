@@ -70,26 +70,32 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Drawable.cpp" />
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbstractObserver.h" />
-    <ClInclude Include="AbstractSubject.h" />
-    <ClInclude Include="bedna.h" />
+    <ClInclude Include="OnChangeCameraObserver.h" />
+    <ClInclude Include="OnChangeCameraSubject.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Drawable.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="models\bedna.h" />
+    <ClInclude Include="models\sphere.h" />
+    <ClInclude Include="models\suzi_flat.h" />
+    <ClInclude Include="models\suzi_smooth.h" />
+    <ClInclude Include="models\worker.h" />
+    <ClInclude Include="OnChangeLightObserver.h" />
+    <ClInclude Include="OnChangeLightSubject.h" />
     <ClInclude Include="opengl_helper.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderLoader.h" />
-    <ClInclude Include="worker.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
     <None Include="FragmentShader.glsl" />
     <None Include="VertexShader.glsl" />
   </ItemGroup>
