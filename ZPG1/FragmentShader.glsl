@@ -18,13 +18,11 @@ vec4 ambient = vec4( 0.1, 0.1, 0.1, 1.0);
 
 
 vec4 V = normalize(vec4(viewPosition,1.0f) - ex_worldPosition);
-vec4 R = vec4(reflect(ex_worldPosition.xyz - lightPosition, ex_worldNormal),0);
-float specularTerm = pow(max(dot(R, V),0.0), 10);
+vec4 R = normalize(vec4(reflect(normalize(ex_worldPosition.xyz - lightPosition), normalize(ex_worldNormal)),1.f));
+float specularTerm = pow(max(dot(R, V),0.0), 128);
 
 vec3 p = vec3(1,1,1) * specularTerm;
 vec4 specular =    vec4(p,1.0);
-
-
 
 out_Color = ambient + diffuse + specular;//out_Color = vec4(lightPosition,1.0f);
 }

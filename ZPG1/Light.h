@@ -7,17 +7,18 @@
 #include "OnChangeLightSubject.h"
 class Light : public OnChangeLightSubject {
 private:
-	GLint x, y, z;
+	float x, y, z;
 public:
 	Light();
 	~Light();
-	GLint getPosX();
-	GLint getPosY();
-	GLint getPosZ();
+	float getPosX();
+	float getPosY();
+	float getPosZ();
+	void move(glm::vec3 moveVec);
 	void setPosX(float x);
 	void setPosY(float y);
 	void setPosZ(float z);
-	void setPos(std::string position);
+
 	void registerObserver(OnChangeLightObserver* observer);
 	void removeObserver(OnChangeLightObserver* observer);
 	void notifyObserver();

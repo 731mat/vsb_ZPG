@@ -22,14 +22,8 @@ Camera::Camera() {
 	curY = 0;
 }
 
-GLint Camera::getPosX() {
-	return xPos;
-}
-GLint Camera::getPosY() {
-	return yPos;
-}
-GLint Camera::getPosZ() {
-	return zPos;
+glm::vec3 Camera::getEye() {
+	return eye;
 }
 
 glm::mat4 Camera::getProjection(){

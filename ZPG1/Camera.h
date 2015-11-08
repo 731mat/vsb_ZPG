@@ -33,9 +33,7 @@ public:
 	void moveDown();
 	void moveUp();
 
-	GLint getPosX();
-	GLint getPosY();
-	GLint getPosZ();
+	glm::vec3 getEye();
 
 	void cursorCallback(float x, float y);
 	void registerObserver(OnChangeCameraObserver* observer);

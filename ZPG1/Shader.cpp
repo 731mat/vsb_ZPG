@@ -32,11 +32,11 @@ GLint Shader::getShader() {
 }
 
 void Shader::updateCamera(Camera* camera) {
+	glm::vec3 cam = camera->getEye();
 	glUniformMatrix4fv(viewMatrixID, 1, GL_FALSE, &camera->getCamera()[0][0]);
 	glUniformMatrix4fv(projectMatrixID, 1, GL_FALSE, &camera->getProjection()[0][0]);
-	glUniform3f(viewPositionID,camera->getPosX(),camera->getPosY(), camera->getPosZ() );
-	//glm::vec3 vec = neco.getVector();
-	//glUniform3f(lokace, vec.x, vec.y, vec.z);
+	glUniform3f(viewPositionID,cam.x, cam.y, cam.z);
+
 }
 
 void Shader::updateLight(Light* light) {

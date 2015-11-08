@@ -14,6 +14,9 @@ Drawable::Drawable(glm::vec3 setVector) {
 	renderObject();
 	
 }
+Drawable::~Drawable() {
+	delete this;
+}
 void Drawable::draw() {
 	Application::getWindow()->getShader()->setModelMatrix(position);
 	glBindVertexArray(VAO);

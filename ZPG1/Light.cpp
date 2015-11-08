@@ -20,18 +20,18 @@ Light::Light() {
 	//glLightfv(GL_LIGHT0, GL_LINEAR_ATTENUATION, 2.0);	//Setup The Diffuse Light
 	//glLightfv(GL_LIGHT0, GL_QUADRATIC_ATTENUATION, 2.0);	//Position The Light
 	//glEnable(GL_LIGHT0);
-	x = 10.f;
-	y = 10.f;
-	z = 10.f;
+	x = 0.f;
+	y = 0.f;
+	z = 0.f;
 }
 
-GLint Light::getPosX() {
+float Light::getPosX() {
 	return x;
 }
-GLint Light::getPosY() {
+float Light::getPosY() {
 	return y;
 }
-GLint Light::getPosZ() {
+float Light::getPosZ() {
 	return z;
 }
 void Light::setPosX(float x) {
@@ -44,27 +44,10 @@ void Light::setPosZ(float z) {
 	Light::z = z;
 }
 
-void Light::setPos(std::string position)
-{
-	if (position == "UP") {
-		y += 0.05;
-	}
-	else if (position == "DOWN") {
-		y -= 0.05;
-	}
-	else if (position == "LEFT"){
-		x -= 0.05;
-	}
-	else if (position == "RIGHT"){
-		x += 0.05;
-	}
-	else if (position == "FORWARD"){
-		z += 0.05;
-	}
-	else if (position == "BACK"){
-		z -= 0.05;
-	}
-
+void Light::move(glm::vec3 moveVec) {
+	this->x += moveVec.x;
+	this->y += moveVec.y;
+	this->z += moveVec.z;
 	notifyObserver();
 }
 

@@ -59,7 +59,7 @@ Application::~Application() {
 	//delete light;
 	//delete camera;
 	for (unsigned int i = 0; i < drawables.size(); i++) 
-		drawables.pop_back();
+		delete drawables[i];
 	glfwDestroyWindow(window);
 	glfwTerminate();
 }
@@ -109,22 +109,22 @@ void Application::KeysClicked(int key) {
 		camera->moveRight();
 		break;
 	case GLFW_KEY_KP_2:
-		light->setPos("DOWN");
+		light->move(glm::vec3(0.0f, -0.5f, 0.0f));
 		break;
 	case GLFW_KEY_KP_8:
-		light->setPos("UP");
+		light->move(glm::vec3(0.0f, 0.5f, 0.0f));
 		break;
 	case GLFW_KEY_KP_4:
-		light->setPos("LEFT");
+		light->move(glm::vec3(-0.5f, 0.0f, 0.0f));
 		break;
 	case GLFW_KEY_KP_6:
-		light->setPos("RIGHT");
+		light->move(glm::vec3(0.5f, 0.0f, 0.0f));
 		break;
 	case GLFW_KEY_KP_1:
-		light->setPos("FORWARD");
+		light->move(glm::vec3(0.0f, 0.0f, 0.5f));
 		break;
 	case GLFW_KEY_KP_3:
-		light->setPos("BACK");
+		light->move(glm::vec3(0.0f, 0.0f, -0.5f));
 		break;
 
 	}
