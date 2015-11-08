@@ -10,10 +10,10 @@
 
 Camera::Camera() {
 	//position
-	eye = glm::vec3(0.f, 0.f, 5);
+	eye = glm::vec3(0.f, 0.f, 7);
 	//direction
 	center = glm::vec3(0, 0, -1.f);
-	//idk exactlz
+	//idk exactly
 	UP = glm::vec3(0.f, 1.f, 0.f);
 	curX = 0;
 	curY = 0;
@@ -54,29 +54,39 @@ glm::mat4 Camera::getProjection(){
  }
 
  void Camera::moveForward() {
-	 // 1,3,5//
-	// center = glm::vec3(0, 0, -1);
+
 	 eye += center * 0.030f;
+	 notifyObserver();
  }
 
  void Camera::moveBack() {
+
 	 eye -= center * 0.005f;
+	 notifyObserver();
  }
 
  void Camera::moveRight() {
+
 	 eye += 0.05f * glm::normalize(glm::cross(center, UP));
+	 notifyObserver();
  }
 
  void Camera::moveLeft() {
+
 	 eye -= 0.05f * glm::normalize(glm::cross(center, UP));
+	 notifyObserver();
  }
 
  void Camera::moveUp() {
+
 	 center -= 0.030f * UP;
+	 notifyObserver();
  }
 
  void Camera::moveDown() {
+
 	 center += 0.030f * UP;
+	 notifyObserver();
  }
 
  void Camera::cursorCallback(float x, float y) {
@@ -92,8 +102,8 @@ glm::mat4 Camera::getProjection(){
 	 //UP = rotateX(glm::normalize(this->UP), dy);
 	 UP = rotateY(UP, dx);
 	 lookAt(center, UP);
-	 printf("%f, %f\n", dx, dy);
+	// printf("%f, %f\n", dx, dy);
 	 curX = x;
 	 curY = y;
-	 
+	 notifyObserver();
  }

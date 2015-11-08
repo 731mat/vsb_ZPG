@@ -103,6 +103,5 @@
     <None Include="FragmentShader.glsl">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

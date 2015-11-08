@@ -34,7 +34,6 @@ public:
 	void moveUp();
 
 	void cursorCallback(float x, float y);
-
 	void registerObserver(OnChangeCameraObserver* observer);
 	void removeObserver(OnChangeCameraObserver* observer);
 

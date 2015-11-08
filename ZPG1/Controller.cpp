@@ -3,7 +3,7 @@
 #include <cstdio>
 
 void Controller::setController(GLFWwindow* window) {
-	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+//	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 	glfwSetKeyCallback(window, key_callback);
 	glfwSetCursorPosCallback(window, cursor_callback);
 	glfwSetMouseButtonCallback(window, button_callback);
@@ -11,15 +11,6 @@ void Controller::setController(GLFWwindow* window) {
 	glfwSetWindowIconifyCallback(window, window_iconify_callback);
 	glfwSetWindowSizeCallback(window, window_size_callback);
 }
-
-
-void Controller::moved(int key) {
-	//printf("%d",key);,
-	//app.KeysClicked(key);
-		
-
-}
-
 
 void Controller::error_callback(int error, const char* description){ fputs(description, stderr); }
 

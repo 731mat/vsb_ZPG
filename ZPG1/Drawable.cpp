@@ -1,6 +1,7 @@
 #include "Drawable.h"
 #include "Application.h"
 //#include "models\\bedna.h"
+//#include "models\suzi_smooth.h"
 #include "models\sphere.h"
 
 

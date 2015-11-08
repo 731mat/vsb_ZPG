@@ -67,15 +67,15 @@ Application::~Application() {
 
 void Application::mainloop() {
 	rotationx = 0;
-	drawables.push_back(new Drawable(glm::vec3(-2, 1, 0)));
-	drawables.push_back(new Drawable(glm::vec3(1, 1, 0)));
-	drawables.push_back(new Drawable(glm::vec3(-2, -1, 0)));
-	drawables.push_back(new Drawable(glm::vec3(1, -1, 0)));
-
+	drawables.push_back(new Drawable(glm::vec3(0, 2, 0)));
+	drawables.push_back(new Drawable(glm::vec3(0, -2, 0)));
+	drawables.push_back(new Drawable(glm::vec3(-2, 0, 0)));
+	drawables.push_back(new Drawable(glm::vec3(2, 0, 0)));
+	camera->setCamera(shader->getShader(),*light);
+	light->notifyObserver();
 
 	while (!glfwWindowShouldClose(window))
 	{
-
 		drawObj();
 		glfwPollEvents();
 		glfwSwapBuffers(window);
@@ -88,10 +88,8 @@ void Application::compileShaders() {
 
 void Application::drawObj() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	camera->setCamera(shader->getShader(),*light);
 	rotationx += 0.1f;
-	//light->setPosY(rotationx);
-	shader->shaderRotate(rotationx);
+	//shader->shaderRotate(rotationx);
 	for (unsigned int i = 0; i < drawables.size(); i++)
 		drawables[i]->draw();
 	}

@@ -9,7 +9,6 @@ private:
 public:
 	Controller();
 	~Controller();
-	static void moved(int key);
 	void setController(GLFWwindow* window);
 	static void error_callback(int error, const char* description);
 	static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
