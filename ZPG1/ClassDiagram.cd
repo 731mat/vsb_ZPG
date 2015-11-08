@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Application">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAgAAQpAAAAUgRACAAAAAAAIKAAAIAAAIAOEWQAA=</HashCode>
+      <FileName>Application.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="camera" />
+      <Field Name="controller" />
+      <Field Name="drawables" />
+      <Field Name="objectInstance" />
+      <Field Name="shader" />
+      <Field Name="light" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Camera">
+    <Position X="12.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABgGAgABCAEAIAIgQAAwAQAAAAIAAIAQAAAACUAAACA=</HashCode>
+      <FileName>Camera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Controller">
+    <Position X="10.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAxAAAAAAAAAAAAAABAABABAAAgAAAAABA=</HashCode>
+      <FileName>Controller.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Drawable" Collapsed="true">
+    <Position X="13.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAIAJAAAAAAAAAAAgAAAAIAECAA=</HashCode>
+      <FileName>Drawable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Light">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAIACAAAAAAgAAAAAAAAAAAABoCYAGAAA=</HashCode>
+      <FileName>Light.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OnChangeCameraObserver" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OnChangeCameraObserver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OnChangeCameraSubject" Collapsed="true">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAACAAAIAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>OnChangeCameraSubject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OnChangeLightObserver" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>OnChangeLightObserver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OnChangeLightSubject" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAIAAAAACAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>OnChangeLightSubject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenGLHelper" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABBAgA=</HashCode>
+      <FileName>opengl_helper.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shader">
+    <Position X="1.25" Y="5" Width="1.5" />
+    <InheritanceLine Type="ShaderLoader">
+      <InheritanceModifierLabel ManuallyPlaced="true">
+        <Position X="0.266" Y="0.456" />
+      </InheritanceModifierLabel>
+    </InheritanceLine>
+    <InheritanceLine Type="OnChangeLightObserver" ManuallyRouted="true">
+      <Path>
+        <Point X="3" Y="1.062" />
+        <Point X="3" Y="2.238" />
+        <Point X="2" Y="2.238" />
+        <Point X="2" Y="5" />
+      </Path>
+      <InheritanceModifierLabel ManuallyPlaced="true">
+        <Position X="-0.536" Y="1.31" />
+      </InheritanceModifierLabel>
+    </InheritanceLine>
+    <InheritanceLine Type="OnChangeCameraObserver" ManuallyRouted="true">
+      <Path>
+        <Point X="4.75" Y="1.062" />
+        <Point X="4.75" Y="2.75" />
+        <Point X="3.448" Y="2.75" />
+        <Point X="3.448" Y="4.258" />
+        <Point X="2" Y="4.258" />
+        <Point X="2" Y="5" />
+      </Path>
+      <InheritanceModifierLabel ManuallyPlaced="true">
+        <Position X="-1.15" Y="0.872" />
+      </InheritanceModifierLabel>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>QgAgAAAAAAAgAACAAAAAAACAQAgAIAAABQAAAAUAQIA=</HashCode>
+      <FileName>Shader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShaderLoader" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAACAAAAAAAAAAAAAAAAAAAgAAAEAAAAIAAAQAAA=</HashCode>
+      <FileName>ShaderLoader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="std::vector&lt;_Ty, _Alloc&gt;" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IUoEEIEqCLBMUEBAAKMIAgASAgUESAIAxQMwgwAEQgI=</HashCode>
+      <FileName>c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Vertex" Collapsed="true">
+    <Position X="13.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\bedna.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
