@@ -42,6 +42,9 @@
     <ClCompile Include="Light.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ShaderLoader.h">
@@ -95,12 +98,27 @@
     <ClInclude Include="OnChangeLightSubject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="VertexShader.glsl">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="FragmentShader.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Lambert-FS.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Lambert-VS.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Phong-FS.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Phong-VS.glsl">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="ClassDiagram.cd" />

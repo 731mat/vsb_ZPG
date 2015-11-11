@@ -24,7 +24,6 @@ public:
 	~Camera();
 	glm::mat4 getCamera();
 	glm::mat4 getProjection();
-	void setCamera(GLint programID, Light &light);
 	void lookAt(glm::vec3 center, glm::vec3 up);
 	void moveForward();
 	void moveBack();
@@ -38,8 +37,6 @@ public:
 	void cursorCallback(float x, float y);
 	void registerObserver(OnChangeCameraObserver* observer);
 	void removeObserver(OnChangeCameraObserver* observer);
-
-protected:
 	void notifyObserver();
 
 };

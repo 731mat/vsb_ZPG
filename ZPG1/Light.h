@@ -1,24 +1,23 @@
 #ifndef light_h_
 #define light_h_
-
+#include <GL/glew.h>
 #include "GLFW\glfw3.h"
 #include <iostream>
 #include <string>
 #include "OnChangeLightSubject.h"
+//#include "Drawable.h"
+class Drawable;
+class Shader;
 class Light : public OnChangeLightSubject {
 private:
 	float x, y, z;
+	Drawable* objLig;
 public:
-	Light();
+	Light(Shader* shader);
 	~Light();
-	float getPosX();
-	float getPosY();
-	float getPosZ();
+	glm::vec3 getPosition();
+	void draw();
 	void move(glm::vec3 moveVec);
-	void setPosX(float x);
-	void setPosY(float y);
-	void setPosZ(float z);
-
 	void registerObserver(OnChangeLightObserver* observer);
 	void removeObserver(OnChangeLightObserver* observer);
 	void notifyObserver();

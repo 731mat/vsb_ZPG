@@ -18,7 +18,7 @@ void Controller::key_callback(GLFWwindow* window, int key, int scancode, int act
 {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE)
 		glfwSetWindowShouldClose(window, GL_TRUE);
-	printf("key_callback [%d,%d,%d,%d] \n", key, scancode, action, mods);
+	//printf("key_callback [%d,%d,%d,%d] \n", key, scancode, action, mods);
 	Application::getWindow()->KeysClicked(key);
 }
 
@@ -32,8 +32,8 @@ void Controller::window_size_callback(GLFWwindow* window, int width, int height)
 }
 
 void Controller::cursor_callback(GLFWwindow *window, double x, double y){ 
-	printf("cursor_callback \n"); 
-	Application::getWindow()->getCamera()->cursorCallback(x, y);
+	//printf("cursor_callback \n"); 
+	Application::getWindow()->getScene()->getCamera()->cursorCallback(x, y);
 	
 }
 

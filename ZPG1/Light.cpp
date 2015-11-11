@@ -1,5 +1,5 @@
 #include "Light.h"
-
+#include "Application.h"
 #include <GLFW/glfw3.h>
 
 
@@ -11,43 +11,36 @@
 #include <glm/gtc/type_ptr.hpp> // glm::value_ptr
 
 
-Light::Light() {
+
+Light::Light(Shader* shader) {
+	//GLfloat spot_direction[] = { 1.0, 1.0, 0.0 }; //smìr
+	//(GL_LIGHT0, GL_SPOT_DIRECTION, spot_direction);
+	//glLightfv(GL_LIGHT0, GL_SPOT_CUTOFF, 45.0f);//  (const GLfloat*)45.0f); //velikost kužele
 	//float lightAmbient[] = new float[] { 0.2f, 0.3f, 0.6f, 1.0f };
 	//float lightDiffuse[] = new float[] { 0.2f, 0.3f, 0.6f, 1.0f };
 	//float lightPosition[] = new float[] {0, 0, 3, 1};
-
-	//glLightfv(GL_LIGHT0, GL_CONSTANT_ATTENUATION, 2.0);	//Setup The Ambient Light
-	//glLightfv(GL_LIGHT0, GL_LINEAR_ATTENUATION, 2.0);	//Setup The Diffuse Light
-	//glLightfv(GL_LIGHT0, GL_QUADRATIC_ATTENUATION, 2.0);	//Position The Light
-	//glEnable(GL_LIGHT0);
 	x = 0.f;
 	y = 0.f;
 	z = 0.f;
+	objLig = new Drawable(shader, getPosition(), glm::vec3(0.5, 0.5, 0.5));
 }
 
-float Light::getPosX() {
-	return x;
-}
-float Light::getPosY() {
-	return y;
-}
-float Light::getPosZ() {
-	return z;
-}
-void Light::setPosX(float x) {
-	Light::x = x;
-}
-void Light::setPosY(float y) {
-	Light::y = y;
-}
-void Light::setPosZ(float z) {
-	Light::z = z;
+Light::~Light() {
 }
 
+glm::vec3 Light::getPosition() {
+	return glm::vec3(x, y, z);
+}
+
+void Light::draw() {
+	objLig->draw();
+	
+}
 void Light::move(glm::vec3 moveVec) {
 	this->x += moveVec.x;
 	this->y += moveVec.y;
 	this->z += moveVec.z;
+	objLig->setPosition(moveVec);
 	notifyObserver();
 }
 

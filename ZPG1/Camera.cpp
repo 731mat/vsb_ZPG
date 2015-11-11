@@ -22,6 +22,10 @@ Camera::Camera() {
 	curY = 0;
 }
 
+Camera::~Camera() {
+
+}
+
 glm::vec3 Camera::getEye() {
 	return eye;
 }
@@ -35,13 +39,9 @@ glm::mat4 Camera::getProjection(){
 	 return glm::lookAt(eye, eye + center, UP);
  }
 
- void Camera::setCamera(GLint programID, Light &light) {
-	 notifyObserver();
- }
-
  void Camera::registerObserver(OnChangeCameraObserver* observer) {
 	 camsObservers.push_back(observer);
-	 printf("Registrovano");
+	 printf("^^ Registrovano\n");
  }
  void Camera::removeObserver(OnChangeCameraObserver* observer){
 	 camsObservers.remove(observer);
@@ -74,13 +74,13 @@ glm::mat4 Camera::getProjection(){
 
  void Camera::moveRight() {
 
-	 eye += 0.05f * glm::normalize(glm::cross(center, UP));
+	 eye += 0.09f * glm::normalize(glm::cross(center, UP));
 	 notifyObserver();
  }
 
  void Camera::moveLeft() {
 
-	 eye -= 0.05f * glm::normalize(glm::cross(center, UP));
+	 eye -= 0.09f * glm::normalize(glm::cross(center, UP));
 	 notifyObserver();
  }
 

@@ -73,6 +73,7 @@
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderLoader.cpp" />
   </ItemGroup>
@@ -92,12 +93,17 @@
     <ClInclude Include="OnChangeLightObserver.h" />
     <ClInclude Include="OnChangeLightSubject.h" />
     <ClInclude Include="opengl_helper.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderLoader.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
     <None Include="FragmentShader.glsl" />
+    <None Include="Lambert-FS.glsl" />
+    <None Include="Lambert-VS.glsl" />
+    <None Include="Phong-FS.glsl" />
+    <None Include="Phong-VS.glsl" />
     <None Include="VertexShader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

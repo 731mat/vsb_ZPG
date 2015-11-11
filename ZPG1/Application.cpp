@@ -45,90 +45,64 @@ Application::Application(int width, int height, const char* title) {
 	GL_CHECK_ERRORS();
 	glGetError();
 	//setVerGL(4.5, 4.5);
-	compileShaders();
-	camera = new Camera;
-	light = new Light;
-	light->registerObserver((OnChangeLightObserver*)shader);
-	camera->registerObserver((OnChangeCameraObserver*)shader);
+	scene = new Scene;
 	controller->setController(window);
 }
 
-
 Application::~Application() {
-	delete shader;
-	//delete light;
-	//delete camera;
-	for (unsigned int i = 0; i < drawables.size(); i++) 
-		delete drawables[i];
+
+	delete scene;
 	glfwDestroyWindow(window);
 	glfwTerminate();
 }
 
-
 void Application::mainloop() {
-	rotationx = 0;
-	drawables.push_back(new Drawable(glm::vec3(0, 2, 0)));
-	drawables.push_back(new Drawable(glm::vec3(0, -2, 0)));
-	drawables.push_back(new Drawable(glm::vec3(-2, 0, 0)));
-	drawables.push_back(new Drawable(glm::vec3(2, 0, 0)));
-	camera->setCamera(shader->getShader(),*light);
-	light->notifyObserver();
 
 	while (!glfwWindowShouldClose(window))
 	{
-		drawObj();
+		scene->drawObj();
 		glfwPollEvents();
 		glfwSwapBuffers(window);
 	}
 }
 
-void Application::compileShaders() {
-	shader = new Shader("VertexShader.glsl", "FragmentShader.glsl");
-}
-
-void Application::drawObj() {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	rotationx += 0.1f;
-	//shader->shaderRotate(rotationx);
-	for (unsigned int i = 0; i < drawables.size(); i++)
-		drawables[i]->draw();
-	}
 void Application::KeysClicked(int key) {
 	switch (key)
 	{
 	case GLFW_KEY_W:
-		camera->moveForward();
+		scene->getCamera()->moveForward();
 		break;
 	case GLFW_KEY_S:
-		camera->moveBack();
+		scene->getCamera()->moveBack();
 		break;
 	case GLFW_KEY_A:
-		camera->moveLeft();
+		scene->getCamera()->moveLeft();
 		break;
 	case GLFW_KEY_D:
-		camera->moveRight();
+		scene->getCamera()->moveRight();
 		break;
-	case GLFW_KEY_KP_2:
-		light->move(glm::vec3(0.0f, -0.5f, 0.0f));
+	case GLFW_KEY_DOWN:
+		scene->getLight()->move(glm::vec3(0.0f, -0.5f, 0.0f));
 		break;
-	case GLFW_KEY_KP_8:
-		light->move(glm::vec3(0.0f, 0.5f, 0.0f));
+	case GLFW_KEY_UP:
+		scene->getLight()->move(glm::vec3(0.0f, 0.5f, 0.0f));
 		break;
-	case GLFW_KEY_KP_4:
-		light->move(glm::vec3(-0.5f, 0.0f, 0.0f));
+	case GLFW_KEY_LEFT:
+		scene->getLight()->move(glm::vec3(-0.5f, 0.0f, 0.0f));
 		break;
-	case GLFW_KEY_KP_6:
-		light->move(glm::vec3(0.5f, 0.0f, 0.0f));
+	case GLFW_KEY_RIGHT:
+		scene->getLight()->move(glm::vec3(0.5f, 0.0f, 0.0f));
 		break;
-	case GLFW_KEY_KP_1:
-		light->move(glm::vec3(0.0f, 0.0f, 0.5f));
+	case GLFW_KEY_N:
+		scene->getLight()->move(glm::vec3(0.0f, 0.0f, 0.5f));
 		break;
-	case GLFW_KEY_KP_3:
-		light->move(glm::vec3(0.0f, 0.0f, -0.5f));
+	case GLFW_KEY_M:
+		scene->getLight()->move(glm::vec3(0.0f, 0.0f, -0.5f));
 		break;
 
 	}
 }
+
 void Application::setVerGL(int major, int minor) {
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
@@ -153,10 +127,6 @@ void Application::getVerGL() {
 	glViewport(0, 0, width, height);
 }
 
-Camera* Application::getCamera() {
-	return camera;
-}
-
-Shader* Application::getShader() {
-	return shader;
+Scene* Application::getScene() {
+	return scene;
 }

@@ -1,9 +1,9 @@
-#ifndef application_h_
-#define application_h_
+#ifndef scene_h_
+#define scene_h_
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
- 
+
 
 //Include GLM  
 #include <glm/vec3.hpp> // glm::vec3
@@ -19,34 +19,32 @@
 #include <vector>
 
 #include "Shader.h"
-#include "Scene.h"
 #include "Camera.h"
 #include "Controller.h"
 #include "Drawable.h"
 #include "Light.h"
 #include "opengl_helper.h"
 
-class Application {
+class Scene : public OnChangeLightObserver{
 private:
-	
-	static Application* objectInstance;
-	GLFWwindow* window;
-	Scene* scene;
-	Controller* controller;
+
+	Shader *lambert, *phong;
+	Camera* camera;
+	Light* light;
+	Drawable* objLight;
 	std::vector<Drawable*> drawables;
-	
-	void setVerGL(int major, int minor);
-	void getVerGL();
-	
-	Application(int width, int height, const char* title);
+
+	void createObj();
+	void compileShaders();
 
 public:
-	void KeysClicked(int key);
-	static Application* getWindow();
-	~Application();
-	void mainloop();
-	Scene* getScene();
-	static int width, height;
-	static std::string title;
+
+	std::vector<Light*> lights;
+	Scene();
+	~Scene();
+	void drawObj();
+	void updateLight(Light* light);
+	Camera* getCamera();
+	Light* getLight();
 };
-#endif application_h_
+#endif scene_h_

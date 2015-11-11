@@ -17,6 +17,6 @@ void main () {
   //gl_Position = vec4(in_Position, 1.0f);
   ex_worldPosition = modelMatrix * vec4(in_Position, 1.0);
   //ex_worldNormal = vec3((modelMatrix)*vec4(normal, 1.0));
-  ex_worldNormal = normal;
-  //ex_worldNormal = mat3(transpose(inverse(modelMatrix))) * normal;
+ // ex_worldNormal = normal;
+ ex_worldNormal = mat3(transpose(inverse(modelMatrix))) * normal;
 }

@@ -3,6 +3,7 @@
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h> 
+#include "Shader.h"
 //Include GLM  
 #include <glm/vec3.hpp> // glm::vec3
 #include <glm/vec4.hpp> // glm::vec4
@@ -12,12 +13,15 @@
 
 class Drawable {
 private:
+	glm::mat4 model;
+	Shader* shader;
 	static int drawables;
 	GLuint VAO;
 	GLuint VBO;
-	glm::vec3 position;
+
 public:
-	Drawable(glm::vec3 setVector);
+	void setPosition(glm::vec3 position);
+	Drawable(Shader* shader, glm::vec3 setPosition, glm::vec3 setScale);
 	~Drawable();
 	void draw();
 	void renderObject();

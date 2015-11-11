@@ -1,4 +1,5 @@
 #include "Shader.h"
+#include "Application.h"
 //Include GLM  
 #include <glm/vec3.hpp> // glm::vec3
 #include <glm/vec4.hpp> // glm::vec4
@@ -12,7 +13,7 @@ Shader::Shader(const char *vertexFile, const char *fragmentFile) {
 	matrixID = glGetUniformLocation(programID, "modelMatrix");
 	viewMatrixID = glGetUniformLocation(programID, "viewMatrix");
 	projectMatrixID = glGetUniformLocation(programID, "projectionMatrix");
-	lightPositionID = glGetUniformLocation(programID, "lightPosition");
+	lightPositionID = glGetUniformLocation(programID, "lightArray");
 	viewPositionID = glGetUniformLocation(programID, "viewPosition");
 	glm::mat4 r = glm::mat4();
 	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &r[0][0]);
@@ -32,6 +33,7 @@ GLint Shader::getShader() {
 }
 
 void Shader::updateCamera(Camera* camera) {
+	setShader();
 	glm::vec3 cam = camera->getEye();
 	glUniformMatrix4fv(viewMatrixID, 1, GL_FALSE, &camera->getCamera()[0][0]);
 	glUniformMatrix4fv(projectMatrixID, 1, GL_FALSE, &camera->getProjection()[0][0]);
@@ -40,12 +42,22 @@ void Shader::updateCamera(Camera* camera) {
 }
 
 void Shader::updateLight(Light* light) {
-	glUniform3f(lightPositionID, light->getPosX(), light->getPosY(), light->getPosZ());
-	
+	light->draw();
+	setShader();
+	glm::vec3 lig = light->getPosition();
+	glUniform3f(lightPositionID, lig.x, lig.y, lig.z);
 }
-void Shader::setModelMatrix(glm::vec3 setVector) {
-	glm::mat4 r = glm::translate(glm::mat4(1.0f), setVector);
-	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &r[0][0]);
+void Shader::updateLights(std::vector<Light*> lights){
+	glm::vec3 position[5];
+	for (unsigned int i = 0; i < lights.size(); i++) {
+		position[i] = lights[i]->getPosition();
+	}
+	glUniform3fv(lightPositionID, lights.size(), &position[0][0]);
+}
+
+void Shader::setModelMatrix(glm::mat4 matrix) {
+	setShader();
+	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &matrix[0][0]);
 }
 void Shader::shaderRotate(float rotationx) {
 	glm::mat4 r = glm::rotate(glm::mat4(1.0f), glm::radians(rotationx), glm::vec3(0.0f, 1.0f, 0.0f));
