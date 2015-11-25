@@ -1,12 +1,12 @@
-#include "Drawable.h"
+#include "Object.h"
 #include "Application.h"
 //#include "models\\bedna.h"
 //#include "models\suzi_smooth.h"
 #include "models\sphere.h"
 
 
-int Drawable::drawables = 0;
-Drawable::Drawable(Shader* shader, glm::vec3 setPosition, glm::vec3 setScale) {
+int Object::drawables = 0;
+Object::Object(Shader* shader, glm::vec3 setPosition, glm::vec3 setScale) {
 	
 	this->shader = shader;
 	VAO = drawables;
@@ -18,10 +18,10 @@ Drawable::Drawable(Shader* shader, glm::vec3 setPosition, glm::vec3 setScale) {
 	model = glm::translate(model, setPosition);
 }
 
-Drawable::~Drawable() {
+Object::~Object() {
 	delete this;
 }
-void Drawable::draw() {
+void Object::draw() {
 
 	this->shader->setModelMatrix(model);
 	glBindVertexArray(VAO);
@@ -30,12 +30,16 @@ void Drawable::draw() {
 	
 }
 
-void Drawable::setPosition(glm::vec3 position) {
+void Object::setPosition(glm::vec3 position) {
 	this->model = glm::translate(model, position);
 }
 
-void Drawable::renderObject() {
-	///VertexDrawable::VertexDrawable(const Vertex* vertices, float verticesCount, MyShader  *shader)
+GLint Object::getID() {
+	return shader->getID();
+}
+
+void Object::renderObject() {
+	///VertexDrawable::Vertex(const Vertex* vertices, float verticesCount, MyShader  *shader)
 	////VAO = 0;
 	//glGenVertexArrays(1, &VAO);
 	//glBindVertexArray(VAO);

@@ -1,5 +1,5 @@
-#ifndef Drawable_h_
-#define Drawable_h_
+#ifndef Object_h_
+#define Object_h_
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h> 
@@ -11,7 +11,7 @@
 #include <glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
 #include <glm/gtc/type_ptr.hpp> // glm::value_ptr
 
-class Drawable {
+class Object {
 private:
 	glm::mat4 model;
 	Shader* shader;
@@ -21,10 +21,11 @@ private:
 
 public:
 	void setPosition(glm::vec3 position);
-	Drawable(Shader* shader, glm::vec3 setPosition, glm::vec3 setScale);
-	~Drawable();
+	Object(Shader* shader, glm::vec3 setPosition, glm::vec3 setScale);
+	~Object();
 	void draw();
 	void renderObject();
+	GLint getID();
 };
 
-#endif Drawable_h_
+#endif Object_h_

@@ -39,6 +39,7 @@ glm::mat4 Camera::getProjection(){
 	 return glm::lookAt(eye, eye + center, UP);
  }
 
+
  void Camera::registerObserver(OnChangeCameraObserver* observer) {
 	 camsObservers.push_back(observer);
 	 printf("^^ Registrovano\n");
@@ -62,31 +63,31 @@ glm::mat4 Camera::getProjection(){
 
  void Camera::moveForward() {
 
-	 eye += center * 0.030f;
+	 eye += center * 0.5f;
 	 notifyObserver();
  }
 
  void Camera::moveBack() {
 
-	 eye -= center * 0.005f;
+	 eye -= center * 0.5f;
 	 notifyObserver();
  }
 
  void Camera::moveRight() {
 
-	 eye += 0.09f * glm::normalize(glm::cross(center, UP));
+	 eye += 0.5f * glm::normalize(glm::cross(center, UP));
 	 notifyObserver();
  }
 
  void Camera::moveLeft() {
 
-	 eye -= 0.09f * glm::normalize(glm::cross(center, UP));
+	 eye -= 0.5f * glm::normalize(glm::cross(center, UP));
 	 notifyObserver();
  }
 
  void Camera::moveUp() {
 
-	 center -= 0.030f * UP;
+	 center -= 0.5f * UP;
 	 notifyObserver();
  }
 
@@ -101,12 +102,13 @@ glm::mat4 Camera::getProjection(){
 		 curX = x;
 	 if (curY == 0)
 		 curY = y;
-	 float dx = (x - curX) / 100.0;
-	 float dy = (y - curY) / 100.0;
+	 float dx = -(x - curX) / 100.0;
+	 float dy = -(y - curY) / 100.0;
 
-	 center = glm::rotateX(glm::normalize(this->center), dy);
 	 center = rotateY(center, dx);
-	 //UP = rotateX(glm::normalize(this->UP), dy);
+	 center = rotateX(center, dy);
+
+	 //center = glm::rotateX(glm::normalize(this->center), dy);
 	 UP = rotateY(UP, dx);
 	 lookAt(center, UP);
 	// printf("%f, %f\n", dx, dy);

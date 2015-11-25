@@ -43,17 +43,12 @@
   </Class>
   <Class Name="Light">
     <Position X="10.25" Y="3" Width="1.5" />
-    <InheritanceLine Type="OnChangeLightSubject">
-      <InheritanceModifierLabel ManuallyPlaced="true">
-        <Position X="0.068" Y="1.643" />
-      </InheritanceModifierLabel>
-    </InheritanceLine>
     <AssociationLine Name="objLig" Type="Drawable" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="11.25" Y="3" />
         <Point X="11.25" Y="2.5" />
-        <Point X="11.083" Y="2.5" Type="JumpStart" />
-        <Point X="10.917" Y="2.5" Type="JumpEnd" />
+        <Point X="10.802" Y="2.5" Type="JumpStart" />
+        <Point X="10.635" Y="2.5" Type="JumpEnd" />
         <Point X="9.083" Y="2.5" Type="JumpStart" />
         <Point X="8.917" Y="2.5" Type="JumpEnd" />
         <Point X="7.594" Y="2.5" />
@@ -62,7 +57,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAIAAACAAAIACAAAIQAgAAAAAAAAAAAABgCQAAAAA=</HashCode>
+      <HashCode>AAAAIAAACAAAIACAAAIQAgAAAAAAAAAABABgCQAAAAA=</HashCode>
       <FileName>Light.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -100,7 +95,7 @@
   <Class Name="Scene">
     <Position X="3.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAgAAAAAwgAAAAAAAQAIIAAAAAAAIAIAQCYA=</HashCode>
+      <HashCode>AAIAAAAAAgAAAAAwgAAAAAAAQAIIAgAAAAAIAIAQCIA=</HashCode>
       <FileName>Scene.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -108,7 +103,7 @@
       <Field Name="phong" />
       <Field Name="camera" />
       <Field Name="light" />
-      <Field Name="objLight" />
+      <Field Name="plane" />
       <Field Name="drawables" />
     </ShowAsAssociation>
   </Class>

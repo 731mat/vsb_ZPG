@@ -9,6 +9,7 @@
 #include "Light.h"
 #include "stdio.h"
 
+class Application;
 class Camera : public OnChangeCameraSubject {
 
 private:
@@ -16,8 +17,6 @@ private:
 	glm::vec3 eye;
 	glm::vec3 center;
 	glm::vec3 UP;
-
-
 
 public:
 	Camera();

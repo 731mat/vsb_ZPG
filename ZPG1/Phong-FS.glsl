@@ -3,30 +3,44 @@
 in vec4 ex_worldPosition;
 in vec3 ex_worldNormal;
 
-uniform vec3 lightPosition;
 uniform vec3 viewPosition;
 uniform vec3 lightArray[5];
 out vec4 out_Color;
+const float cos_outer_cone_angle = 0.8;
+
 
 void main () {
+float dot_product, specularTerm;
+vec4 diffuse, ambient, specular;
+vec3 V,R;
+vec4 finalColor = vec4(0);
+for(int i = 0; i < 3; i++) {
+	if( i == 0) {
+		dot_product = max(dot(normalize(lightArray[i] - ex_worldPosition.xyz), normalize(ex_worldNormal)), 0.0);
+		diffuse = dot_product * vec4( 0.0, 1.0, 0.812, 1.0);
+		ambient = vec4( 0.1, 0.1, 0.1, 1.0);
 
-float dot_product = max(dot(normalize(lightArray[0] - ex_worldPosition.xyz), normalize(ex_worldNormal)), 0.0);
+		V = normalize(viewPosition - vec3(ex_worldPosition));
+		R = normalize(reflect(normalize(ex_worldPosition.xyz - lightArray[i]), normalize(ex_worldNormal)));
+		 specularTerm = pow(max(dot(R, V),0.0), 64);
+		specular =  vec4( vec3(1,1,1) * specularTerm,1.0);
+		finalColor = ambient + diffuse + specular;
 
-vec4 diffuse = dot_product * vec4( 0.385, 1.0, 0.812, 1.0);
-//vec4 ambient = vec4( 1.1, 0.1, 0.9, 1.0);
-vec4 ambient = vec4( 0.1, 0.1, 0.1, 1.0);
-float distanceFromLight = length(lightArray[0] - vec3(ex_worldPosition));
+	}
 
-vec3 V = normalize(viewPosition - vec3(ex_worldPosition));
-vec3 R = normalize(reflect(normalize(ex_worldPosition.xyz - lightArray[0]), normalize(ex_worldNormal)));
-float specularTerm = pow(max(dot(R, V),0.0), 64);
+	if( i == 1)
+	 {
+		dot_product = max(dot(normalize(lightArray[i]), normalize(ex_worldNormal)), 0.0);
+		diffuse = dot_product * vec4( 0.0, 1.0, 0.812, 1.0);
+		ambient = vec4( 0.1, 0.1, 0.1, 1.0);
 
-vec3 p = vec3(1,1,1) * specularTerm;
-vec4 specular =    vec4(p,1.0);
-
-vec3 surfaceToLight = normalize(vec3(distanceFromLight));
-
-out_Color = ambient + diffuse + specular;
-//out_Color = specular;
-//out_Color = vec4(lightArray[0],1.0f);
+		V = normalize(viewPosition - vec3(ex_worldPosition));
+		R = normalize(reflect(normalize(ex_worldPosition.xyz - lightArray[i]), normalize(ex_worldNormal)));
+		 specularTerm = pow(max(dot(R, V),0.0), 64);
+		specular =  vec4( vec3(1,1,1) * specularTerm,1.0);
+		finalColor += ambient + diffuse + specular;
+	}
+	
+}
+out_Color = finalColor;
 }
