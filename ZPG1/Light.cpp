@@ -12,7 +12,7 @@
 
 
 
-Light::Light(Shader* shader) {
+Light::Light(Shader* shader, ObjectManager* objManager) {
 	//GLfloat spot_direction[] = { 1.0, 1.0, 0.0 }; //smìr
 	//(GL_LIGHT0, GL_SPOT_DIRECTION, spot_direction);
 	//glLightfv(GL_LIGHT0, GL_SPOT_CUTOFF, 45.0f);//  (const GLfloat*)45.0f); //velikost kužele
@@ -22,7 +22,7 @@ Light::Light(Shader* shader) {
 	x = 0.f;
 	y = 0.f;
 	z = 0.f;
-	objLig = new Object(shader, getPosition(), glm::vec3(0.5, 0.5, 0.5));
+	objLig = new Object(objManager->getMesh("sphere"), shader, getPosition(), glm::vec3(0.5, 0.5, 0.5));
 }
 Light::Light(float x, float y, float z) {
 	this->x = x;

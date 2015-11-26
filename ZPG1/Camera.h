@@ -21,7 +21,7 @@ private:
 public:
 	Camera();
 	~Camera();
-	glm::mat4 getCamera();
+	glm::mat4 getView();
 	glm::mat4 getProjection();
 	void lookAt(glm::vec3 center, glm::vec3 up);
 	void moveForward();

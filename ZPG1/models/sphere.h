@@ -1,11 +1,8 @@
-typedef struct Vertex
-{
-   float Position[3];
-   float Normal[3];
-} Vertex;
-float pocetPrvku=2880;
+#include "../Vertex.h"
+
+static float sphereCount=2880;
 //glDrawArrays(GL_TRIANGLES, 0, pocetPrvku);;
-const Vertex vertices[2880] = {
+static Vertex sphereVertices[2880] = {
 {{-0.831470 , -0.555570 , 0.000000 },{ -0.833338 , -0.552751 , 0.000000}}, 
 {{-0.923880 , -0.382683 , 0.000000 },{ -0.924741 , -0.380535 , 0.000000}}, 
 {{-0.815493 , -0.555570 , -0.162212 },{ -0.817316 , -0.552751 , -0.162572}}, 

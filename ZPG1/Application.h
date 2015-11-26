@@ -41,8 +41,6 @@ private:
 	Application(int width, int height, const char* title);
 
 public:
-	void keysClicked();
-	void mouseClick();
 	static Application* getWindow();
 	~Application();
 	void mainloop();

@@ -6,7 +6,6 @@ in vec3 ex_worldNormal;
 uniform vec3 viewPosition;
 uniform vec3 lightArray[5];
 out vec4 out_Color;
-const float cos_outer_cone_angle = 0.8;
 
 
 void main () {
@@ -17,7 +16,7 @@ vec4 finalColor = vec4(0);
 for(int i = 0; i < 3; i++) {
 	if( i == 0) {
 		dot_product = max(dot(normalize(lightArray[i] - ex_worldPosition.xyz), normalize(ex_worldNormal)), 0.0);
-		diffuse = dot_product * vec4( 0.0, 1.0, 0.812, 1.0);
+		diffuse = dot_product * vec4( 0.1, 0.1, 0.812, 1.0);
 		ambient = vec4( 0.1, 0.1, 0.1, 1.0);
 
 		V = normalize(viewPosition - vec3(ex_worldPosition));
@@ -28,10 +27,10 @@ for(int i = 0; i < 3; i++) {
 
 	}
 
-	if( i == 1)
+	if( i == 1) //smìrové svìtlo
 	 {
 		dot_product = max(dot(normalize(lightArray[i]), normalize(ex_worldNormal)), 0.0);
-		diffuse = dot_product * vec4( 0.0, 1.0, 0.812, 1.0);
+		diffuse = dot_product * vec4( 0.0, 0.0, 0.812, 1.0);
 		ambient = vec4( 0.1, 0.1, 0.1, 1.0);
 
 		V = normalize(viewPosition - vec3(ex_worldPosition));
