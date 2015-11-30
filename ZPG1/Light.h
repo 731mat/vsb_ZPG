@@ -5,17 +5,18 @@
 #include <iostream>
 #include <string>
 #include "OnChangeLightSubject.h"
-#include "ObjectManager.h"
+#include "MeshManager.h"
+#include "Drawable.h"
 //#include "Object.h"
 class Object;
 class Shader;
-class ObjectManager;
-class Light : public OnChangeLightSubject {
+class MeshManager;
+class Light : public OnChangeLightSubject, Drawable {
 private:
 	float x, y, z;
 	Object* objLig;
 public:
-	Light(Shader* shader, ObjectManager* objManager);
+	Light(Shader* shader, MeshManager* mshManager);
 	Light(float x, float y, float z);
 	~Light();
 	glm::vec3 getPosition();

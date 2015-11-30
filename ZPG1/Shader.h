@@ -30,7 +30,6 @@ public:
 	void setShader();
 
 	GLint getShader();
-	void shaderRotate(float rotationx);
 	void setModelMatrix(glm::mat4 matrix);
 	void updateCamera(Camera* camera);
 	void updateLight(Light* light);

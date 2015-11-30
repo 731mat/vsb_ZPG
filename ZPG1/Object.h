@@ -5,6 +5,7 @@
 #include <GLFW/glfw3.h> 
 #include "Shader.h"
 #include "Mesh.h"
+#include "Model.h"
 //Include GLM  
 #include <glm/vec3.hpp> // glm::vec3
 #include <glm/vec4.hpp> // glm::vec4
@@ -13,17 +14,19 @@
 #include <glm/gtc/type_ptr.hpp> // glm::value_ptr
 class Shader;
 class Mesh;
+class Model;
 class Object {
 private:
 	glm::mat4 model;
 	Shader* shader;
 	Mesh* mesh;
+	Model* objModel;
 	
-
-
 public:
 	void setPosition(glm::vec3 position);
+	void rotate(float rotateX);
 	Object(Mesh* mesh, Shader* shader, glm::vec3 setPosition, glm::vec3 setScale);
+	Object::Object(Model* objModel, Shader* shader, glm::vec3 setPosition, glm::vec3 setScale);
 	~Object();
 	void draw();
 };

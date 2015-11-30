@@ -16,18 +16,22 @@ InputKeyboard::~InputKeyboard()
 void InputKeyboard::keysClicked() {
 	if (keys[87] == true)
 	{
-		Application::getWindow()->getScene()->getCamera()->moveForward();
+		Application::getWindow()->getScene()->getCamera()->moveForward(0.5f);
 	}
 	if (keys[83] == true)
 	{
-		Application::getWindow()->getScene()->getCamera()->moveBack();
+		Application::getWindow()->getScene()->getCamera()->moveBack(0.5f);
 	}
 	if (keys[65] == true)
 	{
-		Application::getWindow()->getScene()->getCamera()->moveLeft();
+		Application::getWindow()->getScene()->getCamera()->moveLeft(0.5f);
 	}
 	if (keys[68] == true)
-		Application::getWindow()->getScene()->getCamera()->moveRight();
+		Application::getWindow()->getScene()->getCamera()->moveRight(0.5f);
+	if (keys[81] == true)
+		Application::getWindow()->getScene()->rotObj(2.5f);
+	if (keys[69] == true)
+		Application::getWindow()->getScene()->rotObj(-2.5f);
 	if (keys[264] == true)
 	{
 		Application::getWindow()->getScene()->getLight()->move(glm::vec3(0.0f, -0.5f, 0.0f));
@@ -66,27 +70,27 @@ void InputKeyboard::keysClicked() {
 	}*/
 	if (keys[71] == true)
 	{
-		Application::getWindow()->getScene()->moveObj(glm::vec3(0.0f, -0.5f, 0.0f));
+		Application::getWindow()->getScene()->moveObj(glm::vec3(0.0f, -0.05f, 0.0f));
 	}
 	if (keys[84] == true)
 	{
-		Application::getWindow()->getScene()->moveObj(glm::vec3(0.0f, 0.5f, 0.0f));
+		Application::getWindow()->getScene()->moveObj(glm::vec3(0.0f, 0.05f, 0.0f));
 	}
 	if (keys[70] == true)
 	{
-		Application::getWindow()->getScene()->moveObj(glm::vec3(-0.5f, 0.0f, 0.0f));
+		Application::getWindow()->getScene()->moveObj(glm::vec3(-0.05f, 0.0f, 0.0f));
 	}
 	if (keys[72] == true)
 	{
-		Application::getWindow()->getScene()->moveObj(glm::vec3(0.5f, 0.0f, 0.0f));
+		Application::getWindow()->getScene()->moveObj(glm::vec3(0.05f, 0.0f, 0.0f));
 	}
 	if (keys[82] == true)
 	{
-		Application::getWindow()->getScene()->moveObj(glm::vec3(0.0f, 0.0f, -0.5f));
+		Application::getWindow()->getScene()->moveObj(glm::vec3(0.0f, 0.0f, -0.05f));
 	}
 	if (keys[89] == true)
 	{
-		Application::getWindow()->getScene()->moveObj(glm::vec3(0.0f, 0.0f, 0.5f));
+		Application::getWindow()->getScene()->moveObj(glm::vec3(0.0f, 0.0f, 0.05f));
 	}
 
 }

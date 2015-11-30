@@ -12,7 +12,7 @@
 
 
 
-Light::Light(Shader* shader, ObjectManager* objManager) {
+Light::Light(Shader* shader, MeshManager* objManager) {
 	//GLfloat spot_direction[] = { 1.0, 1.0, 0.0 }; //smìr
 	//(GL_LIGHT0, GL_SPOT_DIRECTION, spot_direction);
 	//glLightfv(GL_LIGHT0, GL_SPOT_CUTOFF, 45.0f);//  (const GLfloat*)45.0f); //velikost kužele

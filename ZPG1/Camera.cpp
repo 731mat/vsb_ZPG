@@ -77,39 +77,39 @@ void Camera::lookAt(glm::vec3 center, glm::vec3 UP)
 	this->UP = UP;
 }
 
-void Camera::moveForward()
+void Camera::moveForward(float x)
 {
-	eye += center * 0.5f;
+	eye += center * x;
 	notifyObserver();
 }
 
-void Camera::moveBack()
+void Camera::moveBack(float x)
 {
-	eye -= center * 0.5f;
+	eye -= center * x;
 	notifyObserver();
 }
 
-void Camera::moveRight()
+void Camera::moveRight(float x)
 {
-	eye += 0.5f * glm::normalize(glm::cross(center, UP));
+	eye += x * glm::normalize(glm::cross(center, UP));
 	notifyObserver();
 }
 
-void Camera::moveLeft()
+void Camera::moveLeft(float x)
 {
-	eye -= 0.5f * glm::normalize(glm::cross(center, UP));
+	eye -= x * glm::normalize(glm::cross(center, UP));
 	notifyObserver();
 }
 
-void Camera::moveUp()
+void Camera::moveUp(float x)
 {
-	center -= 0.5f * UP;
+	center -= x * UP;
 	notifyObserver();
 }
 
-void Camera::moveDown()
+void Camera::moveDown(float x)
 {
-	center += 0.030f * UP;
+	center += x * UP;
 	notifyObserver();
 }
 

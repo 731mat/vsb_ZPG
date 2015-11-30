@@ -24,12 +24,12 @@ public:
 	glm::mat4 getView();
 	glm::mat4 getProjection();
 	void lookAt(glm::vec3 center, glm::vec3 up);
-	void moveForward();
-	void moveBack();
-	void moveRight();
-	void moveLeft();
-	void moveDown();
-	void moveUp();
+	void moveForward(float x);
+	void moveBack(float x);
+	void moveRight(float x);
+	void moveLeft(float x);
+	void moveDown(float x);
+	void moveUp(float x);
 
 	glm::vec3 getEye();
 

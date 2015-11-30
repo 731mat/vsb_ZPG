@@ -5,30 +5,33 @@
 Scene::Scene()
 {
 	compileShaders();
-	objManager = new ObjectManager;
+	mshManager = new MeshManager;
 	camera = new Camera;
-	light = new Light(lambert, objManager);
-	light2 = new Light(20, 0, -50);
+	light = new Light(LightShader, mshManager);
+	light2 = new Light(20, 0, 35);
+	texture->loadTexture(phong);
 	lights.push_back(light);
 	lights.push_back(light2);
 	phong->updateLights(lights);
 	light2->registerObserver((OnChangeLightObserver*)phong);
 	light->registerObserver((OnChangeLightObserver*)phong);
-	camera->registerObserver((OnChangeCameraObserver*)lambert);
+	camera->registerObserver((OnChangeCameraObserver*)LightShader);
 	camera->registerObserver((OnChangeCameraObserver*)phong);
+	mshManager->setObj("jumper", new Model("models/jumper.obj"));
+	mshManager->setObj("tree", new Model("models/pine.lwo"));
+	//mshManager->setObj("wormhole", new Model("models/stargate.lwo"));
 
-	objManager->setMesh("sphere", new Mesh(GL_TRIANGLES, sphereVertices, sphereCount));
-	objManager->setMesh("worker", new Mesh(GL_TRIANGLES, workerVertices, workerCount));
-	objManager->setMesh("box", new Mesh(GL_TRIANGLES, boxVertices, boxCount));
-	objManager->setMesh("suzi", new Mesh(GL_TRIANGLES, suziVertices, suziCount));
-	objManager->setMesh("jumper", new Mesh(GL_TRIANGLES, jumpVertices, jumpCount));
-	objManager->setMesh("plane", new Mesh(GL_TRIANGLES, plane , 10));
+	mshManager->setMesh("sphere", new Mesh(GL_TRIANGLES, sphereVertices, sphereCount, "sphere"));
+	mshManager->setMesh("worker", new Mesh(GL_TRIANGLES, workerVertices, workerCount, "worker"));
+	mshManager->setMesh("box", new Mesh(GL_TRIANGLES, boxVertices, boxCount, "box"));
+	mshManager->setMesh("suzi", new Mesh(GL_TRIANGLES, suziVertices, suziCount, "suzi"));
+	mshManager->setMesh("plane", new Mesh(GL_TRIANGLES, planeVertices, planeCount, "plane"));
 
-	drawables.push_back(new Object(objManager->getMesh("sphere"), phong, glm::vec3(0, 2, 0), glm::vec3(1, 1, 1)));
-	drawables.push_back(new Object(objManager->getMesh("worker"), phong, glm::vec3(0, -2, 0), glm::vec3(1, 1, 1)));
-	drawables.push_back(new Object(objManager->getMesh("jumper"), phong, glm::vec3(-2, 0, 0), glm::vec3(1, 1, 1)));
-	drawables.push_back(new Object(objManager->getMesh("suzi"), phong, glm::vec3(2, 0, 0), glm::vec3(1, 1, 1)));
-	drawables.push_back(new Object(objManager->getMesh("plane"), phong, glm::vec3(0, -3, 0), glm::vec3(100, 1, 1)));
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(0, 2, 0), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getMesh("worker"), phong, glm::vec3(0, -2, 0), glm::vec3(1, 1, 1)));
+	//drawables.push_back(new Object(mshManager->getObj("wormhole"), phong, glm::vec3(-2, 0, 0), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getMesh("suzi"), phong, glm::vec3(2, 0, 0), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getMesh("plane"), phong, glm::vec3(0, -3, 0), glm::vec3(50, 1, 50)));
 	camera->notifyObserver();
 	light->notifyObserver();
 }
@@ -40,6 +43,7 @@ Scene::~Scene()
 	delete camera;
 	for (unsigned int i = 0; i < drawables.size(); i++)
 		delete drawables[i];
+	delete this;
 }
 
 
@@ -47,8 +51,8 @@ void Scene::compileShaders()
 {
 	//light->registerObserver((OnChangeLightObserver*)shader);
 	//camera->registerObserver((OnChangeCameraObserver*)shader);
-	lambert = new Shader("Lambert-VS.glsl", "Lambert-FS.glsl");
 	//shader = new Shader("VertexShader.glsl", "FragmentShader.glsl");
+	LightShader = new Shader("Lambert-VS.glsl", "Lambert-FS.glsl");
 	phong = new Shader("Phong-VS.glsl", "Phong-FS.glsl");
 }
 
@@ -82,7 +86,7 @@ void Scene::addObj(double x, double y, bool plant)
 		glm::mat4& projection = getCamera()->getProjection();
 		glm::vec4& viewPort = glm::vec4(0, 0, width, height);
 		glm::vec3 pos = glm::unProject(screenX, view, projection, viewPort);
-		drawables.push_back(new Object(objManager->getMesh("box"), phong, glm::vec3(pos.x, pos.y, pos.z), glm::vec3(1, 1, 1)));
+		drawables.push_back(new Object(mshManager->getObj("tree"), phong, glm::vec3(pos.x, pos.y, pos.z), glm::vec3(1, 1, 1)));
 		printf("unProject[%f, %f, %f]\n", pos.x, pos.y, pos.z);
 	}
 }
@@ -101,13 +105,15 @@ void Scene::delObj()
 
 void Scene::moveObj(glm::vec3 position)
 {
-
-//	int newy = (int)Application::height - InputMouse::mouseCursor.y;
-	//glReadPixels(InputMouse::mouseCursor.x, newy, 1, 1, GL_STENCIL_INDEX, GL_UNSIGNED_INT, &index);
 	if (index != 0)
 		drawables[index - 1]->setPosition(position);
 }
 
+void Scene::rotObj(float rotateX)
+{
+	if (index != 0)
+		drawables[index - 1]->rotate(rotateX);
+}
 void Scene::updateLight(Light* light)
 {
 	phong->updateLights(lights);
@@ -123,7 +129,7 @@ Light* Scene::getLight()
 	return light;
 }
 
-ObjectManager* Scene::getObjMan()
+MeshManager* Scene::getObjMan()
 {
-	return objManager;
+	return mshManager;
 }

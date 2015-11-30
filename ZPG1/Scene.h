@@ -24,16 +24,18 @@
 #include "Object.h"
 #include "Light.h"
 #include "opengl_helper.h"
-#include "ObjectManager.h"
+#include "MeshManager.h"
+#include "Texture.h"
 
 
 class Scene : public OnChangeLightObserver{
 private:
 
-	Shader *lambert, *phong;
+	Shader *LightShader, *phong;
 	Camera* camera;
 	Light* light, *light2;
-	ObjectManager* objManager;
+	MeshManager* mshManager;
+	Texture* texture;
 	GLuint index;
 	std::vector<Object*> drawables;
 
@@ -49,9 +51,10 @@ public:
 	void addObj(double x, double y, bool plant = false);
 	void delObj();
 	void moveObj(glm::vec3 position);
+	void rotObj(float rotateX);
 	void updateLight(Light* light);
 	Camera* getCamera();
 	Light* getLight();
-	ObjectManager* getObjMan();
+	MeshManager* getObjMan();
 };
 #endif scene_h_
