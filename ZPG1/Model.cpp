@@ -1,18 +1,21 @@
 #include "Model.h"
+#include <SOIL.h>
 int Model::models = 0;
+
+
 Model::Model(string file)
 {
 	name = file;
 	VAO = models;
 	VBO = models;
+	//texture = models;
 	models++;
 	Import3DFromFile(file);
-	genVAOsAndUniformBuffer(scene);
 }
 
 Model::Model()
 {
-	
+
 }
 
 Model::~Model()
@@ -22,159 +25,153 @@ Model::~Model()
 
 void Model::draw()
 {
-	for (unsigned int n = 0; n < 2000; ++n){
-		
-		// bind VAO
-		glBindVertexArray(VAO);
-		// draw
-		glDrawElements(GL_TRIANGLES, numFaces * 3, GL_UNSIGNED_INT, 0);
-
-	}
+	glBindVertexArray(VAO);
+	glDrawElements(GL_TRIANGLES, indicesCount, GL_UNSIGNED_INT, NULL);
 }
 
 
-bool Model::Import3DFromFile(const std::string& pFile)
+void Model::Import3DFromFile(const std::string& pFile)
 {
-	//check if file exists
-	std::ifstream fin(pFile.c_str());
-	if (!fin.fail()) {
-		fin.close();
+	printf("Loading %s\n", name.c_str());
+	unsigned int importOptions = aiProcess_Triangulate
+		| aiProcess_OptimizeMeshes			    // slouèení malých plošek
+		| aiProcess_JoinIdenticalVertices		// NUTNÉ jinak hodnì duplikuje
+		| aiProcess_Triangulate					// prevod vsech ploch na trojuhelniky
+		| aiProcess_CalcTangentSpace;			// vypocet tangenty, nutny pro spravne pouziti normalove mapy
+
+
+	//aiProcess_GenNormals/ai_Process_GenSmoothNormals - vypocet normal s jemnych prechodem v pripade, ze objekt neobsahuje normaly
+
+	const aiScene* scene = importer.ReadFile(pFile, importOptions);
+
+	if (scene){ //pokud bylo nacteni uspesne
+		printf("scene->mNumMeshes = %d\n", scene->mNumMeshes);
+		printf("scene->mNumMaterials = %d\n", scene->mNumMaterials);
+
+		for (unsigned int i = 0; i < scene->mNumMaterials; i++)						//Materials
+		{
+			const aiMaterial* mat = scene->mMaterials[i];
+
+			aiString name;
+			mat->Get(AI_MATKEY_NAME, name);
+			printf("Material [%d] name %s\n", i, name.C_Str());
+
+			aiColor4D d;
+
+			glm::vec4 diffuse = glm::vec4(0.8f, 0.8f, 0.8f, 1.0f);
+			if (AI_SUCCESS == aiGetMaterialColor(mat, AI_MATKEY_COLOR_DIFFUSE, &d))
+				diffuse = glm::vec4(d.r, d.g, d.b, d.a);
+
+		}
+
+		for (unsigned int i = 0; i < scene->mNumMeshes; i++)						//Objects
+		{
+			aiMesh* mesh = scene->mMeshes[i];
+
+
+			AssimpMesh::Verte* pVertices = new AssimpMesh::Verte[mesh->mNumVertices];
+			std::memset(pVertices, 0, sizeof(AssimpMesh::Verte)* mesh->mNumVertices);
+			if (mesh->mMaterialIndex != NULL) {
+				mat = scene->mMaterials[mesh->mMaterialIndex];
+				aiString *src = new aiString;
+				mat->GetTexture(aiTextureType_DIFFUSE, 0, src);
+				printf("%s", src->C_Str());
+				texture = SOIL_load_OGL_texture
+					(
+					("models/" + string(src->C_Str())).c_str(),
+					SOIL_LOAD_AUTO,
+					SOIL_CREATE_NEW_ID,
+					SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
+					);
+				printf("\nLoading %d\n", texture);
+				if (0 == texture)
+				{
+					printf("SOIL loading error: '%s'\n", SOIL_last_result());
+				}
+				//	glActiveTexture(GL_TEXTURE0);
+			}
+			 for (unsigned int i = 0; i < mesh->mNumVertices; i++)
+			{
+				if (mesh->HasPositions())
+				{
+					pVertices[i].Position[0] = mesh->mVertices[i].x;
+					pVertices[i].Position[1] = mesh->mVertices[i].y;
+					pVertices[i].Position[2] = mesh->mVertices[i].z;
+				}
+				if (mesh->HasNormals())
+				{
+					pVertices[i].Normal[0] = mesh->mNormals[i].x;
+					pVertices[i].Normal[1] = mesh->mNormals[i].y;
+					pVertices[i].Normal[2] = mesh->mNormals[i].z;
+				}
+				if (mesh->HasTextureCoords(0))
+				{
+					pVertices[i].Texture[0] = mesh->mTextureCoords[0][i].x;
+					pVertices[i].Texture[1] = mesh->mTextureCoords[0][i].y;
+				}
+				if (mesh->HasTangentsAndBitangents())
+				{
+					pVertices[i].Tangent[0] = mesh->mTangents[i].x;
+					pVertices[i].Tangent[1] = mesh->mTangents[i].y;
+					pVertices[i].Tangent[2] = mesh->mTangents[i].z;
+				}
+				
+			}
+
+			unsigned int* pIndices = nullptr;
+
+			if (mesh->HasFaces())
+			{
+
+				pIndices = new unsigned int[mesh->mNumFaces * 3];
+				for (unsigned int i = 0; i < mesh->mNumFaces; i++)
+				{
+					pIndices[i * 3] = mesh->mFaces[i].mIndices[0];
+					pIndices[i * 3 + 1] = mesh->mFaces[i].mIndices[1];
+					pIndices[i * 3 + 2] = mesh->mFaces[i].mIndices[2];
+				}
+			}
+
+
+			glGenVertexArrays(1, &VAO);
+			glGenBuffers(1, &VBO);
+			glGenBuffers(1, &IBO);
+
+			glBindVertexArray(VAO);
+			glBindBuffer(GL_ARRAY_BUFFER, VBO);
+
+			glBufferData(GL_ARRAY_BUFFER, sizeof(AssimpMesh::Verte)* mesh->mNumVertices, pVertices, GL_STATIC_DRAW);
+
+			glEnableVertexAttribArray(0);
+			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(0));
+			glEnableVertexAttribArray(1);
+			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(3 * sizeof(GLfloat)));
+			glEnableVertexAttribArray(2);
+			glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(6 * sizeof(GLfloat)));
+			glEnableVertexAttribArray(3);
+			glVertexAttribPointer(3, 4, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(8 * sizeof(GLfloat)));
+
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint)* mesh->mNumFaces * 3, pIndices, GL_STATIC_DRAW);
+
+			glBindBuffer(GL_ARRAY_BUFFER, 0);
+			glBindVertexArray(VAO);
+
+			GLuint err = glGetError();
+			if (err != GL_NO_ERROR)
+			{
+				std::cout << "GL ERROR: " << err << std::endl;
+				return;
+			}
+
+			indicesCount = mesh->mNumFaces * 3;
+
+			delete[] pVertices;
+			delete[] pIndices;
+		}
 	}
 	else{
-		printf("Couldn't open file: %s\n", pFile.c_str());
-		printf("%s\n", importer.GetErrorString());
-		return false;
+		printf("Error during parsing mesh from %s : %s \n", pFile.c_str(), importer.GetErrorString());
 	}
-	scene = importer.ReadFile(pFile, aiProcessPreset_TargetRealtime_Quality);
-
-	// If the import failed, report it
-	if (!scene)
-	{
-		printf("%s\n", importer.GetErrorString());
-		return false;
+	glBindVertexArray(0);
 	}
-
-	// Now we can access the file's contents.
-	printf("Import of scene %s succeeded.", pFile.c_str());
-
-	aiVector3D scene_min, scene_max, scene_center;
-	//get_bounding_box(&scene_min, &scene_max);
-	float tmp;
-	tmp = scene_max.x - scene_min.x;
-	tmp = scene_max.y - scene_min.y > tmp ? scene_max.y - scene_min.y : tmp;
-	tmp = scene_max.z - scene_min.z > tmp ? scene_max.z - scene_min.z : tmp;
-	scaleFactor = 1.f / tmp;
-
-	// We're done. Everything will be cleaned up by the importer destructor
-	return true;
-}
-
-void Model::get_bounding_box_for_node(const aiNode* nd, aiVector3D* min, aiVector3D* max)
-
-{
-	aiMatrix4x4 prev;
-	unsigned int n = 0, t;
-	numMeshe = nd->mNumMeshes;
-	for (; n < nd->mNumMeshes; ++n) {
-		const aiMesh* mesh = scene->mMeshes[nd->mMeshes[n]];
-		for (t = 0; t < mesh->mNumVertices; ++t) {
-
-			aiVector3D tmp = mesh->mVertices[t];
-
-			min->x = aisgl_min(min->x, tmp.x);
-			min->y = aisgl_min(min->y, tmp.y);
-			min->z = aisgl_min(min->z, tmp.z);
-
-			max->x = aisgl_max(max->x, tmp.x);
-			max->y = aisgl_max(max->y, tmp.y);
-			max->z = aisgl_max(max->z, tmp.z);
-		}
-	}
-
-	for (n = 0; n < nd->mNumChildren; ++n) {
-		get_bounding_box_for_node(nd->mChildren[n], min, max);
-	}
-}
-
-void Model::get_bounding_box(aiVector3D* min, aiVector3D* max)
-{
-
-	min->x = min->y = min->z = 1e10f;
-	max->x = max->y = max->z = -1e10f;
-	get_bounding_box_for_node(scene->mRootNode, min, max);
-}	
-void Model::genVAOsAndUniformBuffer(const aiScene *sc) {
-	GLuint vertexLoc = 0, normalLoc = 1, texCoordLoc = 2;
-
-	GLuint buffer;
-
-	// For each mesh
-	for (unsigned int n = 0; n < sc->mNumMeshes; ++n)
-	{
-		const aiMesh* mesh = sc->mMeshes[n];
-
-		// create array with faces
-		// have to convert from Assimp format to array
-		unsigned int *faceArray;
-		faceArray = (unsigned int *)malloc(sizeof(unsigned int)* mesh->mNumFaces * 3);
-		unsigned int faceIndex = 0;
-
-		for (unsigned int t = 0; t < mesh->mNumFaces; ++t) {
-			const aiFace* face = &mesh->mFaces[t];
-
-			memcpy(&faceArray[faceIndex], face->mIndices, 3 * sizeof(unsigned int));
-			faceIndex += 3;
-		}
-		numFaces = sc->mMeshes[n]->mNumFaces;
-
-		// generate Vertex Array for mesh
-		glGenVertexArrays(1, &(VAO));
-		glBindVertexArray(VAO);
-
-		// buffer for faces
-		glGenBuffers(1, &buffer);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, buffer);
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned int)* mesh->mNumFaces * 3, faceArray, GL_STATIC_DRAW);
-
-		// buffer for vertex positions
-		if (mesh->HasPositions()) {
-			glGenBuffers(1, &buffer);
-			glBindBuffer(GL_ARRAY_BUFFER, buffer);
-			glBufferData(GL_ARRAY_BUFFER, sizeof(float)* 3 * mesh->mNumVertices, mesh->mVertices, GL_STATIC_DRAW);
-			glEnableVertexAttribArray(vertexLoc);
-			glVertexAttribPointer(vertexLoc, 3, GL_FLOAT, 0, 0, 0);
-		}
-
-		// buffer for vertex normals
-		if (mesh->HasNormals()) {
-			glGenBuffers(1, &buffer);
-			glBindBuffer(GL_ARRAY_BUFFER, buffer);
-			glBufferData(GL_ARRAY_BUFFER, sizeof(float)* 3 * mesh->mNumVertices, mesh->mNormals, GL_STATIC_DRAW);
-			glEnableVertexAttribArray(normalLoc);
-			glVertexAttribPointer(normalLoc, 3, GL_FLOAT, 0, 0, 0);
-		}
-
-		// buffer for vertex texture coordinates
-		if (mesh->HasTextureCoords(0)) {
-			float *texCoords = (float *)malloc(sizeof(float)* 2 * mesh->mNumVertices);
-			for (unsigned int k = 0; k < mesh->mNumVertices; ++k) {
-
-				texCoords[k * 2] = mesh->mTextureCoords[0][k].x;
-				texCoords[k * 2 + 1] = mesh->mTextureCoords[0][k].y;
-
-			}
-			glGenBuffers(1, &buffer);
-			glBindBuffer(GL_ARRAY_BUFFER, buffer);
-			glBufferData(GL_ARRAY_BUFFER, sizeof(float)* 2 * mesh->mNumVertices, texCoords, GL_STATIC_DRAW);
-			glEnableVertexAttribArray(texCoordLoc);
-			glVertexAttribPointer(texCoordLoc, 2, GL_FLOAT, 0, 0, 0);
-		}
-
-		// unbind buffers
-		glBindVertexArray(0);
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-
-
-	}
-}

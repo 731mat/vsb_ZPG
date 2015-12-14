@@ -1,8 +1,8 @@
 #include "Application.h"
 
 Application* Application::objectInstance = NULL;
-int Application::width = 800;
-int Application::height = 600;
+int Application::width = 1200;
+int Application::height = 720;
 string Application::title = "ZPG MLLGGGGGGG DROP THE FAITH";
 
 Application* Application::getWindow()

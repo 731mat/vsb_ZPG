@@ -4,6 +4,7 @@
 class InputKeyboard
 {
 private:
+	static void timeLoop(int time);
 public:
 	InputKeyboard();
 	~InputKeyboard();

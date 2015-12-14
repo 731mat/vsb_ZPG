@@ -12,11 +12,11 @@
 #include <glm/gtc/type_ptr.hpp> // glm::value_ptr
 
 #include "Vertex.h"
-#include "models\bedna.h"
-#include "models\sphere.h"
-#include "models\suzi_flat.h"
-#include "models\worker.h"
-#include "models\plane.h"
+#include "models\heads\bedna.h"
+#include "models\heads\sphere.h"
+#include "models\heads\suzi_flat.h"
+#include "models\heads\worker.h"
+#include "models\heads\plane.h"
 #include "Drawable.h"
 class Mesh : public Drawable
 {
@@ -28,6 +28,7 @@ private:
 	Vertex * vertices;
 	string name;
 	static int drawables;
+//	std::vector<AssimpMesh*> asMesh;
 
 public:
 	Mesh(GLenum type, Vertex * vertices, float count, string name);

@@ -33,7 +33,7 @@ private:
 
 	Shader *LightShader, *phong;
 	Camera* camera;
-	Light* light, *light2;
+	Light* light, *light2, *light3;
 	MeshManager* mshManager;
 	Texture* texture;
 	GLuint index;

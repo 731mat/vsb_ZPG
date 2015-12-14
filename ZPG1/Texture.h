@@ -6,7 +6,6 @@
 #include <SOIL.h>
 #include <cstdio>
 #include <string>
-
 //Include GLM  
 #include <glm/vec3.hpp> // glm::vec3
 #include <glm/vec4.hpp> // glm::vec4
@@ -22,9 +21,10 @@ private:
 	std::string path;
 
 public:
+	GLuint tex_2d;
 	Texture();
 	~Texture();
-	void loadTexture(Shader* shader);
+	GLuint loadTexture();
 };
 
 #endif Texture_h_

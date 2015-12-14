@@ -13,6 +13,7 @@
 #include <assimp/Importer.hpp>
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
+#include "AssimpMesh.h"
 #include "Drawable.h"
 
 class Model : public Drawable
@@ -21,25 +22,24 @@ private:
 	GLuint numFaces;
 	GLuint VAO;
 	GLuint VBO;
+	GLuint IBO;
+
+	int indicesCount = 0;
 	int static models;
 	unsigned int numMeshe;
 	string name;
-	void get_bounding_box(aiVector3D* min, aiVector3D* max);
-	void get_bounding_box_for_node(const aiNode* nd, aiVector3D* min, aiVector3D* max);
-	void genVAOsAndUniformBuffer(const aiScene *sc);
-	float scaleFactor;
-	#define aisgl_min(x,y) (x<y?x:y)
-	#define aisgl_max(x,y) (y>x?y:x)
+	aiMaterial* mat;
 	Assimp::Importer importer;
+	GLuint tex_2d;
 	const aiScene* scene = NULL;
 
 public:
 	Model();
 	Model(string name);
 	~Model();
+	GLint texture;
 	void draw();
-	bool Import3DFromFile(const std::string& pFile);
-
+	void Import3DFromFile(const std::string& pFile);
 };
 
 #endif model_h_

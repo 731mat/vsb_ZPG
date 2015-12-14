@@ -5,7 +5,7 @@
 Texture::Texture()
 {
 	//this->path = path;
-	//loadTexture();
+	loadTexture();
 }
 
 Texture::~Texture()
@@ -14,12 +14,12 @@ Texture::~Texture()
 }
 
 
-void Texture::loadTexture(Shader* shader)
+GLuint Texture::loadTexture()
 {
 
-	GLuint tex_2d = SOIL_load_OGL_texture
+	tex_2d = SOIL_load_OGL_texture
 		(
-		"textures/PuddleJumper_D.tga",
+		"PuddleJumper_D.tga",
 		SOIL_LOAD_RGB,
 		SOIL_CREATE_NEW_ID,
 		SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
@@ -28,7 +28,10 @@ void Texture::loadTexture(Shader* shader)
 	{
 		printf("SOIL loading error: '%s'\n", SOIL_last_result());
 	}
-	glActiveTexture(GL_TEXTURE0);
+
+	return tex_2d;
+	//glActiveTexture(GL_TEXTURE0);
 	
-	glUniform1i(glGetUniformLocation(shader->getID(), "textura"), 0);
+	//glUniform1i(glGetUniformLocation(shader->getID(), "textura"), 0);
+
 }

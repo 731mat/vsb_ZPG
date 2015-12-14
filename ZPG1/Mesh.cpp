@@ -38,7 +38,7 @@ void Mesh::setObject()
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);
 //	if (name == "plane")
-	glEnableVertexAttribArray(2);
+//	glEnableVertexAttribArray(2);
 	glGenBuffers(1, &VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 

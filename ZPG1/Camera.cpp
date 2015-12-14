@@ -115,6 +115,7 @@ void Camera::moveDown(float x)
 
 void Camera::cursorCallback(float x, float y)
 {
+
 	if (curX == 0)
 		curX = x;
 	if (curY == 0)
