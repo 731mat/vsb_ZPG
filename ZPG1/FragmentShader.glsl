@@ -26,5 +26,6 @@ vec4 specular =    vec4(p,1.0);
 
 vec3 surfaceToLight = normalize(vec3(distanceFromLight));
 
-out_Color = ambient + diffuse + specular;//out_Color = vec4(lightPosition,1.0f);
+out_Color = ambient + diffuse + specular;
+//out_Color = vec4(lightPosition,1.0f);
 }

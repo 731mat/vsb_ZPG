@@ -66,6 +66,9 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AssimpMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -149,6 +152,9 @@
     <ClInclude Include="Drawable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AssimpMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="VertexShader.glsl">
@@ -174,6 +180,7 @@
     <None Include="models\fels.3ds">
       <Filter>models</Filter>
     </None>
+    <None Include="ClassDiagram31.cd" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="textures\wall.jpg">

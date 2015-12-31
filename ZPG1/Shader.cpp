@@ -24,6 +24,16 @@ void Shader::setShader() {
     glUseProgram(programID);
 }
 
+void Shader::setTexture(GLint tex)
+{
+	this->setShader();
+	glActiveTexture(GL_TEXTURE0);
+	//glUniform1i(this->getShader(), tex);
+	glBindTexture(GL_TEXTURE_2D, tex);
+	glUniform1i(this->getShader(), 0);
+	//glUniform1i(glGetUniformLocation(, "textura"), 0);
+}
+
 Shader::~Shader() {
 	this->deleteShader();
 }

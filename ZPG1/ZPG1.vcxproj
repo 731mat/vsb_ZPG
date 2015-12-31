@@ -62,7 +62,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\Kex\Dokumenty\GitHub\libs\assimp--3.0.1270\lib\assimp_debug-dll_win32;..\..\libs\soil;..\..\libs\glew-1.13.0\lib\Release\Win32\;..\..\libs\glfw-3.1.1\lib-vc2013\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\libs\assimp--3.0.1270\lib\assimp_debug-dll_win32;..\..\libs\soil;..\..\libs\glew-1.13.0\lib\Release\Win32\;..\..\libs\glfw-3.1.1\lib-vc2013\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -90,6 +90,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AssimpMesh.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="InputKeyboard.cpp" />
@@ -107,6 +108,7 @@
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AssimpMesh.h" />
     <ClInclude Include="Drawable.h" />
     <ClInclude Include="InputKeyboard.h" />
     <ClInclude Include="InputMouse.h" />
@@ -138,6 +140,7 @@
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
     <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram31.cd" />
     <None Include="FragmentShader.glsl" />
     <None Include="Lambert-FS.glsl" />
     <None Include="Lambert-VS.glsl" />

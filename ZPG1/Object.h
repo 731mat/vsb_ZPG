@@ -6,6 +6,7 @@
 #include "Shader.h"
 #include "Mesh.h"
 #include "Model.h"
+#include "Texture.h"
 //Include GLM  
 #include <glm/vec3.hpp> // glm::vec3
 #include <glm/vec4.hpp> // glm::vec4
@@ -21,6 +22,8 @@ private:
 	Shader* shader;
 	Mesh* mesh;
 	Model* objModel;
+	Texture* texture;
+	GLint text;
 	
 public:
 	void setPosition(glm::vec3 position);

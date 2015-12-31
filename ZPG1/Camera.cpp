@@ -9,7 +9,7 @@
 #include <glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
 
 #include <glm/gtc/type_ptr.hpp> // glm::value_ptr
-
+#include "Application.h"
 #include "glm/gtx/rotate_vector.hpp"
 #include <list>
 
@@ -40,7 +40,7 @@ glm::vec3 Camera::getEye()
 glm::mat4 Camera::getProjection()
 {
 	// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
-	return glm::perspective(45.f, 4.0f / 3.0f, 0.1f, 100.0f);
+	return glm::perspective(45.f, (float)Application::width / (float)Application::height, 0.1f, 100.0f);
 }
 
 glm::mat4 Camera::getView(void)
@@ -115,6 +115,7 @@ void Camera::moveDown(float x)
 
 void Camera::cursorCallback(float x, float y)
 {
+
 	if (curX == 0)
 		curX = x;
 	if (curY == 0)

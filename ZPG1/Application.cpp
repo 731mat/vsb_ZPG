@@ -1,8 +1,8 @@
 #include "Application.h"
 
 Application* Application::objectInstance = NULL;
-int Application::width = 800;
-int Application::height = 600;
+int Application::width = 1200;
+int Application::height = 720;
 string Application::title = "ZPG MLLGGGGGGG DROP THE FAITH";
 
 Application* Application::getWindow()
@@ -98,7 +98,7 @@ void Application::getVerGL()
 	printf("Using GLFW %i.%i.%i\n", major, minor, revision);
 	int width, height;
 	glfwGetFramebufferSize(window, &width, &height);
-	float ratio = width / (float)height;
+	float ratio = (float)width / (float)height;
 	glViewport(0, 0, width, height);
 }
 

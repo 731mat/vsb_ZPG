@@ -9,29 +9,52 @@ Scene::Scene()
 	camera = new Camera;
 	light = new Light(LightShader, mshManager);
 	light2 = new Light(20, 0, 35);
-	texture->loadTexture(phong);
+	light3 = new Light(10, 0, -20);
 	lights.push_back(light);
 	lights.push_back(light2);
 	phong->updateLights(lights);
 	light2->registerObserver((OnChangeLightObserver*)phong);
+	light3->registerObserver((OnChangeLightObserver*)phong);
 	light->registerObserver((OnChangeLightObserver*)phong);
 	camera->registerObserver((OnChangeCameraObserver*)LightShader);
 	camera->registerObserver((OnChangeCameraObserver*)phong);
-	mshManager->setObj("jumper", new Model("models/jumper.obj"));
-	mshManager->setObj("tree", new Model("models/pine.lwo"));
-	//mshManager->setObj("wormhole", new Model("models/stargate.lwo"));
+
+	mshManager->setObj("jumper", new Model("models/Puddle Jumper.obj"));
+	mshManager->setObj("tree", new Model("models/trees/tree.obj"));
+	mshManager->setObj("house", new Model("models/house.obj"));
+	mshManager->setObj("cannon", new Model("models/Cannon.obj"));
+	mshManager->setObj("plane", new Model("models/plane.obj"));
+	mshManager->setObj("grass", new Model("models/grass/grass_01.obj"));
+	mshManager->setObj("R2D2", new Model("models/R2-D2.obj"));
+	mshManager->setObj("BattleDroid", new Model("models/BattleDroid.obj"));
+	mshManager->setObj("starship", new Model("models/sev0099/136_final.obj"));
+	mshManager->setObj("skydom", new Model("models/Skydome.obj"));
 
 	mshManager->setMesh("sphere", new Mesh(GL_TRIANGLES, sphereVertices, sphereCount, "sphere"));
 	mshManager->setMesh("worker", new Mesh(GL_TRIANGLES, workerVertices, workerCount, "worker"));
 	mshManager->setMesh("box", new Mesh(GL_TRIANGLES, boxVertices, boxCount, "box"));
 	mshManager->setMesh("suzi", new Mesh(GL_TRIANGLES, suziVertices, suziCount, "suzi"));
-	mshManager->setMesh("plane", new Mesh(GL_TRIANGLES, planeVertices, planeCount, "plane"));
+	//mshManager->setMesh("plane", new Mesh(GL_TRIANGLES, planeVertices, planeCount, "plane"));
 
-	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(0, 2, 0), glm::vec3(1, 1, 1)));
-	drawables.push_back(new Object(mshManager->getMesh("worker"), phong, glm::vec3(0, -2, 0), glm::vec3(1, 1, 1)));
-	//drawables.push_back(new Object(mshManager->getObj("wormhole"), phong, glm::vec3(-2, 0, 0), glm::vec3(1, 1, 1)));
-	drawables.push_back(new Object(mshManager->getMesh("suzi"), phong, glm::vec3(2, 0, 0), glm::vec3(1, 1, 1)));
-	drawables.push_back(new Object(mshManager->getMesh("plane"), phong, glm::vec3(0, -3, 0), glm::vec3(50, 1, 50)));
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(-10, 4, 20), glm::vec3(0.5,0.5, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(-20, 4, 30), glm::vec3(0.5,0.5, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(-30, 4, 20), glm::vec3(0.5,0.5, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(-40, 4, 20), glm::vec3(0.5,0.5, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(-50, 4, 20), glm::vec3(0.5,0.5, 0.5)));
+
+	drawables.push_back(new Object(mshManager->getMesh("suzi"), phong, glm::vec3(0, 10, 0), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getMesh("sphere"), phong, glm::vec3(5, 0, 20), glm::vec3(1, 1, 1)));
+
+	drawables.push_back(new Object(mshManager->getObj("cannon"), phong, glm::vec3(5, 0, 10), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getObj("house"), phong, glm::vec3(10, 0, -20), glm::vec3(1, 1.5, 1)));
+	drawables.push_back(new Object(mshManager->getObj("house"), phong, glm::vec3(-15, 0, 10), glm::vec3(1, 1, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("house"), phong, glm::vec3(25, 0, 10), glm::vec3(0.5, 1, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("R2D2"), phong, glm::vec3(-4, 0, 0), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getObj("BattleDroid"), phong, glm::vec3(2, 0, 0), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getObj("starship"), phong, glm::vec3(0, 500, -2000), glm::vec3(0.01, 0.01, 0.01)));
+	drawables.push_back(new Object(mshManager->getObj("plane"), phong, glm::vec3(0, -1, 0), glm::vec3(100, 0.1, 100)));
+	drawables.push_back(new Object(mshManager->getObj("skydom"), phong, glm::vec3(0, -3, 0), glm::vec3(30, 30, 30)));
+	drawables.push_back(new Object(mshManager->getObj("grass"), phong, glm::vec3(0, 0, 0), glm::vec3(1, 1, 1)));
 	camera->notifyObserver();
 	light->notifyObserver();
 }
@@ -62,6 +85,7 @@ void Scene::drawObj()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 	light->draw();
 	updateLight(light);
+
 	for (unsigned int i = 0; i < drawables.size(); i++)
 	{
 		glStencilFunc(GL_ALWAYS, i + 1, 0xFF);
