@@ -2,6 +2,8 @@
 #define model_h_
 #include <map>
 #include <GL/glew.h>
+#include <vector>
+
 #include <GLFW/glfw3.h> 
 #include "Shader.h"
 //Include GLM  
@@ -15,7 +17,7 @@
 #include <assimp/postprocess.h>
 #include "AssimpMesh.h"
 #include "Drawable.h"
-
+class AssimpMesh;
 class Model : public Drawable
 {
 private:
@@ -32,6 +34,7 @@ private:
 	Assimp::Importer importer;
 	GLuint tex_2d;
 	const aiScene* scene = NULL;
+	std::vector<AssimpMesh*> meshes;
 
 public:
 	Model();

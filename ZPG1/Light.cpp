@@ -13,15 +13,10 @@
 
 
 Light::Light(Shader* shader, MeshManager* objManager) {
-	//GLfloat spot_direction[] = { 1.0, 1.0, 0.0 }; //smìr
-	//(GL_LIGHT0, GL_SPOT_DIRECTION, spot_direction);
-	//glLightfv(GL_LIGHT0, GL_SPOT_CUTOFF, 45.0f);//  (const GLfloat*)45.0f); //velikost kužele
-	//float lightAmbient[] = new float[] { 0.2f, 0.3f, 0.6f, 1.0f };
-	//float lightDiffuse[] = new float[] { 0.2f, 0.3f, 0.6f, 1.0f };
-	//float lightPosition[] = new float[] {0, 0, 3, 1};
-	x = 0.f;
-	y = 0.f;
-	z = 0.f;
+
+	x = 1.f;
+	y = 1.f;
+	z = 1.f;
 	objLig = new Object(objManager->getMesh("sphere"), shader, getPosition(), glm::vec3(0.5, 0.5, 0.5));
 }
 Light::Light(float x, float y, float z) {

@@ -16,7 +16,7 @@ vec4 diffuse, ambient, specular;
 vec3 V,R;
 vec4 finalColor = vec4(0);
 for(int i = 0; i < 3; i++) {
-	if( i == 0) {
+	if( i == 0) { //bodové svìtlo
 		dot_product = max(dot(normalize(lightArray[i] - ex_worldPosition.xyz), normalize(ex_worldNormal)), 0.0);
 		diffuse = dot_product * vec4( 0.1, 0.1, 0.1, 1.0);
 		ambient = vec4( 0.1, 0.1, 0.1, 1.0);

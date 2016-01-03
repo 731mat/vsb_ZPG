@@ -3,6 +3,7 @@
 
 
 int Mesh::drawables = 0;
+
 Mesh::Mesh(GLenum type, Vertex * vertices, float count, string name)
 {
 	VAO = drawables;

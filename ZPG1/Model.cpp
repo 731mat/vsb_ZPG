@@ -25,19 +25,20 @@ Model::~Model()
 
 void Model::draw()
 {
-	glBindVertexArray(VAO);
-	glDrawElements(GL_TRIANGLES, indicesCount, GL_UNSIGNED_INT, NULL);
+		for (AssimpMesh *mesh : meshes)
+			mesh->draw();
 }
 
 
 void Model::Import3DFromFile(const std::string& pFile)
 {
-	printf("Loading %s\n", name.c_str());
+	printf(" Loading %s\n", name.c_str());
 	unsigned int importOptions = aiProcess_Triangulate
 		| aiProcess_OptimizeMeshes			    // slouèení malých plošek
 		| aiProcess_JoinIdenticalVertices		// NUTNÉ jinak hodnì duplikuje
 		| aiProcess_Triangulate					// prevod vsech ploch na trojuhelniky
-		| aiProcess_CalcTangentSpace;			// vypocet tangenty, nutny pro spravne pouziti normalove mapy
+		| aiProcess_CalcTangentSpace // vypocet tangenty, nutny pro spravne pouziti normalove mapy
+		| aiProcess_GenNormals;			
 
 
 	//aiProcess_GenNormals/ai_Process_GenSmoothNormals - vypocet normal s jemnych prechodem v pripade, ze objekt neobsahuje normaly
@@ -45,8 +46,8 @@ void Model::Import3DFromFile(const std::string& pFile)
 	const aiScene* scene = importer.ReadFile(pFile, importOptions);
 
 	if (scene){ //pokud bylo nacteni uspesne
-		printf("scene->mNumMeshes = %d\n", scene->mNumMeshes);
-		printf("scene->mNumMaterials = %d\n", scene->mNumMaterials);
+		printf("   scene->mNumMeshes = %d\n", scene->mNumMeshes);
+		printf("   scene->mNumMaterials = %d\n", scene->mNumMaterials);
 
 		for (unsigned int i = 0; i < scene->mNumMaterials; i++)						//Materials
 		{
@@ -54,7 +55,7 @@ void Model::Import3DFromFile(const std::string& pFile)
 
 			aiString name;
 			mat->Get(AI_MATKEY_NAME, name);
-			printf("Material [%d] name %s\n", i, name.C_Str());
+			printf("   Material [%d] name %s\n", i, name.C_Str());
 
 			aiColor4D d;
 
@@ -63,7 +64,6 @@ void Model::Import3DFromFile(const std::string& pFile)
 				diffuse = glm::vec4(d.r, d.g, d.b, d.a);
 
 		}
-
 		for (unsigned int i = 0; i < scene->mNumMeshes; i++)						//Objects
 		{
 			aiMesh* mesh = scene->mMeshes[i];
@@ -71,11 +71,10 @@ void Model::Import3DFromFile(const std::string& pFile)
 
 			AssimpMesh::Verte* pVertices = new AssimpMesh::Verte[mesh->mNumVertices];
 			std::memset(pVertices, 0, sizeof(AssimpMesh::Verte)* mesh->mNumVertices);
-			if (mesh->mMaterialIndex != NULL) {
+			//if (mesh->mMaterialIndex != NULL) {
 				mat = scene->mMaterials[mesh->mMaterialIndex];
 				aiString *src = new aiString;
 				mat->GetTexture(aiTextureType_DIFFUSE, 0, src);
-				printf("%s", src->C_Str());
 				texture = SOIL_load_OGL_texture
 					(
 					("models/" + string(src->C_Str())).c_str(),
@@ -83,13 +82,15 @@ void Model::Import3DFromFile(const std::string& pFile)
 					SOIL_CREATE_NEW_ID,
 					SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
 					);
-				printf("\nLoading %d\n", texture);
+				printf("\n   Loading %d\n", texture);
+				printf("   %s", src->C_Str());
 				if (0 == texture)
 				{
 					printf("SOIL loading error: '%s'\n", SOIL_last_result());
 				}
+				printf("\n____________________\n");
 				//	glActiveTexture(GL_TEXTURE0);
-			}
+		//	}
 			 for (unsigned int i = 0; i < mesh->mNumVertices; i++)
 			{
 				if (mesh->HasPositions())
@@ -165,6 +166,7 @@ void Model::Import3DFromFile(const std::string& pFile)
 			}
 
 			indicesCount = mesh->mNumFaces * 3;
+			meshes.push_back(new AssimpMesh(i, VAO, VBO, IBO, indicesCount));
 
 			delete[] pVertices;
 			delete[] pIndices;

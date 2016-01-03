@@ -17,6 +17,10 @@ Shader::Shader(const char *vertexFile, const char *fragmentFile) {
 	viewPositionID = glGetUniformLocation(programID, "viewPosition");
 	glm::mat4 r = glm::mat4();
 	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &r[0][0]);
+	glUniformMatrix4fv(viewMatrixID, 1, GL_FALSE, &r[0][0]);
+	glUniformMatrix4fv(projectMatrixID, 1, GL_FALSE, &r[0][0]);
+
+
 }
 
 
@@ -30,8 +34,8 @@ void Shader::setTexture(GLint tex)
 	glActiveTexture(GL_TEXTURE0);
 	//glUniform1i(this->getShader(), tex);
 	glBindTexture(GL_TEXTURE_2D, tex);
-	glUniform1i(this->getShader(), 0);
-	//glUniform1i(glGetUniformLocation(, "textura"), 0);
+	//glUniform1i(this->getShader(), 0);
+	glUniform1i(glGetUniformLocation(this->getShader(), "textura"), 0);
 }
 
 Shader::~Shader() {
@@ -43,7 +47,7 @@ GLint Shader::getShader() {
 }
 
 void Shader::updateCamera(Camera* camera) {
-	setShader();
+	this->setShader();
 	glm::vec3 cam = camera->getEye();
 	glUniformMatrix4fv(viewMatrixID, 1, GL_FALSE, &camera->getView()[0][0]);
 	glUniformMatrix4fv(projectMatrixID, 1, GL_FALSE, &camera->getProjection()[0][0]);
@@ -52,7 +56,6 @@ void Shader::updateCamera(Camera* camera) {
 }
 
 void Shader::updateLight(Light* light) {
-	light->draw();
 	setShader();
 	glm::vec3 lig = light->getPosition();
 	glUniform3f(lightPositionID, lig.x, lig.y, lig.z);
@@ -63,9 +66,20 @@ void Shader::updateLights(std::vector<Light*> lights){
 		position[i] = lights[i]->getPosition();
 	}
 	glUniform3fv(lightPositionID, lights.size(), &position[0][0]);
+	glGetError();
 }
 
 void Shader::setModelMatrix(glm::mat4 matrix) {
 	setShader();
 	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &matrix[0][0]);
+}
+
+void Shader::setViewMatrix(glm::mat4 matrix) {
+	setShader();
+	glUniformMatrix4fv(viewMatrixID, 1, GL_FALSE, &matrix[0][0]);
+
+}
+void Shader::setProjectionMatrix(glm::mat4 matrix) {
+	setShader();
+	glUniformMatrix4fv(projectMatrixID, 1, GL_FALSE, &matrix[0][0]);
 }

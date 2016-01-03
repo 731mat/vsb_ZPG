@@ -17,11 +17,11 @@ Camera::Camera()
 {
 	xPos = 0.f;
 	yPos = 0.f;
-	zPos = 7;
+	zPos = 7.f;
 	//position
 	eye = glm::vec3(xPos, yPos, zPos);
 	//direction
-	center = glm::vec3(0, 0, -1.f);
+	center = glm::vec3(0, 0.0f, -1.f);
 	//idk exactly
 	UP = glm::vec3(0.f, 1.f, 0.f);
 	curX = 0;
@@ -52,7 +52,7 @@ glm::mat4 Camera::getView(void)
 void Camera::registerObserver(OnChangeCameraObserver* observer)
 {
 	camsObservers.push_back(observer);
-	printf("^^ Registrovano\n");
+	printf("Registrovano\n");
 }
 
 void Camera::removeObserver(OnChangeCameraObserver* observer)
@@ -63,10 +63,10 @@ void Camera::removeObserver(OnChangeCameraObserver* observer)
 
 void Camera::notifyObserver()
 {
-	std::list<OnChangeCameraObserver*>::iterator pos = this->camsObservers.begin();
+	list<OnChangeCameraObserver*>::iterator pos = this->camsObservers.begin();
 	while (pos != this->camsObservers.end())
 	{
-		((OnChangeCameraObserver*)(*pos))->updateCamera(this);
+		(*pos)->updateCamera(this);
 		++pos;
 	}
 }
@@ -120,8 +120,8 @@ void Camera::cursorCallback(float x, float y)
 		curX = x;
 	if (curY == 0)
 		curY = y;
-	float dx = -(x - curX) / 100.0;
-	float dy = -(y - curY) / 100.0;
+	float dx = -(x - curX) / 100.0f;
+	float dy = -(y - curY) / 100.0f;
 
 	center = rotateY(center, dx);
 	center = rotateX(center, dy);

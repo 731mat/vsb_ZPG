@@ -8,6 +8,7 @@
 #include "OnChangeCameraSubject.h"
 #include "Light.h"
 #include "stdio.h"
+#include "OnChangeCameraObserver.h"
 
 class Application;
 class Camera : public OnChangeCameraSubject {

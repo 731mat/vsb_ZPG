@@ -12,6 +12,8 @@
 #include "Camera.h"
 #include "opengl_helper.h"	// tohle je helper soubor na kontrolu chyb, doporuèuju používat makro GL_CHECK_ERRORS po každém glXXX volání :-)
 #include <vector>
+#include "OnChangeCameraObserver.h"
+#include "OnChangeLightObserver.h"
 
 class Shader : public ShaderLoader, OnChangeCameraObserver, OnChangeLightObserver {
 
@@ -31,9 +33,12 @@ public:
 	void setTexture(GLint tex);
 	GLint getShader();
 	void setModelMatrix(glm::mat4 matrix);
+	void setViewMatrix(glm::mat4 matrix);
+	void setProjectionMatrix(glm::mat4 matrix);
 	void updateCamera(Camera* camera);
 	void updateLight(Light* light);
 	void updateLights(std::vector<Light*> lights);
-	GLuint getID() { return this->programID;  }
+	GLuint getID() const
+	{ return this->programID;  }
 };
 #endif Shader _h_

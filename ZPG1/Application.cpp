@@ -3,7 +3,7 @@
 Application* Application::objectInstance = NULL;
 int Application::width = 1200;
 int Application::height = 720;
-string Application::title = "ZPG MLLGGGGGGG DROP THE FAITH";
+string Application::title = "ZPG";
 
 Application* Application::getWindow()
 {
@@ -72,8 +72,10 @@ void Application::mainloop()
 		controller->keyboard->keysClicked();
 		controller->mouse->buttonClicked();
 		scene->drawObj();
+		GL_CHECK_ERRORS();
 		glfwPollEvents();
 		glfwSwapBuffers(window);
+		glGetError();
 	}
 }
 

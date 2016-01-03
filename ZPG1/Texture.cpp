@@ -5,7 +5,7 @@
 Texture::Texture()
 {
 	//this->path = path;
-	loadTexture();
+	//loadTexture();
 }
 
 Texture::~Texture()

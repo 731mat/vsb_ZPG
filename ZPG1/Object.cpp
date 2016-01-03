@@ -12,35 +12,33 @@ Object::Object(Mesh* mesh, Shader* shader, glm::vec3 setPosition, glm::vec3 setS
 	//text = texture->loadTexture();
 }
 
-Object::Object(Model* objModel, Shader* shader, glm::vec3 setPosition, glm::vec3 setScale)
+Object::Object(Model* objModel, Shader* shader, glm::vec3 setPosition, glm::vec3 setScale): mesh(nullptr), texture(nullptr), text(0)
 {
 	this->shader = shader;
 	this->objModel = objModel;
 	model = glm::mat4(1.0f);
 	model = glm::scale(model, setScale);
 	model = glm::translate(model, setPosition);
+		
 }
 
 Object::~Object()
 {
-	delete this;
 }
 
 void Object::draw()
 {
 	this->shader->setModelMatrix(model); 
-	
+	this->shader->setShader();
 
 	if (mesh != NULL)
 	{
-//		this->shader->setTexture(this->objModel->texture);
-
+		//this->shader->setTexture(this->objModel->texture);
 		//this->shader->setTexture(this->texture->loadTexture());
 		this->mesh->draw();
 	}
 	if (objModel != NULL)
 	{
-		
 		this->shader->setTexture(this->objModel->texture);
 
 		this->objModel->draw();
