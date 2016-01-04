@@ -1,0 +1,93 @@
+# Blender MTL File: 'None'
+# Material Count: 8
+
+newmtl Main_Tie_Interior
+Ns 400.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.105882 0.105882 0.105882
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Main_Tie_Interior_2
+Ns 400.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.274510 0.274510 0.274510
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Main_Tie_Surface
+Ns 400.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.333333 0.333333 0.384314
+Ks 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Main_Tie_Surface_Brace
+Ns 400.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.333333 0.333333 0.384314
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Main_Brace_Map.jpg
+map_Bump Main_Brace_Map.jpg
+map_Ks Main_Brace_Map.jpg
+
+newmtl Main_Tie_Surface_Sphere
+Ns 400.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.333333 0.333333 0.384314
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Main_Sphere_Map_Grime.jpg
+map_Bump Main_Sphere_Map_Grime.jpg
+map_Ks Main_Sphere_Map_Grime.jpg
+
+newmtl Main_Tie_Surface_Wing_Detail
+Ns 400.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.333333 0.333333 0.384314
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Main_Wing_Map.jpg
+map_Bump Main_Wing_Map.jpg
+map_Ks Main_Wing_Map.jpg
+
+newmtl Main_Tie_Window
+Ns 400.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.188235 0.188235 0.188235
+Ks 0.650000 0.650000 0.650000
+Ke 0.000000 0.000000 0.000000
+Ni 1.020000
+d 0.365000
+illum 2
+
+newmtl Tie_Main_Wing
+Ns 400.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.700000 0.700000 0.700000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd slatsUV.jpg
+map_Bump slatsUV.jpg

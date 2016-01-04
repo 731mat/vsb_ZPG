@@ -1,0 +1,2899 @@
+LWSC
+3
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 0
+PreviewLastFrame 60
+PreviewFrameStep 1
+CurrentFrame 0
+FramesPerSecond 30
+
+AddNullObject **MASTER MOVER**
+ShowObject 6 3
+SchematicPosition -2.089200 0.827110
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+AddNullObject ** Head Goal **
+ShowObject 6 2
+SchematicPosition -2.046698 0.462902
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.00033017879 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.5734971 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.062161561 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key -0.12740904 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 1
+PivotPosition 0.0003301788 -0.12 0.1270158
+ParentItem 10000000
+ShadowOptions 7
+
+AddNullObject ** Right Arm Goal **
+ShowObject 6 5
+ItemExpand 0 0
+SchematicPosition -3.512414 -1.499192
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key 0.1799528 0 0 1 0 0 0 0 0
+  Key 0.1799528 0.40000001 0 0 0 0 0.038097065 0.019048532 0
+  Key 0.2370984 0.60000002 0 0 0 0 0 0 0
+  Key 0.1799528 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 1
+{ Envelope
+  4
+  Key 1.102499 0 0 1 0 0 0 0 0
+  Key 0.98249918 0.40000001 0 0 0 0 -0.051980019 -0.025990009 0
+  Key 1.024529 0.60000002 0 0 0 0 0.054545376 0.065454453 0
+  Key 1.102499 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.37975419 0 0 1 0 0 0 0 0
+  Key 0.044754259 0.40000001 0 0 0 0 -0.14511125 -0.072555624 0
+  Key 0.16208731 0.60000002 0 0 0 0 0.1522727 0.18272723 0
+  Key 0.37975419 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 3
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+
+ParentItem 10000000
+ShadowOptions 7
+
+AddNullObject ** Left Arm Goal **
+ShowObject 6 5
+ItemExpand 0 0
+SchematicPosition 0.967664 -1.299430
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key -0.18910749 0 0 1 0 0 0 0 0
+  Key -0.23410749 0.2 0 0 0 0 0 0 0
+  Key -0.18910749 0.40000001 0 0 0 0 0.014062501 0.0309375 0
+  Key -0.18910749 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.98750019 0 0 1 0 0 0 0 0
+  Key 1.032483 0.2 0 0 0 0 0.037499905 0.037499905 0
+  Key 1.0625 0.40000001 0 0 0 0 -0.014057122 -0.030925669 0
+  Key 0.98750019 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 2
+{ Envelope
+  4
+  Key 0.042724021 0 0 1 0 0 0 0 0
+  Key 0.2496428 0.2 0 0 0 0 0.1725 0.1725 0
+  Key 0.38772401 0.40000001 0 0 0 0 -0.064662121 -0.14225666 0
+  Key 0.042724021 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 3
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+
+ParentItem 10000000
+ShadowOptions 7
+
+AddNullObject **Left Leg Goal**
+ShowObject 6 2
+ItemExpand 0 0
+SchematicPosition -0.133690 -4.078514
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  8
+  Key -0.093429118 0 0 1 0 0 0 0 0
+  Key -0.090000004 0.40000001 0 0 0 0 0.0032080235 0.00032080236 0
+  Key -0.089900292 0.44 0 0 0 0 5.640338e-005 0.00011280676 0
+  Key -0.089830793 0.51999998 0 0 0 0 8.5234642e-006 4.2617321e-006 0
+  Key -0.089887507 0.56 0 0 0 0 -5.640338e-005 -0.00011280676 0
+  Key -0.090000004 0.63999999 0 0 0 0 -4.4998527e-005 -6.7497793e-005 0
+  Key -0.090000004 0.75999999 0 0 0 0 0 0 0
+  Key -0.090000004 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 1
+{ Envelope
+  8
+  Key -0.002498199 0 0 1 0 0 0 0 0
+  Key -0.002498199 0.40000001 0 0 0 0 0.0085615385 0.00085615384 0
+  Key 0.006919493 0.44 0 0 0 0 0.025520319 0.051040638 0
+  Key 0.074062757 0.51999998 0 0 0 0 0.070859075 0.035429537 0
+  Key 0.1132081 0.56 0 0 0 0 0.029479681 0.058959361 0
+  Key 0.1625018 0.63999999 0 0 0 0 -0.023050521 -0.034575779 0
+  Key 0.055581801 0.75999999 0 0 0 0 -0.098999999 -0.066 0
+  Key -0.002498199 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 2
+{ Envelope
+  8
+  Key 0.41439039 0 0 1 0 0 0 0 0
+  Key -0.33924839 0.40000001 0 0 0 0 -0.69090825 -0.069090828 0
+  Key -0.34560871 0.44 0 0 0 0 0.024695596 0.049391191 0
+  Key -0.2651616 0.51999998 0 0 0 0 0.10535648 0.052678239 0
+  Key -0.187574 0.56 0 0 0 0 0.088211894 0.17642379 0
+  Key -0.00052593142 0.63999999 0 0 0 0 0.19409436 0.29114154 0
+  Key 0.2976619 0.75999999 0 0 0 0 0.24676652 0.16451101 0
+  Key 0.41075161 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 3
+{ Envelope
+  8
+  Key -1.924688e-005 0 0 1 0 0 0 0 0
+  Key 0.028039725 0.40000001 0 0 0 0 0.026354801 0.0026354799 0
+  Key 0.028971033 0.44 0 0 0 0 -0.0029534518 -0.0059069037 0
+  Key 0.01917937 0.51999998 0 0 0 0 0.0023899365 0.0011949682 0
+  Key 0.032555938 0.56 0 0 0 0 0.0017184218 0.0034368436 0
+  Key 0.024334636 0.63999999 0 0 0 0 -0.0092026535 -0.013803979 0
+  Key 0.0095493048 0.75999999 0 0 0 0 -0.014612329 -0.0097415531 0
+  Key -1.924688e-005 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 4
+{ Envelope
+  8
+  Key 0.00018639384 0 0 1 0 0 0 0 0
+  Key 0.0098368889 0.40000001 0 0 0 0 0.019285625 0.0019285625 0
+  Key 0.021400582 0.44 0 0 0 0 0.091612726 0.18322545 0
+  Key 0.28467506 0.51999998 0 0 0 0 0.30120829 0.15060414 0
+  Key 0.47321302 0.56 0 0 0 0 -0.10507443 -0.21014886 0
+  Key -0.030548217 0.63999999 0 0 0 0 -0.25844389 -0.38766584 0
+  Key -0.17289671 0.75999999 0 0 0 0 0.018440766 0.012293844 0
+  Key 0.00018639384 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 5
+{ Envelope
+  8
+  Key 2.8514194e-005 0 0 1 0 0 0 0 0
+  Key 2.8514194e-005 0.40000001 0 0 0 0 0 0 0
+  Key 2.8514194e-005 0.44 0 0 0 0 0 0 0
+  Key 2.8514194e-005 0.51999998 0 0 0 0 0 0 0
+  Key 2.8514194e-005 0.56 0 0 0 0 0 0 0
+  Key 2.8514194e-005 0.63999999 0 0 0 0 0 0 0
+  Key 2.8514194e-005 0.75999999 0 0 0 0 0 0 0
+  Key 2.8514194e-005 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 6
+{ Envelope
+  8
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.44 0 0 0 0 0 0 0
+  Key 1 0.51999998 0 0 0 0 0 0 0
+  Key 1 0.56 0 0 0 0 0 0 0
+  Key 1 0.63999999 0 0 0 0 0 0 0
+  Key 1 0.75999999 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 7
+{ Envelope
+  8
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.44 0 0 0 0 0 0 0
+  Key 1 0.51999998 0 0 0 0 0 0 0
+  Key 1 0.56 0 0 0 0 0 0 0
+  Key 1 0.63999999 0 0 0 0 0 0 0
+  Key 1 0.75999999 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 8
+{ Envelope
+  8
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.44 0 0 0 0 0 0 0
+  Key 1 0.51999998 0 0 0 0 0 0 0
+  Key 1 0.56 0 0 0 0 0 0 0
+  Key 1 0.63999999 0 0 0 0 0 0 0
+  Key 1 0.75999999 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+
+ParentItem 10000000
+ShadowOptions 7
+
+AddNullObject **Right Leg Goal**
+ShowObject 6 2
+ItemExpand 0 0
+SchematicPosition -2.390437 -3.801800
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  8
+  Key 0.099951424 0 0 1 0 0 0 0 0
+  Key 0.099951424 0.079999998 0 0 0 0 0 0 0
+  Key 0.099951424 0.12 0 0 0 0 0 0 0
+  Key 0.099951424 0.2 0 0 0 0 0 0 0
+  Key 0.099951424 0.31999999 0 0 0 0 0 0 0
+  Key 0.099951424 0.40000001 0 0 0 0 0 0 0
+  Key 0.099951424 0.44 0 0 0 0 0 0 0
+  Key 0.099951424 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 1
+{ Envelope
+  8
+  Key 0.01250165 0 0 1 0 0 0 0 0
+  Key 0.07294172 0.079999998 0 0 0 0 0.0740401 0.03702005 0
+  Key 0.1235618 0.12 0 0 0 0 0.03651996 0.073039919 0
+  Key 0.1825016 0.2 0 0 0 0 -0.014929751 -0.022394625 0
+  Key 0.086237423 0.31999999 0 0 0 0 -0.10199997 -0.067999981 0
+  Key 0.01250165 0.40000001 0 0 0 0 -0.049157184 -0.024578592 0
+  Key 0.01250165 0.44 0 0 0 0 0 0 0
+  Key 0.01250165 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 2
+{ Envelope
+  8
+  Key -0.32815281 0 0 1 0 0 0 0 0
+  Key -0.2400226 0.079999998 0 0 0 0 0.116162 0.058081001 0
+  Key -0.1539098 0.12 0 0 0 0 0.08742246 0.17484492 0
+  Key 0.022244779 0.2 0 0 0 0 0.1636724 0.2455086 0
+  Key 0.2552712 0.31999999 0 0 0 0 0.22776146 0.15184097 0
+  Key 0.40184721 0.40000001 0 0 0 0 0.069844209 0.034922104 0
+  Key 0.36003751 0.44 0 0 0 0 -0.06636364 -0.66363639 0
+  Key -0.32815281 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 3
+{ Envelope
+  8
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.31999999 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.44 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 4
+{ Envelope
+  8
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0.30684981 0.079999998 0 0 0 0 0.27110779 0.1355539 0
+  Key 0.40666169 0.12 0 0 0 0 -0.10228327 -0.20456654 0
+  Key 0 0.2 0 0 0 0 -0.24836041 -0.37254062 0
+  Key -0.21423933 0.31999999 0 0 0 0 0.0060750712 0.0040500471 0
+  Key 0.010125118 0.40000001 0 0 0 0 0.14282621 0.071413107 0
+  Key 0 0.44 0 0 0 0 -0.00092046527 -0.0092046531 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 5
+{ Envelope
+  8
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.31999999 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.44 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 6
+{ Envelope
+  8
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.31999999 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.44 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 7
+{ Envelope
+  8
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.31999999 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.44 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 8
+{ Envelope
+  8
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.31999999 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.44 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+
+LockedChannels 8
+PivotPosition 0.0875 0.00250002 -2.831221e-007
+ParentItem 10000000
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/MAIN BODY COMMANDER.lwo
+ShowObject 6 7
+ItemExpand 0 0
+SchematicPosition -2.035092 -0.565407
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  5
+  Key 0 0 0 1 0 0 0 0 0
+  Key -0.035 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0.034510978 0.034510978 0
+  Key 0.034021951 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 1
+{ Envelope
+  5
+  Key 1.16 0 0 1 0 0 0 0 0
+  Key 1.22 0.2 0 0 0 0 0 0 0
+  Key 1.16 0.40000001 0 0 0 0 0.0015900135 0.0015900135 0
+  Key 1.2231801 0.60000002 0 0 0 0 0 0 0
+  Key 1.16 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 2
+{ Envelope
+  5
+  Key 0.017499721 0 0 1 0 0 0 0 0
+  Key 0.02749972 0.2 0 0 0 0 0 0 0
+  Key 0.017499721 0.40000001 0 0 0 0 -0.0025849156 -0.0025849156 0
+  Key 0.022329889 0.60000002 0 0 0 0 0 0 0
+  Key 0.017499721 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 3
+{ Envelope
+  5
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 4
+{ Envelope
+  5
+  Key 0.08726646 0 0 1 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0.08726646 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0.08726646 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 5
+{ Envelope
+  5
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 6
+{ Envelope
+  5
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 7
+{ Envelope
+  5
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 8
+{ Envelope
+  5
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+
+LockedChannels 2570
+PivotPosition 0 1.234 0
+ParentItem 10000000
+IKAnchor 1
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/NECK.lwo
+ShowObject 6 7
+SchematicPosition -2.037584 -0.244692
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.52 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.056999989 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4079
+HLimits 0 0
+PController 3
+PLimits -10 59.99999
+BLimits 0 0
+PivotPosition 0 1.52 0.05699999
+ParentItem 10000006
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/HEAD COMMANDER.lwo
+ShowObject 6 7
+SchematicPosition -2.048066 0.116328
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.665 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key -0.0079999948 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4079
+HLimits -40 40
+PLimits -20 90
+BLimits 0 0
+PivotPosition 0 1.665 -0.007999995
+ParentItem 10000007
+GoalObject 2
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT ARM+SHOULDER.lwo
+ShowObject 6 7
+SchematicPosition -0.162343 -0.842815
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.090999998 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.475 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.070000023 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4039
+HController 3
+PController 3
+BController 3
+PivotPosition -0.091 1.475 0.07000002
+ParentItem 10000006
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT FOREARM.lwo
+ShowObject 6 7
+SchematicPosition -0.142900 -1.127295
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.16249999 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.182 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.075000018 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4079
+PController 3
+PLimits -30 90
+PivotPosition -0.1625 1.182 0.07500002
+ParentItem 10000009
+GoalObject 33
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT REAR DIGITS.lwo
+ShowObject 6 7
+SchematicPosition -0.098461 -2.437476
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.16150001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.175 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.39250001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4087
+PivotPosition -0.1615 1.175 0.3925
+ParentItem 1000001d
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT DIGIT 1.lwo
+ShowObject 6 7
+SchematicPosition -0.049624 -2.808272
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.16150001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.201 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.46250001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4087
+PivotPosition -0.1615 1.201 0.4625
+ParentItem 1000000b
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT DIGIT 2.lwo
+ShowObject 6 7
+SchematicPosition -0.097522 -3.179065
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.16150001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.152 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.46250001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4087
+PivotPosition -0.1615 1.152 0.4625
+ParentItem 1000000b
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT ARM+SHOULDER.lwo
+ShowObject 6 7
+SchematicPosition -4.548231 -1.043490
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.090999998 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.475 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.071000002 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 1991
+HController 3
+PController 3
+BController 3
+PivotPosition 0.091 1.475 0.071
+ParentItem 10000006
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT FOREARM.lwo
+ShowObject 6 7
+SchematicPosition -4.537894 -1.342348
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.16249999 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.182 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.075999998 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4039
+HController 3
+HLimits 0 0
+PController 3
+PLimits -30 90
+BController 3
+BLimits 0 0
+PivotPosition 0.1625 1.182 0.076
+ParentItem 1000000e
+GoalObject 35
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT REAR DIGITS.lwo
+ShowObject 6 7
+SchematicPosition -4.536250 -2.677276
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.16150001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.175 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.3935 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4087
+PivotPosition 0.1615 1.175 0.3935
+ParentItem 1000001e
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT DIGIT 1.lwo
+ShowObject 6 7
+SchematicPosition -4.538624 -2.966444
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.16150001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.201 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.46250001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4087
+PivotPosition 0.1615 1.201 0.4625
+ParentItem 10000010
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT DIGIT 2.lwo
+ShowObject 6 7
+SchematicPosition -4.530305 -3.286806
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.16150001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.152 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.46250001 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4087
+PivotPosition 0.1615 1.152 0.4625
+ParentItem 10000010
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT THUMB REAR.lwo
+ShowObject 6 7
+SchematicPosition -0.109921 -1.764615
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.14 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.176 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.36149999 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4087
+PivotPosition -0.14 1.176 0.3615
+ParentItem 1000001d
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT THUMB TIP.lwo
+ShowObject 6 7
+SchematicPosition -0.124403 -2.084975
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.086500011 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.176 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.3935 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4087
+PivotPosition -0.08650001 1.176 0.3935
+ParentItem 10000013
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT THUMB REAR.lwo
+ShowObject 6 7
+SchematicPosition -4.542736 -1.967563
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.14 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.176 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.36149999 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0.61435604 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPosition 0.14 1.176 0.3615
+ParentItem 1000001e
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT THUMB TIP.lwo
+ShowObject 6 7
+SchematicPosition -4.512915 -2.267033
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.086500026 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.176 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.3935 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPosition 0.08650003 1.176 0.3935
+ParentItem 10000015
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT THIGH.lwo
+ShowObject 6 7
+SchematicPosition -1.138710 -3.667515
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.081 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 0.97149998 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.0305 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4071
+HController 3
+HLimits -15 20
+PController 3
+BController 3
+PivotPosition -0.081 0.9715 0.0305
+ParentItem 10000006
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT SHIN.lwo
+ShowObject 6 7
+SchematicPosition -1.117593 -4.023471
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.086499996 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 0.48949999 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.0055 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPosition -0.0865 0.4895 0.0055
+ParentItem 10000017
+GoalObject 32
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT FOOT.lwo
+ShowObject 6 7
+SchematicPosition -1.149875 -4.379428
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.086999997 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 0.069499999 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key -0.0015 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4039
+HLimits -15 15
+PLimits -15 15
+BLimits -15 15
+PivotPosition -0.087 0.0695 -0.0015
+ParentItem 10000018
+GoalObject 5
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT THIGH.lwo
+ShowObject 6 7
+SchematicPosition -3.383183 -3.648989
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.080999993 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 0.96799999 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.028999999 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0.010297442 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key -0.10419612 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4039
+HController 3
+HLimits -20 15
+PController 3
+BController 3
+BJointStiffness 10
+PivotPosition 0.081 0.968 0.029
+ParentItem 10000006
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT SHIN.lwo
+ShowObject 6 7
+SchematicPosition -3.378186 -3.971671
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.086999997 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 0.48899999 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.0049999999 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0.17453292 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPosition 0.087 0.489 0.005
+ParentItem 1000001a
+GoalObject 34
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT FOOT.lwo
+ShowObject 6 7
+SchematicPosition -3.339272 -4.345424
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  2
+  Key 0.086999997 0 0 0 0 0 0 0 0
+  Key 0.086999997 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  2
+  Key 0.069499999 0 0 0 0 0 0 0 0
+  Key 0.069499999 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  2
+  Key -0.015 0 0 0 0 0 0 0 0
+  Key -0.015 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  2
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  2
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  2
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  2
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  2
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  2
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4047
+PivotPosition 0.087 0.0695 -0.015
+ParentItem 1000001b
+GoalObject 6
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/LEFT PALM.lwo
+ShowObject 6 7
+SchematicPosition -0.141170 -1.458812
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -0.16152 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.177 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.298311 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4063
+PivotPosition -0.16152 1.177 0.298311
+ParentItem 1000000a
+GoalObject 4
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+LoadObjectLayer 1 STAR WARS/Droids/Trade Battle Droid/Objects/new droid/RIGHT PALM.lwo
+ShowObject 6 7
+SchematicPosition -4.571323 -1.652804
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0.16152 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 1.177 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0.2983107 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LockedChannels 4063
+PivotPosition 0.16152 1.177 0.2983107
+ParentItem 1000000f
+GoalObject 3
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+AddNullObject ** Left Knee Goal **
+ShowObject 6 2
+SchematicPosition -0.135616 -3.812050
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  6
+  Key 0.0031330399 0 0 1 0 0 0 0 0
+  Key 0.0031330399 0.40000001 0 0 0 0 0.0021053599 0.00063160801 0
+  Key 0.0058700079 0.51999998 0 0 0 0 0.0023984197 0.00079947326 0
+  Key 0.006330933 0.56 0 0 0 0 -0.0012935736 -0.0025871473 0
+  Key 0.0019892871 0.63999999 0 0 0 0 -0.00091368373 -0.0022842092 0
+  Key 0.0031330399 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 1
+{ Envelope
+  6
+  Key 0.40999991 0 0 1 0 0 0 0 0
+  Key 0.40999991 0.40000001 0 0 0 0 0.076482207 0.022944661 0
+  Key 0.50942677 0.51999998 0 0 0 0 0.26324093 0.087746978 0
+  Key 0.76098782 0.56 0 0 0 0 -0.0062726238 -0.012545248 0
+  Key 0.4906089 0.63999999 0 0 0 0 -0.10028226 -0.25070566 0
+  Key 0.40999991 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 2
+{ Envelope
+  6
+  Key 0.071103297 0 0 1 0 0 0 0 0
+  Key 0.3611033 0.40000001 0 0 0 0 0.2198866 0.06596598 0
+  Key 0.35695589 0.51999998 0 0 0 0 -0.047718756 -0.015906252 0
+  Key 0.29747829 0.56 0 0 0 0 0.034454703 0.068909407 0
+  Key 0.46032 0.63999999 0 0 0 0 -0.064678572 -0.16169642 0
+  Key 0.071103297 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 3
+{ Envelope
+  6
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.51999998 0 0 0 0 0 0 0
+  Key 0 0.56 0 0 0 0 0 0 0
+  Key 0 0.63999999 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 4
+{ Envelope
+  6
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.51999998 0 0 0 0 0 0 0
+  Key 0 0.56 0 0 0 0 0 0 0
+  Key 0 0.63999999 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 5
+{ Envelope
+  6
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.51999998 0 0 0 0 0 0 0
+  Key 0 0.56 0 0 0 0 0 0 0
+  Key 0 0.63999999 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 6
+{ Envelope
+  6
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.51999998 0 0 0 0 0 0 0
+  Key 1 0.56 0 0 0 0 0 0 0
+  Key 1 0.63999999 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 7
+{ Envelope
+  6
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.51999998 0 0 0 0 0 0 0
+  Key 1 0.56 0 0 0 0 0 0 0
+  Key 1 0.63999999 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 8
+{ Envelope
+  6
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.51999998 0 0 0 0 0 0 0
+  Key 1 0.56 0 0 0 0 0 0 0
+  Key 1 0.63999999 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+
+ParentItem 10000004
+ShadowOptions 7
+
+AddNullObject ** Left Elbow Goal **
+ShowObject 6 5
+SchematicPosition 1.068179 -0.970240
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  5
+  Key 0 0 0 1 0 0 0 0 0
+  Key -0.009999997 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 -0.0045730514 -0.0045730514 0
+  Key -0.0191461 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 1
+{ Envelope
+  5
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0.13299879 0.2 0 0 0 0 0.0024999999 0.0024999999 0
+  Key 0.0049999999 0.40000001 0 0 0 0 0.0049969554 0.0049969554 0
+  Key 0.14299271 0.60000002 0 0 0 0 -0.0022727272 -0.0027272727 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 2
+{ Envelope
+  5
+  Key -0.35340539 0 0 1 0 0 0 0 0
+  Key -0.35340539 0.2 0 0 0 0 0 0 0
+  Key -0.35340539 0.40000001 0 0 0 0 0 0 0
+  Key -0.35340539 0.60000002 0 0 0 0 0 0 0
+  Key -0.35340539 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 3
+{ Envelope
+  5
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 4
+{ Envelope
+  5
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 5
+{ Envelope
+  5
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 6
+{ Envelope
+  5
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 7
+{ Envelope
+  5
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 8
+{ Envelope
+  5
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+
+ParentItem 10000003
+ShadowOptions 7
+
+AddNullObject ** Right Knee Goal **
+ShowObject 6 2
+SchematicPosition -2.438991 -4.088351
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  6
+  Key 0.090000004 0 0 1 0 0 0 0 0
+  Key 0.076311111 0.079999998 0 0 0 0 -0.015120004 -0.0075600022 0
+  Key 0.067319997 0.12 0 0 0 0 -0.0071037076 -0.014207415 0
+  Key 0.054999989 0.2 0 0 0 0 0.0064800018 0.016200004 0
+  Key 0.090000004 0.40000001 0 0 0 0 0.010937504 0.024062511 0
+  Key 0.090000004 0.83999997 0 0 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 1
+{ Envelope
+  6
+  Key 0.4000001 0 0 1 0 0 0 0 0
+  Key 0.5833143 0.079999998 0 0 0 0 0.16530533 0.082652666 0
+  Key 0.6479581 0.12 0 0 0 0 -0.059760828 -0.11952166 0
+  Key 0.40403181 0.2 0 0 0 0 -0.072273739 -0.18068434 0
+  Key 0.39500001 0.40000001 0 0 0 0 -0.0012599118 -0.002771806 0
+  Key 0.4000001 0.83999997 0 0 0 0 0.0049969298 0 0
+  Behaviors 1 2
+}
+Channel 2
+{ Envelope
+  6
+  Key 0.35499999 0 0 1 0 0 0 0 0
+  Key 0.37755319 0.079999998 0 0 0 0 -0.013059795 -0.0065298975 0
+  Key 0.3354103 0.12 0 0 0 0 0.0034916699 0.0069833398 0
+  Key 0.3880282 0.2 0 0 0 0 -0.072974369 -0.18243591 0
+  Key 0.080000013 0.40000001 0 0 0 0 -0.010321317 -0.022706898 0
+  Key 0.35499999 0.83999997 0 0 0 0 0.27482647 0 0
+  Behaviors 1 2
+}
+Channel 3
+{ Envelope
+  6
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 0 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 4
+{ Envelope
+  6
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 0 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 5
+{ Envelope
+  6
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.079999998 0 0 0 0 0 0 0
+  Key 0 0.12 0 0 0 0 0 0 0
+  Key 0 0.2 0 0 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 0 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 6
+{ Envelope
+  6
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 0 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 7
+{ Envelope
+  6
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 0 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 8
+{ Envelope
+  6
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.079999998 0 0 0 0 0 0 0
+  Key 1 0.12 0 0 0 0 0 0 0
+  Key 1 0.2 0 0 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 0 0 0 0 0 0
+  Behaviors 1 2
+}
+
+ParentItem 10000005
+ShadowOptions 7
+
+AddNullObject ** Right Elbow Goal **
+ShowObject 6 5
+SchematicPosition -3.524406 -1.245380
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0.035 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 -0.015909091 -0.01909091 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 1
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0.19 0.40000001 0 0 0 0 0.11000001 0.055000003 0
+  Key 0.16500001 0.60000002 0 0 0 0 -0.086363636 -0.10363636 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 2
+{ Envelope
+  4
+  Key -0.33384359 0 0 1 0 0 0 0 0
+  Key -0.33384359 0.40000001 0 0 0 0 0 0 0
+  Key -0.33384359 0.60000002 0 0 0 0 0 0 0
+  Key -0.33384359 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 3
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 1 0 0 0 0 0
+  Key 0 0.40000001 0 0 0 0 0 0 0
+  Key 0 0.60000002 0 0 0 0 0 0 0
+  Key 0 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 6
+{ Envelope
+  4
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 7
+{ Envelope
+  4
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+Channel 8
+{ Envelope
+  4
+  Key 1 0 0 1 0 0 0 0 0
+  Key 1 0.40000001 0 0 0 0 0 0 0
+  Key 1 0.60000002 0 0 0 0 0 0 0
+  Key 1 0.83999997 0 1 0 0 0 0 0
+  Behaviors 1 2
+}
+
+ParentItem 10000002
+ShadowOptions 7
+
+AmbientColor 1 1 1
+AmbientIntensity 0.25
+
+AddLight
+LightName Light
+ShowLight 1 5
+SchematicPosition -3.983064 1.379726
+LightMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -3.3093524 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 3.8449998 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 3.4886436 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0.78539813 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0.61086524 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+HController 1
+PController 1
+TargetObject 7
+LightColor 1 1 1
+LightIntensity 1
+AffectCaustics 1
+LightType 2
+LightConeAngle 17
+LightEdgeAngle 5
+ShadowType 2
+ShadowMapSize 3000
+UseConeAngle 1
+ShadowFuzziness 10
+
+AddCamera
+CameraName Camera
+ShowCamera 1 2
+SchematicPosition -4.901275 1.373240
+CameraMotion
+NumChannels 6
+Channel 0
+{ Envelope
+  1
+  Key -1.7344767 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 2.5349998 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 3.5251191 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 2.6755888 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0.44331357 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ZoomFactor 3.2
+ResolutionMultiplier 1.0
+FrameSize 640 480
+PixelAspect 1
+MaskPosition 0 0 640 480
+MotionBlur 0
+FieldRendering 0
+
+ApertureHeight 0.015
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 0.1
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 0.1569 0.3137
+SkyColor 0.4706 0.7059 0.9412
+GroundColor 0.1961 0.1569 0.1176
+NadirColor 0.3922 0.3137 0.2353
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+DataOverlayLabel  
+
+ViewConfiguration 0
+DefineView 0
+ViewType 9
+ViewAimpoint 0 0 0
+ViewZoomFactor 4
+
+GridNumber 80
+GridSize 1
+CameraViewBG 0
+ShowMotionPath 1
+ShowFogRadius 0
+ShowFogEffect 0
+ShowSafeAreas 0
+ShowFieldChart 0
+
+CurrentObject 0
+CurrentLight 0
+CurrentCamera 0
+GraphEditorData
+{ GraphEd_Favorites
+}
+{ GE_Expression_Lib
+  1
+}

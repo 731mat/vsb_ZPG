@@ -27,7 +27,9 @@ private:
 	
 public:
 	void setPosition(glm::vec3 position);
-	void rotate(float rotateX);
+	void rotateX(float rotateX);
+	void rotateY(float rotateY);
+	void rotateZ(float rotateZ);
 	Object(Mesh* mesh, Shader* shader, glm::vec3 setPosition, glm::vec3 setScale);
 	Object::Object(Model* objModel, Shader* shader, glm::vec3 setPosition, glm::vec3 setScale);
 	~Object();

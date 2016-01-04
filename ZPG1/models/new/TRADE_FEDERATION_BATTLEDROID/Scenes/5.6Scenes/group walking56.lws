@@ -1,0 +1,3743 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 120
+FrameStep 1
+PreviewFirstFrame 0
+PreviewLastFrame 120
+PreviewFrameStep 1
+FramesPerSecond 30
+
+AddNullObject **MASTER MOVER**
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  1
+  0.1907178 0 0.2340638 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 211
+ShadowOptions 7
+
+AddNullObject ** Head Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  4
+  0.0003301788 1.573497 0.06216156 0 -7.3 0 1 1 1
+  0 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -17.7 -3 0 1 1 1
+  33 0 0 0 0
+  0.0003301788 1.573497 0.06216156 46 7.599999 0 1 1 1
+  71 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -0.2999986 -1.300001 0 1 1 1
+  102 0 0 0 0
+EndBehavior 1
+LockedChannels 1
+PivotPoint 0.0003301788 -0.12 0.1270158
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject ** Right Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  0 0 1 0 0
+  0.1799528 0.9824992 0.04475426 0 0 0 1 1 1
+  10 0 0 0 0
+  0.2370984 1.024529 0.1620873 0 0 0 1 1 1
+  15 0 0 0 0
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  21 0 1 0 0
+EndBehavior 2
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject ** Left Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  0 0 1 0 0
+  -0.2341075 1.032483 0.2496428 0 0 0 1 1 1
+  5 0 0 0 0
+  -0.1891075 1.0625 0.387724 0 0 0 1 1 1
+  11 0 0 0 0
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  22 0 1 0 0
+EndBehavior 2
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject **Left Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  8
+  -0.09342912 -0.002498199 0.4143904 -0.001102765 0.01067958 0.001633743 1 1 1
+  0 0 1 0 0
+  -0.09 -0.002498199 -0.3392484 1.606558 0.5636122 0.001633743 1 1 1
+  10 0 0 0 0
+  -0.08990029 0.006919493 -0.3456087 1.659918 1.226163 0.001633743 1 1 1
+  11 0 0 0 0
+  -0.08983079 0.07406276 -0.2651616 1.098897 16.31068 0.001633743 1 1 1
+  13 0 0 0 0
+  -0.08988751 0.1132081 -0.187574 1.865318 27.11311 0.001633743 1 1 1
+  13 0 0 0 0
+  -0.09 0.1625018 -0.0005259314 1.394272 -1.750284 0.001633743 1 1 1
+  15 0 0 0 0
+  -0.09 0.0555818 0.2976619 0.5471349 -9.906252 0.001633743 1 1 1
+  18 0 0 0 0
+  -0.09 -0.002498199 0.4107516 -0.001102765 0.01067958 0.001633743 1 1 1
+  20 0 1 0 0
+EndBehavior 2
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject **Right Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  8
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  0 0 1 0 0
+  0.09995142 0.07294172 -0.2400226 0 17.5812 0 1 1 1
+  2 0 0 0 0
+  0.09995142 0.1235618 -0.1539098 0 23.3 0 1 1 1
+  3 0 0 0 0
+  0.09995142 0.1825016 0.02224478 0 0 0 1 1 1
+  5 0 0 0 0
+  0.09995142 0.08623742 0.2552712 0 -12.27501 0 1 1 1
+  8 0 0 0 0
+  0.09995142 0.01250165 0.4018472 0 0.5801265 0 1 1 1
+  10 0 0 0 0
+  0.09995142 0.01250165 0.3600375 0 0 0 1 1 1
+  11 0 0 0 0
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  21 0 1 0 0
+EndBehavior 2
+LockedChannels 8
+PivotPoint 0.0875 0.00250002 -2.831221e-007
+ParentObject 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\MAIN BODY COMMANDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  5
+  0 1.16 0.01749972 0 5 0 1 1 1
+  0 0 1 0 0
+  -0.035 1.22 0.02749972 0 0 0 1 1 1
+  5 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  10 0 0 0 0
+  0.03402195 1.22318 0.02232989 0 0 0 1 1 1
+  15 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  21 0 1 0 0
+EndBehavior 2
+LockedChannels 2570
+PivotPoint 0 1.234 0
+ParentObject 1
+IKAnchor 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\NECK.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.52 0.05699999 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits 0 0
+PController 3
+PLimits -10 59.99999
+BLimits 0 0
+PivotPoint 0 1.52 0.05699999
+ParentObject 7
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\HEAD COMMANDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.665 -0.007999995 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits -40 40
+PLimits -20 90
+BLimits 0 0
+PivotPoint 0 1.665 -0.007999995
+ParentObject 8
+GoalObject 2
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT ARM+SHOULDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.091 1.475 0.07000002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+PController 3
+BController 3
+PivotPoint -0.091 1.475 0.07000002
+ParentObject 7
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1625 1.182 0.07500002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits -30 90
+PivotPoint -0.1625 1.182 0.07500002
+ParentObject 10
+GoalObject 33
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.175 0.3925 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.175 0.3925
+ParentObject 30
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.201 0.4625
+ParentObject 12
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.152 0.4625
+ParentObject 12
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT ARM+SHOULDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.091 1.475 0.071 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 1991
+HController 3
+PController 3
+BController 3
+PivotPoint 0.091 1.475 0.071
+ParentObject 7
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1625 1.182 0.076 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits 0 0
+PController 3
+PLimits -30 90
+BController 3
+BLimits 0 0
+PivotPoint 0.1625 1.182 0.076
+ParentObject 15
+GoalObject 35
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.175 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.175 0.3935
+ParentObject 31
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.201 0.4625
+ParentObject 17
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.152 0.4625
+ParentObject 17
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.14 1.176 0.3615 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.14 1.176 0.3615
+ParentObject 30
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.08650001 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.08650001 1.176 0.3935
+ParentObject 20
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.14 1.176 0.3615 35.20001 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.14 1.176 0.3615
+ParentObject 31
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08650003 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.08650003 1.176 0.3935
+ParentObject 22
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.081 0.9715 0.0305 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4071
+HController 3
+HLimits -15 20
+PController 3
+BController 3
+PivotPoint -0.081 0.9715 0.0305
+ParentObject 7
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.0865 0.4895 0.0055 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint -0.0865 0.4895 0.0055
+ParentObject 24
+GoalObject 32
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.087 0.0695 -0.0015 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HLimits -15 15
+PLimits -15 15
+BLimits -15 15
+PivotPoint -0.087 0.0695 -0.0015
+ParentObject 25
+GoalObject 5
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08099999 0.968 0.029 0.59 -5.969998 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits -20 15
+PController 3
+BController 3
+BJointStiffness 10
+PivotPoint 0.081 0.968 0.029
+ParentObject 7
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.087 0.489 0.005 0 10 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint 0.087 0.489 0.005
+ParentObject 27
+GoalObject 34
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  0 0 0 0 0
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  4 0 0 0 0
+EndBehavior 1
+LockedChannels 4047
+PivotPoint 0.087 0.0695 -0.015
+ParentObject 28
+GoalObject 6
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.16152 1.177 0.298311 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint -0.16152 1.177 0.298311
+ParentObject 11
+GoalObject 4
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.16152 1.177 0.2983107 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint 0.16152 1.177 0.2983107
+ParentObject 16
+GoalObject 3
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+AddNullObject ** Left Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  0 0 1 0 0
+  0.00313304 0.4099999 0.3611033 0 0 0 1 1 1
+  12 0 0 0 0
+  0.005870008 0.5094268 0.3569559 0 0 0 1 1 1
+  16 0 0 0 0
+  0.006330933 0.7609878 0.2974783 0 0 0 1 1 1
+  17 0 0 0 0
+  0.001989287 0.4906089 0.46032 0 0 0 1 1 1
+  19 0 0 0 0
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 5
+ShadowOptions 7
+
+AddNullObject ** Left Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  5
+  0 0 -0.3534054 0 0 0 1 1 1
+  0 0 1 0 0
+  -0.009999997 0.1329988 -0.3534054 0 0 0 1 1 1
+  6 0 0 0 0
+  0 0.005 -0.3534054 0 0 0 1 1 1
+  12 0 0 0 0
+  -0.0191461 0.1429927 -0.3534054 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3534054 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 4
+ShadowOptions 7
+
+AddNullObject ** Right Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  0 0 1 0 0
+  0.07631111 0.5833143 0.3775532 0 0 0 1 1 1
+  2 0 0 0 0
+  0.06732 0.6479581 0.3354103 0 0 0 1 1 1
+  4 0 0 0 0
+  0.05499999 0.4040318 0.3880282 0 0 0 1 1 1
+  6 0 0 0 0
+  0.09 0.395 0.08000001 0 0 0 1 1 1
+  12 0 0 0 0
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  25 0 0 0 0
+EndBehavior 2
+ParentObject 6
+ShadowOptions 7
+
+AddNullObject ** Right Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 -0.3338436 0 0 0 1 1 1
+  0 0 1 0 0
+  0.035 0.19 -0.3338436 0 0 0 1 1 1
+  12 0 0 0 0
+  0 0.165 -0.3338436 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3338436 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 3
+ShadowOptions 7
+
+AddNullObject **MASTER MOVER**
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  1
+  -0.3822147 0 -0.2574267 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 211
+ShadowOptions 7
+
+AddNullObject ** Head Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  5
+  0.0003301788 1.573497 0.06216156 -12 -7.3 0 1 1 1
+  0 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -23.5 -11.2 0 1 1 1
+  25 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -4.1 10 0 1 1 1
+  63 0 0 0 0
+  0.0003301788 1.573497 0.06216156 29 10 0 1 1 1
+  91 0 0 0 0
+  0.0003301788 1.573497 0.06216156 29 10 21.5 1 1 1
+  120 0 0 0 0
+EndBehavior 1
+LockedChannels 1
+PivotPoint 0.0003301788 -0.12 0.1270158
+ParentObject 36
+ShadowOptions 7
+
+AddNullObject ** Right Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  0 0 1 0 0
+  0.1799528 0.9824992 0.04475426 0 0 0 1 1 1
+  12 0 0 0 0
+  0.2370984 1.024529 0.1620873 0 0 0 1 1 1
+  18 0 0 0 0
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 36
+ShadowOptions 7
+
+AddNullObject ** Left Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  0 0 1 0 0
+  -0.2341075 1.032483 0.2496428 0 0 0 1 1 1
+  6 0 0 0 0
+  -0.1891075 1.0625 0.387724 0 0 0 1 1 1
+  12 0 0 0 0
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 36
+ShadowOptions 7
+
+AddNullObject **Left Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  8
+  -0.09342912 -0.002498199 0.4143904 -0.001102765 0.01067958 0.001633743 1 1 1
+  0 0 1 0 0
+  -0.09 -0.002498199 -0.3392484 1.606558 0.5636122 0.001633743 1 1 1
+  12 0 0 0 0
+  -0.08990029 0.006919493 -0.3456087 1.659918 1.226163 0.001633743 1 1 1
+  13 0 0 0 0
+  -0.08983079 0.07406276 -0.2651616 1.098897 16.31068 0.001633743 1 1 1
+  16 0 0 0 0
+  -0.08988751 0.1132081 -0.187574 1.865318 27.11311 0.001633743 1 1 1
+  17 0 0 0 0
+  -0.09 0.1625018 -0.0005259314 1.394272 -1.750284 0.001633743 1 1 1
+  19 0 0 0 0
+  -0.09 0.0555818 0.2976619 0.5471349 -9.906252 0.001633743 1 1 1
+  23 0 0 0 0
+  -0.09 -0.002498199 0.4107516 -0.001102765 0.01067958 0.001633743 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 36
+ShadowOptions 7
+
+AddNullObject **Right Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  8
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  0 0 1 0 0
+  0.09995142 0.07294172 -0.2400226 0 17.5812 0 1 1 1
+  2 0 0 0 0
+  0.09995142 0.1235618 -0.1539098 0 23.3 0 1 1 1
+  4 0 0 0 0
+  0.09995142 0.1825016 0.02224478 0 0 0 1 1 1
+  6 0 0 0 0
+  0.09995142 0.08623742 0.2552712 0 -12.27501 0 1 1 1
+  10 0 0 0 0
+  0.09995142 0.01250165 0.4018472 0 0.5801265 0 1 1 1
+  12 0 0 0 0
+  0.09995142 0.01250165 0.3600375 0 0 0 1 1 1
+  13 0 0 0 0
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+LockedChannels 8
+PivotPoint 0.0875 0.00250002 -2.831221e-007
+ParentObject 36
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\MAIN BODY LIEUTENANT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  5
+  0 1.16 0.01749972 0 5 0 1 1 1
+  0 0 1 0 0
+  -0.035 1.22 0.02749972 0 0 0 1 1 1
+  6 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  12 0 0 0 0
+  0.03402195 1.22318 0.02232989 0 0 0 1 1 1
+  18 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+LockedChannels 2570
+PivotPoint 0 1.234 0
+ParentObject 36
+IKAnchor 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\NECK.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.52 0.05699999 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits 0 0
+PController 3
+PLimits -10 59.99999
+BLimits 0 0
+PivotPoint 0 1.52 0.05699999
+ParentObject 42
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\HEAD.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.665 -0.007999995 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits -40 40
+PLimits -20 90
+BLimits 0 0
+PivotPoint 0 1.665 -0.007999995
+ParentObject 43
+GoalObject 37
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT ARM+SHOULDER LIEUTENANT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.091 1.475 0.07000002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+PController 3
+BController 3
+PivotPoint -0.091 1.475 0.07000002
+ParentObject 42
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1625 1.182 0.07500002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits -30 90
+PivotPoint -0.1625 1.182 0.07500002
+ParentObject 45
+GoalObject 68
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.175 0.3925 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.175 0.3925
+ParentObject 65
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.201 0.4625
+ParentObject 47
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.152 0.4625
+ParentObject 47
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT ARM+SHOULDER LIEUTENANT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.091 1.475 0.071 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 1991
+HController 3
+PController 3
+BController 3
+PivotPoint 0.091 1.475 0.071
+ParentObject 42
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1625 1.182 0.076 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits 0 0
+PController 3
+PLimits -30 90
+BController 3
+BLimits 0 0
+PivotPoint 0.1625 1.182 0.076
+ParentObject 50
+GoalObject 70
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.175 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.175 0.3935
+ParentObject 66
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.201 0.4625
+ParentObject 52
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.152 0.4625
+ParentObject 52
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.14 1.176 0.3615 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.14 1.176 0.3615
+ParentObject 65
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.08650001 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.08650001 1.176 0.3935
+ParentObject 55
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.14 1.176 0.3615 35.20001 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.14 1.176 0.3615
+ParentObject 66
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08650003 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.08650003 1.176 0.3935
+ParentObject 57
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.081 0.9715 0.0305 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4071
+HController 3
+HLimits -15 20
+PController 3
+BController 3
+PivotPoint -0.081 0.9715 0.0305
+ParentObject 42
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.0865 0.4895 0.0055 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint -0.0865 0.4895 0.0055
+ParentObject 59
+GoalObject 67
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.087 0.0695 -0.0015 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HLimits -15 15
+PLimits -15 15
+BLimits -15 15
+PivotPoint -0.087 0.0695 -0.0015
+ParentObject 60
+GoalObject 40
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08099999 0.968 0.029 0.59 -5.969998 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits -20 15
+PController 3
+BController 3
+BJointStiffness 10
+PivotPoint 0.081 0.968 0.029
+ParentObject 42
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.087 0.489 0.005 0 10 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint 0.087 0.489 0.005
+ParentObject 62
+GoalObject 69
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  0 0 0 0 0
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  4 0 0 0 0
+EndBehavior 1
+LockedChannels 4047
+PivotPoint 0.087 0.0695 -0.015
+ParentObject 63
+GoalObject 41
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.16152 1.177 0.298311 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint -0.16152 1.177 0.298311
+ParentObject 46
+GoalObject 39
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.16152 1.177 0.2983107 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint 0.16152 1.177 0.2983107
+ParentObject 51
+GoalObject 38
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+AddNullObject ** Left Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  0 0 1 0 0
+  0.00313304 0.4099999 0.3611033 0 0 0 1 1 1
+  12 0 0 0 0
+  0.005870008 0.5094268 0.3569559 0 0 0 1 1 1
+  16 0 0 0 0
+  0.006330933 0.7609878 0.2974783 0 0 0 1 1 1
+  17 0 0 0 0
+  0.001989287 0.4906089 0.46032 0 0 0 1 1 1
+  19 0 0 0 0
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 40
+ShadowOptions 7
+
+AddNullObject ** Left Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  5
+  0 0 -0.3534054 0 0 0 1 1 1
+  0 0 1 0 0
+  -0.009999997 0.1329988 -0.3534054 0 0 0 1 1 1
+  6 0 0 0 0
+  0 0.005 -0.3534054 0 0 0 1 1 1
+  12 0 0 0 0
+  -0.0191461 0.1429927 -0.3534054 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3534054 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 39
+ShadowOptions 7
+
+AddNullObject ** Right Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  0 0 1 0 0
+  0.07631111 0.5833143 0.3775532 0 0 0 1 1 1
+  2 0 0 0 0
+  0.06732 0.6479581 0.3354103 0 0 0 1 1 1
+  4 0 0 0 0
+  0.05499999 0.4040318 0.3880282 0 0 0 1 1 1
+  6 0 0 0 0
+  0.09 0.395 0.08000001 0 0 0 1 1 1
+  12 0 0 0 0
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  25 0 0 0 0
+EndBehavior 2
+ParentObject 41
+ShadowOptions 7
+
+AddNullObject ** Right Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 -0.3338436 0 0 0 1 1 1
+  0 0 1 0 0
+  0.035 0.19 -0.3338436 0 0 0 1 1 1
+  12 0 0 0 0
+  0 0.165 -0.3338436 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3338436 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 38
+ShadowOptions 7
+
+AddNullObject **MASTER MOVER**
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 -2.383578 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 211
+ShadowOptions 7
+
+AddNullObject ** Head Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  5
+  0.0003301788 1.573497 0.06216156 0 -7.3 0 1 1 1
+  0 0 0 0 0
+  0.0003301788 1.573497 0.06216156 0 -7.3 0 1 1 1
+  10 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -43.3 -7.3 0 1 1 1
+  71 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -43.3 4 0 1 1 1
+  106 0 0 0 0
+  0.0003301788 1.573497 0.06216156 5.099994 4 0 1 1 1
+  120 0 0 0 0
+EndBehavior 1
+LockedChannels 1
+PivotPoint 0.0003301788 -0.12 0.1270158
+ParentObject 71
+ShadowOptions 7
+
+AddNullObject ** Right Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  5
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  0 0 0 0 0
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  10 0 1 0 0
+  0.1799528 0.9824992 0.04475426 0 0 0 1 1 1
+  22 0 0 0 0
+  0.2370984 1.024529 0.1620873 0 0 0 1 1 1
+  28 0 0 0 0
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  35 0 1 0 0
+EndBehavior 2
+ParentObject 71
+ShadowOptions 7
+
+AddNullObject ** Left Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  5
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  0 0 0 0 0
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  10 0 1 0 0
+  -0.2341075 1.032483 0.2496428 0 0 0 1 1 1
+  16 0 0 0 0
+  -0.1891075 1.0625 0.387724 0 0 0 1 1 1
+  22 0 0 0 0
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  35 0 1 0 0
+EndBehavior 2
+ParentObject 71
+ShadowOptions 7
+
+AddNullObject **Left Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  9
+  -0.09342912 -0.002498199 0.4143904 -0.001102765 0.01067958 0.001633743 1 1 1
+  0 0 0 0 0
+  -0.09342912 -0.002498199 0.4143904 -0.001102765 0.01067958 0.001633743 1 1 1
+  10 0 1 0 0
+  -0.09 -0.002498199 -0.3392484 1.606558 0.5636122 0.001633743 1 1 1
+  22 0 0 0 0
+  -0.08990029 0.006919493 -0.3456087 1.659918 1.226163 0.001633743 1 1 1
+  23 0 0 0 0
+  -0.08983079 0.07406276 -0.2651616 1.098897 16.31068 0.001633743 1 1 1
+  26 0 0 0 0
+  -0.08988751 0.1132081 -0.187574 1.865318 27.11311 0.001633743 1 1 1
+  27 0 0 0 0
+  -0.09 0.1625018 -0.0005259314 1.394272 -1.750284 0.001633743 1 1 1
+  29 0 0 0 0
+  -0.09 0.0555818 0.2976619 0.5471349 -9.906252 0.001633743 1 1 1
+  33 0 0 0 0
+  -0.09 -0.002498199 0.4107516 -0.001102765 0.01067958 0.001633743 1 1 1
+  35 0 1 0 0
+EndBehavior 2
+ParentObject 71
+ShadowOptions 7
+
+AddNullObject **Right Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  9
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  0 0 0 0 0
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  10 0 1 0 0
+  0.09995142 0.07294172 -0.2400226 0 17.5812 0 1 1 1
+  12 0 0 0 0
+  0.09995142 0.1235618 -0.1539098 0 23.3 0 1 1 1
+  14 0 0 0 0
+  0.09995142 0.1825016 0.02224478 0 0 0 1 1 1
+  16 0 0 0 0
+  0.09995142 0.08623742 0.2552712 0 -12.27501 0 1 1 1
+  20 0 0 0 0
+  0.09995142 0.01250165 0.4018472 0 0.5801265 0 1 1 1
+  22 0 0 0 0
+  0.09995142 0.01250165 0.3600375 0 0 0 1 1 1
+  23 0 0 0 0
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  35 0 1 0 0
+EndBehavior 2
+LockedChannels 8
+PivotPoint 0.0875 0.00250002 -2.831221e-007
+ParentObject 71
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\MAIN BODY.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  0 1.16 0.01749972 0 5 0 1 1 1
+  0 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  10 0 1 0 0
+  -0.035 1.22 0.02749972 0 0 0 1 1 1
+  16 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  22 0 0 0 0
+  0.03402195 1.22318 0.02232989 0 0 0 1 1 1
+  28 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  35 0 1 0 0
+EndBehavior 2
+LockedChannels 2570
+PivotPoint 0 1.234 0
+ParentObject 71
+IKAnchor 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\NECK.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.52 0.05699999 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits 0 0
+PController 3
+PLimits -10 59.99999
+BLimits 0 0
+PivotPoint 0 1.52 0.05699999
+ParentObject 77
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\HEAD.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.665 -0.007999995 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits -40 40
+PLimits -20 90
+BLimits 0 0
+PivotPoint 0 1.665 -0.007999995
+ParentObject 78
+GoalObject 72
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT ARM+SHOULDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.091 1.475 0.07000002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+PController 3
+BController 3
+PivotPoint -0.091 1.475 0.07000002
+ParentObject 77
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1625 1.182 0.07500002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits -30 90
+PivotPoint -0.1625 1.182 0.07500002
+ParentObject 80
+GoalObject 103
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.175 0.3925 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.175 0.3925
+ParentObject 100
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.201 0.4625
+ParentObject 82
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.152 0.4625
+ParentObject 82
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT ARM+SHOULDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.091 1.475 0.071 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 1991
+HController 3
+PController 3
+BController 3
+PivotPoint 0.091 1.475 0.071
+ParentObject 77
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1625 1.182 0.076 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits 0 0
+PController 3
+PLimits -30 90
+BController 3
+BLimits 0 0
+PivotPoint 0.1625 1.182 0.076
+ParentObject 85
+GoalObject 105
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.175 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.175 0.3935
+ParentObject 101
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.201 0.4625
+ParentObject 87
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.152 0.4625
+ParentObject 87
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.14 1.176 0.3615 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.14 1.176 0.3615
+ParentObject 100
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.08650001 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.08650001 1.176 0.3935
+ParentObject 90
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.14 1.176 0.3615 35.20001 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.14 1.176 0.3615
+ParentObject 101
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08650003 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.08650003 1.176 0.3935
+ParentObject 92
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.081 0.9715 0.0305 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4071
+HController 3
+HLimits -15 20
+PController 3
+BController 3
+PivotPoint -0.081 0.9715 0.0305
+ParentObject 77
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.0865 0.4895 0.0055 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint -0.0865 0.4895 0.0055
+ParentObject 94
+GoalObject 102
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.087 0.0695 -0.0015 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HLimits -15 15
+PLimits -15 15
+BLimits -15 15
+PivotPoint -0.087 0.0695 -0.0015
+ParentObject 95
+GoalObject 75
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08099999 0.968 0.029 0.59 -5.969998 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits -20 15
+PController 3
+BController 3
+BJointStiffness 10
+PivotPoint 0.081 0.968 0.029
+ParentObject 77
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.087 0.489 0.005 0 10 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint 0.087 0.489 0.005
+ParentObject 97
+GoalObject 104
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  0 0 0 0 0
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  4 0 0 0 0
+EndBehavior 1
+LockedChannels 4047
+PivotPoint 0.087 0.0695 -0.015
+ParentObject 98
+GoalObject 76
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.16152 1.177 0.298311 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint -0.16152 1.177 0.298311
+ParentObject 81
+GoalObject 74
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.16152 1.177 0.2983107 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint 0.16152 1.177 0.2983107
+ParentObject 86
+GoalObject 73
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+AddNullObject ** Left Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  0 0 1 0 0
+  0.00313304 0.4099999 0.3611033 0 0 0 1 1 1
+  12 0 0 0 0
+  0.005870008 0.5094268 0.3569559 0 0 0 1 1 1
+  16 0 0 0 0
+  0.006330933 0.7609878 0.2974783 0 0 0 1 1 1
+  17 0 0 0 0
+  0.001989287 0.4906089 0.46032 0 0 0 1 1 1
+  19 0 0 0 0
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 75
+ShadowOptions 7
+
+AddNullObject ** Left Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  5
+  0 0 -0.3534054 0 0 0 1 1 1
+  0 0 1 0 0
+  -0.009999997 0.1329988 -0.3534054 0 0 0 1 1 1
+  6 0 0 0 0
+  0 0.005 -0.3534054 0 0 0 1 1 1
+  12 0 0 0 0
+  -0.0191461 0.1429927 -0.3534054 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3534054 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 74
+ShadowOptions 7
+
+AddNullObject ** Right Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  0 0 1 0 0
+  0.07631111 0.5833143 0.3775532 0 0 0 1 1 1
+  2 0 0 0 0
+  0.06732 0.6479581 0.3354103 0 0 0 1 1 1
+  4 0 0 0 0
+  0.05499999 0.4040318 0.3880282 0 0 0 1 1 1
+  6 0 0 0 0
+  0.09 0.395 0.08000001 0 0 0 1 1 1
+  12 0 0 0 0
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  25 0 0 0 0
+EndBehavior 2
+ParentObject 76
+ShadowOptions 7
+
+AddNullObject ** Right Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 -0.3338436 0 0 0 1 1 1
+  0 0 1 0 0
+  0.035 0.19 -0.3338436 0 0 0 1 1 1
+  12 0 0 0 0
+  0 0.165 -0.3338436 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3338436 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 73
+ShadowOptions 7
+
+AddNullObject **MASTER MOVER**
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  1
+  0.5961144 0 -0.8768847 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 211
+ShadowOptions 7
+
+AddNullObject ** Head Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  4
+  0.0003301788 1.573497 0.06216156 0 -7.3 0 1 1 1
+  0 0 0 0 0
+  0.0003301788 1.573497 0.06216156 51.6 7.999999 0 1 1 1
+  26 0 0 0 0
+  0.0003301788 1.573497 0.06216156 25.49999 0.09999904 0 1 1 1
+  72 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -47.80001 0.09999904 0 1 1 1
+  120 0 0 0 0
+EndBehavior 1
+LockedChannels 1
+PivotPoint 0.0003301788 -0.12 0.1270158
+ParentObject 106
+ShadowOptions 7
+
+AddNullObject ** Right Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  0 0 1 0 0
+  0.1799528 0.9824992 0.04475426 0 0 0 1 1 1
+  12 0 0 0 0
+  0.2370984 1.024529 0.1620873 0 0 0 1 1 1
+  18 0 0 0 0
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 106
+ShadowOptions 7
+
+AddNullObject ** Left Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  0 0 1 0 0
+  -0.2341075 1.032483 0.2496428 0 0 0 1 1 1
+  6 0 0 0 0
+  -0.1891075 1.0625 0.387724 0 0 0 1 1 1
+  12 0 0 0 0
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 106
+ShadowOptions 7
+
+AddNullObject **Left Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  8
+  -0.09342912 -0.002498199 0.4143904 -0.001102765 0.01067958 0.001633743 1 1 1
+  0 0 1 0 0
+  -0.09 -0.002498199 -0.3392484 1.606558 0.5636122 0.001633743 1 1 1
+  12 0 0 0 0
+  -0.08990029 0.006919493 -0.3456087 1.659918 1.226163 0.001633743 1 1 1
+  13 0 0 0 0
+  -0.08983079 0.07406276 -0.2651616 1.098897 16.31068 0.001633743 1 1 1
+  16 0 0 0 0
+  -0.08988751 0.1132081 -0.187574 1.865318 27.11311 0.001633743 1 1 1
+  17 0 0 0 0
+  -0.09 0.1625018 -0.0005259314 1.394272 -1.750284 0.001633743 1 1 1
+  19 0 0 0 0
+  -0.09 0.0555818 0.2976619 0.5471349 -9.906252 0.001633743 1 1 1
+  23 0 0 0 0
+  -0.09 -0.002498199 0.4107516 -0.001102765 0.01067958 0.001633743 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 106
+ShadowOptions 7
+
+AddNullObject **Right Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  8
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  0 0 1 0 0
+  0.09995142 0.07294172 -0.2400226 0 17.5812 0 1 1 1
+  2 0 0 0 0
+  0.09995142 0.1235618 -0.1539098 0 23.3 0 1 1 1
+  4 0 0 0 0
+  0.09995142 0.1825016 0.02224478 0 0 0 1 1 1
+  6 0 0 0 0
+  0.09995142 0.08623742 0.2552712 0 -12.27501 0 1 1 1
+  10 0 0 0 0
+  0.09995142 0.01250165 0.4018472 0 0.5801265 0 1 1 1
+  12 0 0 0 0
+  0.09995142 0.01250165 0.3600375 0 0 0 1 1 1
+  13 0 0 0 0
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+LockedChannels 8
+PivotPoint 0.0875 0.00250002 -2.831221e-007
+ParentObject 106
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\MAIN BODY.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  5
+  0 1.16 0.01749972 0 5 0 1 1 1
+  0 0 1 0 0
+  -0.035 1.22 0.02749972 0 0 0 1 1 1
+  6 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  12 0 0 0 0
+  0.03402195 1.22318 0.02232989 0 0 0 1 1 1
+  18 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+LockedChannels 2570
+PivotPoint 0 1.234 0
+ParentObject 106
+IKAnchor 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\NECK.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.52 0.05699999 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits 0 0
+PController 3
+PLimits -10 59.99999
+BLimits 0 0
+PivotPoint 0 1.52 0.05699999
+ParentObject 112
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\HEAD.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.665 -0.007999995 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits -40 40
+PLimits -20 90
+BLimits 0 0
+PivotPoint 0 1.665 -0.007999995
+ParentObject 113
+GoalObject 107
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT ARM+SHOULDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.091 1.475 0.07000002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+PController 3
+BController 3
+PivotPoint -0.091 1.475 0.07000002
+ParentObject 112
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1625 1.182 0.07500002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits -30 90
+PivotPoint -0.1625 1.182 0.07500002
+ParentObject 115
+GoalObject 138
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.175 0.3925 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.175 0.3925
+ParentObject 135
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.201 0.4625
+ParentObject 117
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.152 0.4625
+ParentObject 117
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT ARM+SHOULDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.091 1.475 0.071 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 1991
+HController 3
+PController 3
+BController 3
+PivotPoint 0.091 1.475 0.071
+ParentObject 112
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1625 1.182 0.076 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits 0 0
+PController 3
+PLimits -30 90
+BController 3
+BLimits 0 0
+PivotPoint 0.1625 1.182 0.076
+ParentObject 120
+GoalObject 140
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.175 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.175 0.3935
+ParentObject 136
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.201 0.4625
+ParentObject 122
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.152 0.4625
+ParentObject 122
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.14 1.176 0.3615 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.14 1.176 0.3615
+ParentObject 135
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.08650001 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.08650001 1.176 0.3935
+ParentObject 125
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.14 1.176 0.3615 35.20001 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.14 1.176 0.3615
+ParentObject 136
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08650003 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.08650003 1.176 0.3935
+ParentObject 127
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.081 0.9715 0.0305 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4071
+HController 3
+HLimits -15 20
+PController 3
+BController 3
+PivotPoint -0.081 0.9715 0.0305
+ParentObject 112
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.0865 0.4895 0.0055 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint -0.0865 0.4895 0.0055
+ParentObject 129
+GoalObject 137
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.087 0.0695 -0.0015 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HLimits -15 15
+PLimits -15 15
+BLimits -15 15
+PivotPoint -0.087 0.0695 -0.0015
+ParentObject 130
+GoalObject 110
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08099999 0.968 0.029 0.59 -5.969998 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits -20 15
+PController 3
+BController 3
+BJointStiffness 10
+PivotPoint 0.081 0.968 0.029
+ParentObject 112
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.087 0.489 0.005 0 10 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint 0.087 0.489 0.005
+ParentObject 132
+GoalObject 139
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  0 0 0 0 0
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  4 0 0 0 0
+EndBehavior 1
+LockedChannels 4047
+PivotPoint 0.087 0.0695 -0.015
+ParentObject 133
+GoalObject 111
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.16152 1.177 0.298311 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint -0.16152 1.177 0.298311
+ParentObject 116
+GoalObject 109
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.16152 1.177 0.2983107 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint 0.16152 1.177 0.2983107
+ParentObject 121
+GoalObject 108
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+AddNullObject ** Left Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  0 0 1 0 0
+  0.00313304 0.4099999 0.3611033 0 0 0 1 1 1
+  12 0 0 0 0
+  0.005870008 0.5094268 0.3569559 0 0 0 1 1 1
+  16 0 0 0 0
+  0.006330933 0.7609878 0.2974783 0 0 0 1 1 1
+  17 0 0 0 0
+  0.001989287 0.4906089 0.46032 0 0 0 1 1 1
+  19 0 0 0 0
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 110
+ShadowOptions 7
+
+AddNullObject ** Left Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  5
+  0 0 -0.3534054 0 0 0 1 1 1
+  0 0 1 0 0
+  -0.009999997 0.1329988 -0.3534054 0 0 0 1 1 1
+  6 0 0 0 0
+  0 0.005 -0.3534054 0 0 0 1 1 1
+  12 0 0 0 0
+  -0.0191461 0.1429927 -0.3534054 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3534054 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 109
+ShadowOptions 7
+
+AddNullObject ** Right Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  0 0 1 0 0
+  0.07631111 0.5833143 0.3775532 0 0 0 1 1 1
+  2 0 0 0 0
+  0.06732 0.6479581 0.3354103 0 0 0 1 1 1
+  4 0 0 0 0
+  0.05499999 0.4040318 0.3880282 0 0 0 1 1 1
+  6 0 0 0 0
+  0.09 0.395 0.08000001 0 0 0 1 1 1
+  12 0 0 0 0
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  25 0 0 0 0
+EndBehavior 2
+ParentObject 111
+ShadowOptions 7
+
+AddNullObject ** Right Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 -0.3338436 0 0 0 1 1 1
+  0 0 1 0 0
+  0.035 0.19 -0.3338436 0 0 0 1 1 1
+  12 0 0 0 0
+  0 0.165 -0.3338436 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3338436 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 108
+ShadowOptions 7
+
+AddNullObject **MASTER MOVER**
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  1
+  -0.8555734 0 -1.104782 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 211
+ShadowOptions 7
+
+AddNullObject ** Head Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  5
+  0.0003301788 1.573497 0.06216156 11.3 -7.3 0 1 1 1
+  0 0 0 0 0
+  0.0003301788 1.573497 0.06216156 0 -7.3 0 1 1 1
+  18 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -20.2 -7.3 0 1 1 1
+  38 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -40.4 1.999999 0 1 1 1
+  97 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -15.5 -2.200001 0 1 1 1
+  120 0 0 0 0
+EndBehavior 1
+LockedChannels 1
+PivotPoint 0.0003301788 -0.12 0.1270158
+ParentObject 141
+ShadowOptions 7
+
+AddNullObject ** Right Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  5
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  0 0 0 0 0
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  18 0 1 0 0
+  0.1799528 0.9824992 0.04475426 0 0 0 1 1 1
+  30 0 0 0 0
+  0.2370984 1.024529 0.1620873 0 0 0 1 1 1
+  36 0 0 0 0
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  43 0 1 0 0
+EndBehavior 2
+ParentObject 141
+ShadowOptions 7
+
+AddNullObject ** Left Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  5
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  0 0 0 0 0
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  18 0 1 0 0
+  -0.2341075 1.032483 0.2496428 0 0 0 1 1 1
+  24 0 0 0 0
+  -0.1891075 1.0625 0.387724 0 0 0 1 1 1
+  30 0 0 0 0
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  43 0 1 0 0
+EndBehavior 2
+ParentObject 141
+ShadowOptions 7
+
+AddNullObject **Left Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  9
+  -0.09342912 -0.002498199 0.4143904 -0.001102765 0.01067958 0.001633743 1 1 1
+  0 0 0 0 0
+  -0.09342912 -0.002498199 0.4143904 -0.001102765 0.01067958 0.001633743 1 1 1
+  18 0 1 0 0
+  -0.09 -0.002498199 -0.3392484 1.606558 0.5636122 0.001633743 1 1 1
+  30 0 0 0 0
+  -0.08990029 0.006919493 -0.3456087 1.659918 1.226163 0.001633743 1 1 1
+  31 0 0 0 0
+  -0.08983079 0.07406276 -0.2651616 1.098897 16.31068 0.001633743 1 1 1
+  34 0 0 0 0
+  -0.08988751 0.1132081 -0.187574 1.865318 27.11311 0.001633743 1 1 1
+  35 0 0 0 0
+  -0.09 0.1625018 -0.0005259314 1.394272 -1.750284 0.001633743 1 1 1
+  37 0 0 0 0
+  -0.09 0.0555818 0.2976619 0.5471349 -9.906252 0.001633743 1 1 1
+  41 0 0 0 0
+  -0.09 -0.002498199 0.4107516 -0.001102765 0.01067958 0.001633743 1 1 1
+  43 0 1 0 0
+EndBehavior 2
+ParentObject 141
+ShadowOptions 7
+
+AddNullObject **Right Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  9
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  0 0 0 0 0
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  18 0 1 0 0
+  0.09995142 0.07294172 -0.2400226 0 17.5812 0 1 1 1
+  20 0 0 0 0
+  0.09995142 0.1235618 -0.1539098 0 23.3 0 1 1 1
+  22 0 0 0 0
+  0.09995142 0.1825016 0.02224478 0 0 0 1 1 1
+  24 0 0 0 0
+  0.09995142 0.08623742 0.2552712 0 -12.27501 0 1 1 1
+  28 0 0 0 0
+  0.09995142 0.01250165 0.4018472 0 0.5801265 0 1 1 1
+  30 0 0 0 0
+  0.09995142 0.01250165 0.3600375 0 0 0 1 1 1
+  31 0 0 0 0
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  43 0 1 0 0
+EndBehavior 2
+LockedChannels 8
+PivotPoint 0.0875 0.00250002 -2.831221e-007
+ParentObject 141
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\MAIN BODY.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  0 1.16 0.01749972 0 5 0 1 1 1
+  0 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  18 0 1 0 0
+  -0.035 1.22 0.02749972 0 0 0 1 1 1
+  24 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  30 0 0 0 0
+  0.03402195 1.22318 0.02232989 0 0 0 1 1 1
+  36 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  43 0 1 0 0
+EndBehavior 2
+LockedChannels 2570
+PivotPoint 0 1.234 0
+ParentObject 141
+IKAnchor 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\NECK.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.52 0.05699999 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits 0 0
+PController 3
+PLimits -10 59.99999
+BLimits 0 0
+PivotPoint 0 1.52 0.05699999
+ParentObject 147
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\HEAD.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.665 -0.007999995 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits -40 40
+PLimits -20 90
+BLimits 0 0
+PivotPoint 0 1.665 -0.007999995
+ParentObject 148
+GoalObject 142
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT ARM+SHOULDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.091 1.475 0.07000002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+PController 3
+BController 3
+PivotPoint -0.091 1.475 0.07000002
+ParentObject 147
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1625 1.182 0.07500002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits -30 90
+PivotPoint -0.1625 1.182 0.07500002
+ParentObject 150
+GoalObject 173
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.175 0.3925 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.175 0.3925
+ParentObject 170
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.201 0.4625
+ParentObject 152
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.152 0.4625
+ParentObject 152
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT ARM+SHOULDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.091 1.475 0.071 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 1991
+HController 3
+PController 3
+BController 3
+PivotPoint 0.091 1.475 0.071
+ParentObject 147
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1625 1.182 0.076 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits 0 0
+PController 3
+PLimits -30 90
+BController 3
+BLimits 0 0
+PivotPoint 0.1625 1.182 0.076
+ParentObject 155
+GoalObject 175
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.175 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.175 0.3935
+ParentObject 171
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.201 0.4625
+ParentObject 157
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.152 0.4625
+ParentObject 157
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.14 1.176 0.3615 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.14 1.176 0.3615
+ParentObject 170
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.08650001 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.08650001 1.176 0.3935
+ParentObject 160
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.14 1.176 0.3615 35.20001 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.14 1.176 0.3615
+ParentObject 171
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08650003 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.08650003 1.176 0.3935
+ParentObject 162
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.081 0.9715 0.0305 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4071
+HController 3
+HLimits -15 20
+PController 3
+BController 3
+PivotPoint -0.081 0.9715 0.0305
+ParentObject 147
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.0865 0.4895 0.0055 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint -0.0865 0.4895 0.0055
+ParentObject 164
+GoalObject 172
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.087 0.0695 -0.0015 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HLimits -15 15
+PLimits -15 15
+BLimits -15 15
+PivotPoint -0.087 0.0695 -0.0015
+ParentObject 165
+GoalObject 145
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08099999 0.968 0.029 0.59 -5.969998 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits -20 15
+PController 3
+BController 3
+BJointStiffness 10
+PivotPoint 0.081 0.968 0.029
+ParentObject 147
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.087 0.489 0.005 0 10 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint 0.087 0.489 0.005
+ParentObject 167
+GoalObject 174
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  0 0 0 0 0
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  4 0 0 0 0
+EndBehavior 1
+LockedChannels 4047
+PivotPoint 0.087 0.0695 -0.015
+ParentObject 168
+GoalObject 146
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.16152 1.177 0.298311 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint -0.16152 1.177 0.298311
+ParentObject 151
+GoalObject 144
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.16152 1.177 0.2983107 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint 0.16152 1.177 0.2983107
+ParentObject 156
+GoalObject 143
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+AddNullObject ** Left Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  0 0 1 0 0
+  0.00313304 0.4099999 0.3611033 0 0 0 1 1 1
+  12 0 0 0 0
+  0.005870008 0.5094268 0.3569559 0 0 0 1 1 1
+  16 0 0 0 0
+  0.006330933 0.7609878 0.2974783 0 0 0 1 1 1
+  17 0 0 0 0
+  0.001989287 0.4906089 0.46032 0 0 0 1 1 1
+  19 0 0 0 0
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 145
+ShadowOptions 7
+
+AddNullObject ** Left Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  5
+  0 0 -0.3534054 0 0 0 1 1 1
+  0 0 1 0 0
+  -0.009999997 0.1329988 -0.3534054 0 0 0 1 1 1
+  6 0 0 0 0
+  0 0.005 -0.3534054 0 0 0 1 1 1
+  12 0 0 0 0
+  -0.0191461 0.1429927 -0.3534054 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3534054 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 144
+ShadowOptions 7
+
+AddNullObject ** Right Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  0 0 1 0 0
+  0.07631111 0.5833143 0.3775532 0 0 0 1 1 1
+  2 0 0 0 0
+  0.06732 0.6479581 0.3354103 0 0 0 1 1 1
+  4 0 0 0 0
+  0.05499999 0.4040318 0.3880282 0 0 0 1 1 1
+  6 0 0 0 0
+  0.09 0.395 0.08000001 0 0 0 1 1 1
+  12 0 0 0 0
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  25 0 0 0 0
+EndBehavior 2
+ParentObject 146
+ShadowOptions 7
+
+AddNullObject ** Right Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 -0.3338436 0 0 0 1 1 1
+  0 0 1 0 0
+  0.035 0.19 -0.3338436 0 0 0 1 1 1
+  12 0 0 0 0
+  0 0.165 -0.3338436 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3338436 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 143
+ShadowOptions 7
+
+AddNullObject **MASTER MOVER**
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  1
+  1.010203 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 211
+ShadowOptions 7
+
+AddNullObject ** Head Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  4
+  0.0003301788 1.573497 0.06216156 -8.799999 -7.3 0 1 1 1
+  0 0 0 0 0
+  0.0003301788 1.573497 0.06216156 17.2 -12 0 1 1 1
+  32 0 0 0 0
+  0.0003301788 1.573497 0.06216156 31.1 8.9 0 1 1 1
+  70 0 0 0 0
+  0.0003301788 1.573497 0.06216156 -7.999998 8.9 0 1 1 1
+  105 0 0 0 0
+EndBehavior 1
+LockedChannels 1
+PivotPoint 0.0003301788 -0.12 0.1270158
+ParentObject 176
+ShadowOptions 7
+
+AddNullObject ** Right Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  0 0 1 0 0
+  0.1799528 0.9824992 0.04475426 0 0 0 1 1 1
+  12 0 0 0 0
+  0.2370984 1.024529 0.1620873 0 0 0 1 1 1
+  18 0 0 0 0
+  0.1799528 1.102499 0.3797542 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 176
+ShadowOptions 7
+
+AddNullObject ** Left Arm Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  0 0 1 0 0
+  -0.2341075 1.032483 0.2496428 0 0 0 1 1 1
+  6 0 0 0 0
+  -0.1891075 1.0625 0.387724 0 0 0 1 1 1
+  12 0 0 0 0
+  -0.1891075 0.9875002 0.04272402 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 176
+ShadowOptions 7
+
+AddNullObject **Left Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  8
+  -0.09342912 -0.002498199 0.4143904 -0.001102765 0.01067958 0.001633743 1 1 1
+  0 0 1 0 0
+  -0.09 -0.002498199 -0.3392484 1.606558 0.5636122 0.001633743 1 1 1
+  12 0 0 0 0
+  -0.08990029 0.006919493 -0.3456087 1.659918 1.226163 0.001633743 1 1 1
+  13 0 0 0 0
+  -0.08983079 0.07406276 -0.2651616 1.098897 16.31068 0.001633743 1 1 1
+  16 0 0 0 0
+  -0.08988751 0.1132081 -0.187574 1.865318 27.11311 0.001633743 1 1 1
+  17 0 0 0 0
+  -0.09 0.1625018 -0.0005259314 1.394272 -1.750284 0.001633743 1 1 1
+  19 0 0 0 0
+  -0.09 0.0555818 0.2976619 0.5471349 -9.906252 0.001633743 1 1 1
+  23 0 0 0 0
+  -0.09 -0.002498199 0.4107516 -0.001102765 0.01067958 0.001633743 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 176
+ShadowOptions 7
+
+AddNullObject **Right Leg Goal**
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  8
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  0 0 1 0 0
+  0.09995142 0.07294172 -0.2400226 0 17.5812 0 1 1 1
+  2 0 0 0 0
+  0.09995142 0.1235618 -0.1539098 0 23.3 0 1 1 1
+  4 0 0 0 0
+  0.09995142 0.1825016 0.02224478 0 0 0 1 1 1
+  6 0 0 0 0
+  0.09995142 0.08623742 0.2552712 0 -12.27501 0 1 1 1
+  10 0 0 0 0
+  0.09995142 0.01250165 0.4018472 0 0.5801265 0 1 1 1
+  12 0 0 0 0
+  0.09995142 0.01250165 0.3600375 0 0 0 1 1 1
+  13 0 0 0 0
+  0.09995142 0.01250165 -0.3281528 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+LockedChannels 8
+PivotPoint 0.0875 0.00250002 -2.831221e-007
+ParentObject 176
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\MAIN BODY.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  5
+  0 1.16 0.01749972 0 5 0 1 1 1
+  0 0 1 0 0
+  -0.035 1.22 0.02749972 0 0 0 1 1 1
+  6 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  12 0 0 0 0
+  0.03402195 1.22318 0.02232989 0 0 0 1 1 1
+  18 0 0 0 0
+  0 1.16 0.01749972 0 5 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+LockedChannels 2570
+PivotPoint 0 1.234 0
+ParentObject 176
+IKAnchor 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\NECK.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.52 0.05699999 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits 0 0
+PController 3
+PLimits -10 59.99999
+BLimits 0 0
+PivotPoint 0 1.52 0.05699999
+ParentObject 182
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\HEAD.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 1.665 -0.007999995 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+HLimits -40 40
+PLimits -20 90
+BLimits 0 0
+PivotPoint 0 1.665 -0.007999995
+ParentObject 183
+GoalObject 177
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT ARM+SHOULDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.091 1.475 0.07000002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+PController 3
+BController 3
+PivotPoint -0.091 1.475 0.07000002
+ParentObject 182
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1625 1.182 0.07500002 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits -30 90
+PivotPoint -0.1625 1.182 0.07500002
+ParentObject 185
+GoalObject 208
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.175 0.3925 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.175 0.3925
+ParentObject 205
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.201 0.4625
+ParentObject 187
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.1615 1.152 0.4625
+ParentObject 187
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT ARM+SHOULDER.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.091 1.475 0.071 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 1991
+HController 3
+PController 3
+BController 3
+PivotPoint 0.091 1.475 0.071
+ParentObject 182
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOREARM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1625 1.182 0.076 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits 0 0
+PController 3
+PLimits -30 90
+BController 3
+BLimits 0 0
+PivotPoint 0.1625 1.182 0.076
+ParentObject 190
+GoalObject 210
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT REAR DIGITS.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.175 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.175 0.3935
+ParentObject 206
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.201 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.201 0.4625
+ParentObject 192
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT DIGIT 2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.1615 1.152 0.4625 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint 0.1615 1.152 0.4625
+ParentObject 192
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.14 1.176 0.3615 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.14 1.176 0.3615
+ParentObject 205
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.08650001 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+PivotPoint -0.08650001 1.176 0.3935
+ParentObject 195
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB REAR.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.14 1.176 0.3615 35.20001 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.14 1.176 0.3615
+ParentObject 206
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THUMB TIP.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08650003 1.176 0.3935 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4087
+HLimits -30 59.99999
+PLimits 0 0
+BLimits 0 0
+PivotPoint 0.08650003 1.176 0.3935
+ParentObject 197
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.081 0.9715 0.0305 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4071
+HController 3
+HLimits -15 20
+PController 3
+BController 3
+PivotPoint -0.081 0.9715 0.0305
+ParentObject 182
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.0865 0.4895 0.0055 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint -0.0865 0.4895 0.0055
+ParentObject 199
+GoalObject 207
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.087 0.0695 -0.0015 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HLimits -15 15
+PLimits -15 15
+BLimits -15 15
+PivotPoint -0.087 0.0695 -0.0015
+ParentObject 200
+GoalObject 180
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT THIGH.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.08099999 0.968 0.029 0.59 -5.969998 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4039
+HController 3
+HLimits -20 15
+PController 3
+BController 3
+BJointStiffness 10
+PivotPoint 0.081 0.968 0.029
+ParentObject 182
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT SHIN.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.087 0.489 0.005 0 10 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4079
+PController 3
+PLimits 10 130
+PivotPoint 0.087 0.489 0.005
+ParentObject 202
+GoalObject 209
+FullTimeIK 1
+GoalStrength 2
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT FOOT.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  0 0 0 0 0
+  0.087 0.0695 -0.015 0 0 0 1 1 1
+  4 0 0 0 0
+EndBehavior 1
+LockedChannels 4047
+PivotPoint 0.087 0.0695 -0.015
+ParentObject 203
+GoalObject 181
+FullTimeIK 1
+GoalStrength 10
+MatchGoalOrientation 1
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\LEFT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.16152 1.177 0.298311 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint -0.16152 1.177 0.298311
+ParentObject 186
+GoalObject 179
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+LoadObject F:\LIGHTWAVE MODELS\STAR WARS\Droids\Trade Battle Droid\Objects\new droid\RIGHT PALM.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.16152 1.177 0.2983107 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4063
+PivotPoint 0.16152 1.177 0.2983107
+ParentObject 191
+GoalObject 178
+FullTimeIK 1
+GoalStrength 10
+ShadowOptions 7
+
+AddNullObject ** Left Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  0 0 1 0 0
+  0.00313304 0.4099999 0.3611033 0 0 0 1 1 1
+  12 0 0 0 0
+  0.005870008 0.5094268 0.3569559 0 0 0 1 1 1
+  16 0 0 0 0
+  0.006330933 0.7609878 0.2974783 0 0 0 1 1 1
+  17 0 0 0 0
+  0.001989287 0.4906089 0.46032 0 0 0 1 1 1
+  19 0 0 0 0
+  0.00313304 0.4099999 0.0711033 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 180
+ShadowOptions 7
+
+AddNullObject ** Left Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  5
+  0 0 -0.3534054 0 0 0 1 1 1
+  0 0 1 0 0
+  -0.009999997 0.1329988 -0.3534054 0 0 0 1 1 1
+  6 0 0 0 0
+  0 0.005 -0.3534054 0 0 0 1 1 1
+  12 0 0 0 0
+  -0.0191461 0.1429927 -0.3534054 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3534054 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 179
+ShadowOptions 7
+
+AddNullObject ** Right Knee Goal **
+ShowObject 8 2
+ObjectMotion (unnamed)
+  9
+  6
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  0 0 1 0 0
+  0.07631111 0.5833143 0.3775532 0 0 0 1 1 1
+  2 0 0 0 0
+  0.06732 0.6479581 0.3354103 0 0 0 1 1 1
+  4 0 0 0 0
+  0.05499999 0.4040318 0.3880282 0 0 0 1 1 1
+  6 0 0 0 0
+  0.09 0.395 0.08000001 0 0 0 1 1 1
+  12 0 0 0 0
+  0.09 0.4000001 0.355 0 0 0 1 1 1
+  25 0 0 0 0
+EndBehavior 2
+ParentObject 181
+ShadowOptions 7
+
+AddNullObject ** Right Elbow Goal **
+ShowObject 8 5
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 -0.3338436 0 0 0 1 1 1
+  0 0 1 0 0
+  0.035 0.19 -0.3338436 0 0 0 1 1 1
+  12 0 0 0 0
+  0 0.165 -0.3338436 0 0 0 1 1 1
+  18 0 0 0 0
+  0 0 -0.3338436 0 0 0 1 1 1
+  25 0 1 0 0
+EndBehavior 2
+ParentObject 178
+ShadowOptions 7
+
+AddNullObject GROUP MASTER NULL
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  3
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  1 0 0 0 0
+  -0.4241234 0 7.292296 0 0 0 1 1 1
+  131 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.25
+
+AddLight
+LightName Light
+ShowLight 1 5
+LightMotion (unnamed)
+  9
+  1
+  -4.287462 3.39 3.927866 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+HController 1
+PController 1
+TargetObject 211
+LightColor 255 255 255
+LgtIntensity 1
+LightType 0
+ShadowType 1
+
+ShowCamera 1 2
+CameraMotion (unnamed)
+  9
+  1
+  -1.661959 1.525 8.611081 164.3 2.1 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ZoomFactor 3.2
+Resolution 1
+CustomSize 340 260
+PixelAspectRatio -1
+CustomPixelRatio 1
+MaskPosition 0 0 640 480
+MotionBlur 0
+FieldRendering 0
+SegmentMemory 30000000
+ApertureHeight 0.015
+Antialiasing 1
+AdaptiveSampling 1
+AdaptiveThreshold 26
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+DataOverlayLabel  
+SaveAnimationName J:\droidgroupwalk.avi
+AnimationSaver AVI(.avi)
+863398244
+10000
+120
+
+EndPlugin
+
+ViewType 9
+ViewAimpoint 0 0 0
+ViewZoomFactor 0.7071069
+
+GridNumber 80
+GridSize 1
+CameraViewBG 0
+ShowMotionPath 1
+ShowFogRadius 0
+ShowFogEffect 0
+ShowSafeAreas 0
+ShowFieldChart 0

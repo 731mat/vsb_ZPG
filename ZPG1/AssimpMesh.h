@@ -25,6 +25,7 @@ public:
 		float Normal[3];
 		float Texture[2];
 		float Tangent[3];
+		float Bitangens[3];
 	};
 	AssimpMesh(int id, GLuint VAO, GLuint VBO, GLuint IBO, int indicesCount);
 	~AssimpMesh();

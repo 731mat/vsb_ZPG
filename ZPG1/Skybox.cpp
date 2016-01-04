@@ -84,14 +84,13 @@ void Skybox::drawSkybox()
 {
 	glDepthMask(GL_FALSE);
 	this->shader->setShader();
-	//viewMat = glm::mat4(glm::mat3(Application::getWindow()->getScene()->getCamera()->getView()));
-	//glUniformMatrix4fv(glGetUniformLocation(shader->getShader(), "view"), 1, GL_FALSE, glm::value_ptr(viewMat));
-	//glUniformMatrix4fv(glGetUniformLocation(shader->getShader(), "projection"), 1, GL_FALSE, glm::value_ptr(Application::getWindow()->getScene()->getCamera()->getProjection()));
-	//this->shader->setViewMatrix(Application::getWindow()->getScene()->getCamera()->getView());
-	//this->shader->setProjectionMatrix(Application::getWindow()->getScene()->getCamera()->getProjection());
-	glBindTexture(GL_TEXTURE_CUBE_MAP, tex_cube);
-	//glBindTexture(GL_TEXTURE_CUBE_MAP, tex_cube);
-	//glUniform1i(glGetUniformLocation(shader->getShader(), "textura"), 0);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+	this->shader->setViewMatrix(viewMat);
+	this->shader->setProjectionMatrix(projectionMat);
 	glBindVertexArray(skyboxVAO);
 	glActiveTexture(GL_TEXTURE0);
 	glUniform1i(glGetUniformLocation(shader->getShader(), "textura"), 0);
@@ -105,10 +104,5 @@ void Skybox::updateCamera(Camera* camera)
 {
 	projectionMat = camera->getProjection();
 	viewMat = glm::mat4(glm::mat3(camera->getView()));
-	//this->shader->setShader();
-	//viewMat = (camera->getView());
-	//projectionMat = (camera->getProjection());
-	//this->shader->setViewMatrix(camera->getView());
-	//this->shader->setProjectionMatrix(camera->getProjection());
 	this->drawSkybox();
 }

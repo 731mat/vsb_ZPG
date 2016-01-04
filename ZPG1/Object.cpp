@@ -9,6 +9,7 @@ Object::Object(Mesh* mesh, Shader* shader, glm::vec3 setPosition, glm::vec3 setS
 	model = glm::mat4(1.0f);
 	model = glm::scale(model, setScale);
 	model = glm::translate(model, setPosition);
+	
 	//text = texture->loadTexture();
 }
 
@@ -19,7 +20,7 @@ Object::Object(Model* objModel, Shader* shader, glm::vec3 setPosition, glm::vec3
 	model = glm::mat4(1.0f);
 	model = glm::scale(model, setScale);
 	model = glm::translate(model, setPosition);
-		
+	
 }
 
 Object::~Object()
@@ -28,6 +29,7 @@ Object::~Object()
 
 void Object::draw()
 {
+	
 	this->shader->setModelMatrix(model); 
 	this->shader->setShader();
 
@@ -39,8 +41,10 @@ void Object::draw()
 	}
 	if (objModel != NULL)
 	{
-		this->shader->setTexture(this->objModel->texture);
-
+		if (this->objModel->textureNormal != -1)
+			this->shader->setTexture(this->objModel->texture, this->objModel->textureNormal, true);
+		else
+			this->shader->setTexture(this->objModel->texture, this->objModel->textureNormal, false);
 		this->objModel->draw();
 	}
 }
@@ -50,7 +54,16 @@ void Object::setPosition(glm::vec3 position)
 	this->model = glm::translate(model, position);
 }
 
-void Object::rotate(float rotateX)
+void Object::rotateX(float rotateX)
 {
-	this->model = glm::rotate(model, glm::radians(rotateX), glm::vec3(0.0f, 1.0f, 0.0f));
+	this->model = glm::rotate(model, glm::radians(rotateX), glm::vec3(1.0f, 0.0f, 0.0f));
+}
+
+void Object::rotateY(float rotateY)
+{
+	this->model = glm::rotate(model, glm::radians(rotateY), glm::vec3(0.0f, 1.0f, 0.0f));
+}
+void Object::rotateZ(float rotateZ)
+{
+	this->model = glm::rotate(model, glm::radians(rotateZ), glm::vec3(0.0f, 0.0f, 1.0f));
 }

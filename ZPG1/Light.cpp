@@ -14,9 +14,9 @@
 
 Light::Light(Shader* shader, MeshManager* objManager) {
 
-	x = 1.f;
+	x = 0.f;
 	y = 1.f;
-	z = 1.f;
+	z = 0.f;
 	objLig = new Object(objManager->getMesh("sphere"), shader, getPosition(), glm::vec3(0.5, 0.5, 0.5));
 }
 Light::Light(float x, float y, float z) {

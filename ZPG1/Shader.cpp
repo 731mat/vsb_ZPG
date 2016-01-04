@@ -28,14 +28,19 @@ void Shader::setShader() {
     glUseProgram(programID);
 }
 
-void Shader::setTexture(GLint tex)
+void Shader::setTexture(GLint tex, GLint texNormal, bool normalMapping)
 {
 	this->setShader();
 	glActiveTexture(GL_TEXTURE0);
-	//glUniform1i(this->getShader(), tex);
 	glBindTexture(GL_TEXTURE_2D, tex);
-	//glUniform1i(this->getShader(), 0);
-	glUniform1i(glGetUniformLocation(this->getShader(), "textura"), 0);
+	glUniform1i(glGetUniformLocation(this->getID(), "textura"), 0);
+	glUniform1i(glGetUniformLocation(this->getID(), "normalMapping"), normalMapping);
+	if (normalMapping)
+	{
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, texNormal);
+		glUniform1i(glGetUniformLocation(this->getID(), "normalMap"), 1);
+	}
 }
 
 Shader::~Shader() {

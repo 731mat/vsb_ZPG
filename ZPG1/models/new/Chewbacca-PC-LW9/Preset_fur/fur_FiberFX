@@ -1,0 +1,410 @@
+Header "FiberFX  1995-2008 NewTek"
+Version 2
+{ FFobject
+  { Quantity
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.66000003
+        0
+      }
+    }
+  }
+  Cluster 1
+  { Width
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        4
+        0
+      }
+    }
+  }
+  Subdivide 1
+  ShadowDepth 16
+  Samples 0
+  SampleWidth 2
+  { Kink
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        1
+        0
+      }
+    }
+  }
+  { Radius
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.02
+        0
+      }
+    }
+  }
+  { ClusterRadius
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.0049999999
+        0
+      }
+    }
+  }
+  { Swirl
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0
+        0
+      }
+    }
+  }
+  { Splay
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0
+        0
+      }
+    }
+  }
+  { Tuft
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.2
+        0
+      }
+    }
+  }
+  { Stray
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.2
+        0
+      }
+    }
+  }
+  { Random
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.5
+        0
+      }
+    }
+  }
+  { Clump
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.1
+        0
+      }
+    }
+  }
+  { Scale
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.64999998
+        0
+      }
+    }
+  }
+  { Color
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.5 0.40000001 0.2
+        0
+      }
+    }
+  }
+  { TipColor1
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.29411766 0.23529412 0.12156863
+        0
+      }
+    }
+  }
+  { TipColor2
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.54901963 0.25098041 0
+        0
+      }
+    }
+  }
+  { BaseColor1
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.39215687 0.12941177 0.06666667
+        0
+      }
+    }
+  }
+  { BaseColor2
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.50196081 0.3137255 0.15686275
+        0
+      }
+    }
+  }
+  { ColorMix
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.5
+        0
+      }
+    }
+  }
+  { SpecColor
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.71764708 0.60392159 0.56862748
+        0
+      }
+    }
+  }
+  { Highlight
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.5
+        0
+      }
+    }
+  }
+  { Diffuse
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.80000001
+        0
+      }
+    }
+  }
+  { Specular
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.40000001
+        0
+      }
+    }
+  }
+  { Gloss
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.0625
+        0
+      }
+    }
+  }
+  { Luminous
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0
+        0
+      }
+    }
+  }
+  { Ambient
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.1
+        0
+      }
+    }
+  }
+  { Transparency
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.2
+        0
+      }
+    }
+  }
+  { Translucency
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0
+        0
+      }
+    }
+  }
+  { SelfShadow
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.2
+        0
+      }
+    }
+  }
+  { CastShadow
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.40000001
+        0
+      }
+    }
+  }
+  { Cull
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0
+        0
+      }
+    }
+  }
+  { Fade
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0
+        0
+      }
+    }
+  }
+  { Gravity
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        1.3
+        0
+      }
+    }
+  }
+  { Bias
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0
+        0
+      }
+    }
+  }
+  { BiasMapName
+    ""
+  }
+  { Surface
+    "Chewie Fourrure corps"
+  }
+  { Usedot
+    1
+  }
+  { DynaGravity
+    1
+  }
+  { EdgeQty
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        2
+        0
+      }
+    }
+  }
+  { World
+    0
+  }
+  { Tilt
+    -0.2
+  }
+  { Gloss2
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0
+        0
+      }
+    }
+  }
+  { Tilt2
+    0.2
+  }
+  { Pigment
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        0.30000001 0.2 0.1
+        0
+      }
+    }
+  }
+  { Bump
+    { VariantParameter
+      3
+      0
+      { ParameterValue
+        1
+        0
+      }
+    }
+  }
+  { PInstance
+    "es\\Common Files\\Roxio Shared\\9.0\\DLLShared\\;C:\\Program Files\\Sof"
+  }
+  ShadowType 0
+  PerPixelColor 0
+  SampleRadius 2
+  StrandVCnt 1
+  ColorMod 0
+  ColorBlend 0
+  UseNodes 0
+}

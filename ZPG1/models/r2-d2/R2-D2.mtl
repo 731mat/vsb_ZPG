@@ -1,13 +1,14 @@
-# 
-# 
+# Blender MTL File: 'None'
+# Material Count: 1
 
 newmtl R2D2
-Ns 96.078431
+Ns 94.117647
 Ka 0.000000 0.000000 0.000000
 Kd 0.640000 0.640000 0.640000
 Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
-illum 1
+illum 2
 map_Kd r2-d2/R2-D2_D.tga
-map_Bump r2-d2R2-D2_N.tga
+map_Bump r2-d2/R2-D2_N.tga

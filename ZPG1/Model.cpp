@@ -32,7 +32,7 @@ void Model::draw()
 
 void Model::Import3DFromFile(const std::string& pFile)
 {
-	printf(" Loading %s\n", name.c_str());
+	printf("\n Loading %s\n", name.c_str());
 	unsigned int importOptions = aiProcess_Triangulate
 		| aiProcess_OptimizeMeshes			    // slouèení malých plošek
 		| aiProcess_JoinIdenticalVertices		// NUTNÉ jinak hodnì duplikuje
@@ -89,6 +89,21 @@ void Model::Import3DFromFile(const std::string& pFile)
 					printf("SOIL loading error: '%s'\n", SOIL_last_result());
 				}
 				printf("\n____________________\n");
+				mat->GetTexture(aiTextureType_HEIGHT, 0, src);
+				textureNormal = SOIL_load_OGL_texture
+					(
+					("models/" + string(src->C_Str())).c_str(),
+					SOIL_LOAD_AUTO,
+					SOIL_CREATE_NEW_ID,
+					SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
+					);
+				printf("\n   Loading %d\n", textureNormal);
+				printf("   %s", src->C_Str());
+				if (0 == textureNormal)
+				{
+					printf("\nSOIL loading error: '%s'\n", SOIL_last_result());
+					textureNormal = -1;
+				}
 				//	glActiveTexture(GL_TEXTURE0);
 		//	}
 			 for (unsigned int i = 0; i < mesh->mNumVertices; i++)
@@ -115,6 +130,9 @@ void Model::Import3DFromFile(const std::string& pFile)
 					pVertices[i].Tangent[0] = mesh->mTangents[i].x;
 					pVertices[i].Tangent[1] = mesh->mTangents[i].y;
 					pVertices[i].Tangent[2] = mesh->mTangents[i].z;
+					//pVertices[i].Bitangens[0] = mesh->mBitangents[i].x;
+					//pVertices[i].Bitangens[1] = mesh->mBitangents[i].y;
+					//pVertices[i].Bitangens[2] = mesh->mBitangents[i].z;
 				}
 				
 			}
@@ -142,15 +160,20 @@ void Model::Import3DFromFile(const std::string& pFile)
 			glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
 			glBufferData(GL_ARRAY_BUFFER, sizeof(AssimpMesh::Verte)* mesh->mNumVertices, pVertices, GL_STATIC_DRAW);
-
+			
 			glEnableVertexAttribArray(0);
-			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(0));
+			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(nullptr));
 			glEnableVertexAttribArray(1);
 			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(3 * sizeof(GLfloat)));
 			glEnableVertexAttribArray(2);
 			glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(6 * sizeof(GLfloat)));
 			glEnableVertexAttribArray(3);
 			glVertexAttribPointer(3, 4, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(8 * sizeof(GLfloat)));
+			glEnableVertexAttribArray(4);
+			glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(11 * sizeof(GLfloat)));
+			//glEnableVertexAttribArray(5);
+			//glVertexAttribPointer(5, 3, GL_FLOAT, GL_FALSE, sizeof(AssimpMesh::Verte), (GLvoid*)(14 * sizeof(GLfloat)));
+
 
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 			glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint)* mesh->mNumFaces * 3, pIndices, GL_STATIC_DRAW);
