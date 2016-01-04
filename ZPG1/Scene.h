@@ -26,16 +26,18 @@
 #include "opengl_helper.h"
 #include "MeshManager.h"
 #include "Texture.h"
+#include "Skybox.h"
 
 
 class Scene : public OnChangeLightObserver{
 private:
 
-	Shader *LightShader, *phong;
+	Shader *LightShader, *phong, *skyboxShader;
 	Camera* camera;
 	Light* light, *light2, *light3;
 	MeshManager* mshManager;
 	Texture* texture;
+	Skybox* skybox;
 	GLuint index;
 	std::vector<Object*> drawables;
 
@@ -45,13 +47,15 @@ private:
 public:
 
 	std::vector<Light*> lights;
+	void loadObjects();
 	Scene();
 	~Scene();
 	void drawObj();
 	void addObj(double x, double y, bool plant = false);
 	void delObj();
 	void moveObj(glm::vec3 position);
-	void rotObj(float rotateX);
+	void rotObjX(float rotateX);
+	void rotObjY(float rotateY);
 	void updateLight(Light* light);
 	Camera* getCamera();
 	Light* getLight();
