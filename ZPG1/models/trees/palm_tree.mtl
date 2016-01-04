@@ -8,7 +8,11 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 1
+<<<<<<< HEAD
 map_Kd trees/palm_trunk_d.dds
+=======
+map_Kd palm_trunk_d.dds
+>>>>>>> origin/master
 
 
 newmtl palm_leaf
@@ -19,6 +23,10 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.500000
 d 0.000000
 illum 1
+<<<<<<< HEAD
 map_Kd trees/palm_leaf_d.dds
+=======
+map_Kd palm_leaf_d.dds
+>>>>>>> origin/master
 
 

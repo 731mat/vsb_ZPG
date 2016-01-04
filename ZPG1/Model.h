@@ -33,14 +33,22 @@ private:
 	aiMaterial* mat;
 	Assimp::Importer importer;
 	GLuint tex_2d;
+<<<<<<< HEAD
 	const aiScene* scene = nullptr;
 	std::vector<AssimpMesh*> meshes;
+=======
+	const aiScene* scene = NULL;
+>>>>>>> origin/master
 
 public:
 	Model();
 	Model(string name);
 	~Model();
+<<<<<<< HEAD
 	GLint texture, textureNormal;
+=======
+	GLint texture;
+>>>>>>> origin/master
 	void draw();
 	void Import3DFromFile(const std::string& pFile);
 };

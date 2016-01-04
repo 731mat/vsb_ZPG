@@ -20,12 +20,52 @@ Scene::Scene()
 	camera->registerObserver((OnChangeCameraObserver*)skyboxShader);
 	camera->registerObserver((OnChangeCameraObserver*)LightShader);
 	camera->registerObserver((OnChangeCameraObserver*)phong);
+<<<<<<< HEAD
 	camera->registerObserver(skybox);
 	skybox->loadSkybox("skybox/front.jpg", "skybox/back.jpg", "skybox/left.jpg", "skybox/right.jpg", "skybox/top.jpg", "skybox/bottom.jpg"); // mountains + ocean
 	//skybox->loadSkybox("skybox/ft.jpg", "skybox/bk.jpg", "skybox/lf.jpg", "skybox/rt.jpg", "skybox/up.jpg", "skybox/dn.jpg"); 
 	//skybox->loadSkybox("skybox/arctic_ft.tga", "skybox/arctic_bk.tga", "skybox/arctic_lf.tga", "skybox/arctic_rt.tga", "skybox/arctic_up.tga", "skybox/arctic_dn.tga"); //Snow Terrain
 	skybox->loadSkybox("skybox/arrakisday_ft.tga", "skybox/arrakisday_bk.tga", "skybox/arrakisday_lf.tga", "skybox/arrakisday_rt.tga", "skybox/arrakisday_up.tga", "skybox/arrakisday_dn.tga"); //Desert
 	this->loadObjects();
+=======
+
+	mshManager->setObj("jumper", new Model("models/Puddle Jumper.obj"));
+	mshManager->setObj("tree", new Model("models/trees/tree.obj"));
+	mshManager->setObj("house", new Model("models/house.obj"));
+	mshManager->setObj("cannon", new Model("models/Cannon.obj"));
+	mshManager->setObj("plane", new Model("models/plane.obj"));
+	mshManager->setObj("grass", new Model("models/grass/grass_01.obj"));
+	mshManager->setObj("R2D2", new Model("models/R2-D2.obj"));
+	mshManager->setObj("BattleDroid", new Model("models/BattleDroid.obj"));
+	mshManager->setObj("starship", new Model("models/ARC170.obj"));
+	mshManager->setObj("skydom", new Model("models/Skydome.obj"));
+
+	mshManager->setMesh("sphere", new Mesh(GL_TRIANGLES, sphereVertices, sphereCount, "sphere"));
+	mshManager->setMesh("worker", new Mesh(GL_TRIANGLES, workerVertices, workerCount, "worker"));
+	mshManager->setMesh("box", new Mesh(GL_TRIANGLES, boxVertices, boxCount, "box"));
+	mshManager->setMesh("suzi", new Mesh(GL_TRIANGLES, suziVertices, suziCount, "suzi"));
+	//mshManager->setMesh("plane", new Mesh(GL_TRIANGLES, planeVertices, planeCount, "plane"));
+
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(-10, 4, 20), glm::vec3(0.5,0.5, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(-20, 4, 30), glm::vec3(0.5,0.5, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(-30, 4, 20), glm::vec3(0.5,0.5, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(-40, 4, 20), glm::vec3(0.5,0.5, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("jumper"), phong, glm::vec3(-50, 4, 20), glm::vec3(0.5,0.5, 0.5)));
+
+	drawables.push_back(new Object(mshManager->getMesh("suzi"), phong, glm::vec3(0, 10, 0), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getMesh("sphere"), phong, glm::vec3(5, 0, 20), glm::vec3(1, 1, 1)));
+
+	drawables.push_back(new Object(mshManager->getObj("cannon"), phong, glm::vec3(5, 0, 10), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getObj("house"), phong, glm::vec3(10, 0, -20), glm::vec3(1, 1.5, 1)));
+	drawables.push_back(new Object(mshManager->getObj("house"), phong, glm::vec3(-15, 0, 10), glm::vec3(1, 1, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("house"), phong, glm::vec3(25, 0, 10), glm::vec3(0.5, 1, 0.5)));
+	drawables.push_back(new Object(mshManager->getObj("R2D2"), phong, glm::vec3(-4, 0, 0), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getObj("BattleDroid"), phong, glm::vec3(2, 0, 0), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getObj("starship"), phong, glm::vec3(0, 500, -2000), glm::vec3(0.01, 0.01, 0.01)));
+	drawables.push_back(new Object(mshManager->getObj("plane"), phong, glm::vec3(0, -1, 0), glm::vec3(100, 0.1, 100)));
+	drawables.push_back(new Object(mshManager->getObj("skydom"), phong, glm::vec3(0, 0, 0), glm::vec3(1, 1, 1)));
+	drawables.push_back(new Object(mshManager->getObj("grass"), phong, glm::vec3(0, 0, 0), glm::vec3(1, 1, 1)));
+>>>>>>> origin/master
 	camera->notifyObserver();
 	light->notifyObserver();
 }
@@ -56,6 +96,7 @@ void Scene::drawObj()
 	//skybox->drawSkybox();
 	light->draw();
 	updateLight(light);
+
 	for (unsigned int i = 0; i < drawables.size(); i++)
 	{
 		glStencilFunc(GL_ALWAYS, i + 1, 0xFF);

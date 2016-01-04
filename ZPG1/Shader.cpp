@@ -28,6 +28,7 @@ void Shader::setShader() {
     glUseProgram(programID);
 }
 
+<<<<<<< HEAD
 void Shader::setTexture(GLint tex, GLint texNormal, bool normalMapping)
 {
 	this->setShader();
@@ -41,6 +42,16 @@ void Shader::setTexture(GLint tex, GLint texNormal, bool normalMapping)
 		glBindTexture(GL_TEXTURE_2D, texNormal);
 		glUniform1i(glGetUniformLocation(this->getID(), "normalMap"), 1);
 	}
+=======
+void Shader::setTexture(GLint tex)
+{
+	this->setShader();
+	glActiveTexture(GL_TEXTURE0);
+	//glUniform1i(this->getShader(), tex);
+	glBindTexture(GL_TEXTURE_2D, tex);
+	glUniform1i(this->getShader(), 0);
+	//glUniform1i(glGetUniformLocation(, "textura"), 0);
+>>>>>>> origin/master
 }
 
 Shader::~Shader() {

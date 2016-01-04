@@ -216,7 +216,11 @@ Ks 0.050000 0.050000 0.050000
 Ni 1.000000
 d 1.000000
 illum 2
+<<<<<<< HEAD
 map_Kd avent/interior_lod0.tga
+=======
+map_Kd interior_lod0.tga
+>>>>>>> origin/master
 
 newmtl lines
 Ns 252.941176
@@ -235,7 +239,11 @@ Ks 0.050000 0.050000 0.050000
 Ni 1.000000
 d 1.000000
 illum 2
+<<<<<<< HEAD
 map_Kd avent/interior_lod0.tga
+=======
+map_Kd interior_lod0.tga
+>>>>>>> origin/master
 
 newmtl signs
 Ns 252.941176
@@ -245,7 +253,11 @@ Ks 0.050000 0.050000 0.050000
 Ni 1.000000
 d 1.000000
 illum 2
+<<<<<<< HEAD
 map_Kd avent/interior_lod0.tga
+=======
+map_Kd interior_lod0.tga
+>>>>>>> origin/master
 
 newmtl speedometer
 Ns 252.941176
@@ -255,4 +267,9 @@ Ks 0.050000 0.050000 0.050000
 Ni 1.000000
 d 1.000000
 illum 2
+<<<<<<< HEAD
 
+=======
+map_Kd \Users\manapoly\Desktop\Yusup\Models\Land\Lamborghini\Aventador Hi-Poly [Squir]\aventador-new\gaudges.jpg
+map_Ka \\Users\\manapoly\\Desktop\\Yusup\\Models\\Land\\Lamborghini\\Aventador Hi-Poly [Squir]\\aventador-new\\gaudges.jpg
+>>>>>>> origin/master

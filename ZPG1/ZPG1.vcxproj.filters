@@ -69,9 +69,12 @@
     <ClCompile Include="AssimpMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Skybox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+=======
+>>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -158,9 +161,12 @@
     <ClInclude Include="AssimpMesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Skybox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <None Include="Lambert-FS.glsl">
@@ -181,12 +187,15 @@
       <Filter>models</Filter>
     </None>
     <None Include="ClassDiagram31.cd" />
+<<<<<<< HEAD
     <None Include="Skybox-FS.glsl">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="Skybox-VS.glsl">
       <Filter>Resource Files</Filter>
     </None>
+=======
+>>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <Image Include="textures\wall.jpg">

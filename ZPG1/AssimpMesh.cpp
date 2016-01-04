@@ -1,5 +1,6 @@
 #include "AssimpMesh.h"
 
+<<<<<<< HEAD
 AssimpMesh::AssimpMesh(int id, GLuint VAO, GLuint VBO, GLuint IBO, int indicesCount)
 {
 	this->VAO = VAO;
@@ -7,6 +8,11 @@ AssimpMesh::AssimpMesh(int id, GLuint VAO, GLuint VBO, GLuint IBO, int indicesCo
 	this->IBO = IBO;
 	this->indicesCount = indicesCount;
 
+=======
+AssimpMesh::AssimpMesh()
+{
+	
+>>>>>>> origin/master
 }
 
 AssimpMesh::~AssimpMesh()
@@ -14,6 +20,7 @@ AssimpMesh::~AssimpMesh()
 	delete this;
 }
 
+<<<<<<< HEAD
 
 void AssimpMesh::draw()
 {	
@@ -22,3 +29,5 @@ void AssimpMesh::draw()
 }
 
 
+=======
+>>>>>>> origin/master

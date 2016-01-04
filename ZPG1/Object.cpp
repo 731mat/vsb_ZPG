@@ -9,7 +9,10 @@ Object::Object(Mesh* mesh, Shader* shader, glm::vec3 setPosition, glm::vec3 setS
 	model = glm::mat4(1.0f);
 	model = glm::scale(model, setScale);
 	model = glm::translate(model, setPosition);
+<<<<<<< HEAD
 	
+=======
+>>>>>>> origin/master
 	//text = texture->loadTexture();
 }
 
@@ -31,20 +34,35 @@ void Object::draw()
 {
 	
 	this->shader->setModelMatrix(model); 
+<<<<<<< HEAD
 	this->shader->setShader();
 
 	if (mesh != NULL)
 	{
 		//this->shader->setTexture(this->objModel->texture);
+=======
+	
+
+	if (mesh != NULL)
+	{
+//		this->shader->setTexture(this->objModel->texture);
+
+>>>>>>> origin/master
 		//this->shader->setTexture(this->texture->loadTexture());
 		this->mesh->draw();
 	}
 	if (objModel != NULL)
 	{
+<<<<<<< HEAD
 		if (this->objModel->textureNormal != -1)
 			this->shader->setTexture(this->objModel->texture, this->objModel->textureNormal, true);
 		else
 			this->shader->setTexture(this->objModel->texture, this->objModel->textureNormal, false);
+=======
+		
+		this->shader->setTexture(this->objModel->texture);
+
+>>>>>>> origin/master
 		this->objModel->draw();
 	}
 }

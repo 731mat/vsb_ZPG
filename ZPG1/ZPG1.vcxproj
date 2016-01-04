@@ -143,7 +143,11 @@
     <None Include="ClassDiagram.cd" />
     <None Include="ClassDiagram3.cd" />
     <None Include="ClassDiagram31.cd" />
+<<<<<<< HEAD
     <None Include="Skybox-FS.glsl" />
+=======
+    <None Include="FragmentShader.glsl" />
+>>>>>>> origin/master
     <None Include="Lambert-FS.glsl" />
     <None Include="Lambert-VS.glsl" />
     <None Include="models\fels.3ds" />

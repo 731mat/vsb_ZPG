@@ -8,6 +8,10 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 1
+<<<<<<< HEAD
 map_Kd grass/grass_diff.tga
+=======
+map_Kd grass_diff.tga
+>>>>>>> origin/master
 
 

@@ -3,7 +3,11 @@
 Application* Application::objectInstance = NULL;
 int Application::width = 1200;
 int Application::height = 720;
+<<<<<<< HEAD
 string Application::title = "ZPG";
+=======
+string Application::title = "ZPG MLLGGGGGGG DROP THE FAITH";
+>>>>>>> origin/master
 
 Application* Application::getWindow()
 {

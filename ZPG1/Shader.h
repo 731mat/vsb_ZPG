@@ -30,7 +30,11 @@ public:
 	Shader(const char *vertexFile, const char *fragmentFile);
 	~Shader();
 	void setShader();
+<<<<<<< HEAD
 	void setTexture(GLint tex, GLint texNormal, bool normalMapping);
+=======
+	void setTexture(GLint tex);
+>>>>>>> origin/master
 	GLint getShader();
 	void setModelMatrix(glm::mat4 matrix);
 	void setViewMatrix(glm::mat4 matrix);
